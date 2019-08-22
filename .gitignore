@@ -5,7 +5,7 @@ npm-debug.log
 .eslintcache
 .gatsby-context.js
 gatsby-starter-lumen.iml
-public/
+#public/
 .idea/
 
 yarn.lock
