@@ -1,0 +1,12 @@
+node_modules/
+flow-typed/
+.cache/
+npm-debug.log
+.eslintcache
+.gatsby-context.js
+gatsby-starter-lumen.iml
+public/
+.idea/
+
+yarn.lock
+package-lock.json

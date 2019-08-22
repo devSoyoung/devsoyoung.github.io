@@ -1,0 +1,30 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.meta {
+  font-size: 14px;
+  letter-spacing: -1px;
+  margin-top: 10px;
+
+  &__category {
+    //display: inline-block;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: $color-secondary;
+  }
+
+  &__date {
+    //display: inline-block;
+    //float: right;
+    //font-style: italic;
+    font-weight: 500;
+    margin-right: 10px;
+  }
+}
+//
+//@include breakpoint-sm {
+//  .meta {
+//    margin: 0 152.5px;
+//  }
+//
+//}
