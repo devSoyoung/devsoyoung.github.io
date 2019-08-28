@@ -1,410 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67e40d81-0fe9-4401-a1f6-292ff33cbbdf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/pages/about.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/pages/contacts.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-02-01-python-anaconda.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-03-26-css-display-attribute.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-03-26-js-event-basic.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-03-26-js-exception.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-03-26-js-htmlcollection-nodelist.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-03-26-js-timer.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-04-12-naver-tech-concert-review-1.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-04-12-naver-tech-concert-review-2.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-04-12-naver-tech-concert-review-3.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-04-13-naver-tech-concert-review-4.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-05-04-webpack-introduce.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-05-06-html-encoding.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-05-06-markdown-image-tag.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-05-07-shadow-dom.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-05-11-koa-api-tutorial.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-05-12-koa-router.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-06-08-typescript-react-project.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-06-26-under-over-fetching.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-07-04-node-gyp-rebuild-error.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-07-10-mysql-sudo-login.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-07-18-redux-middleware.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-08-06-React-tutorial-article.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/posts/2019-08-22-DB-primarykey-uniquekey.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/flow/css-module-stub.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-browser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby-node.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby/create-pages.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby/on-create-node.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby/pagination/create-categories-pages.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby/pagination/create-posts-pages.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gatsby/pagination/create-tags-pages.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/netlify.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/postcss-config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/1-51797c978b1a5ee5dd65.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/14-eea8d13d3b638e4c9910.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/2-fee884a4c4165b93a3fb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/404/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/_headers" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/cms.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/cms.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/admin/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app-cc47ec4630decab15961.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/categories/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/category/css/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/category/database/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/category/error/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/category/etc/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/category/html/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/category/javascript/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/category/node-js/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/category/python/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/category/react/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/category/seminar/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/category/webpack/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/chunk-map.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/component---node-modules-gatsby-plugin-offline-app-shell-js-6f8ca706f9645b999427.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/component---src-templates-categories-list-template-js-7af7e0f27421c4bd1f0c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/component---src-templates-category-template-js-8efd19e38b1c2d3d51b7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/component---src-templates-index-template-js-68a38e46885422af1300.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/component---src-templates-not-found-template-js-7f95a6ce53bfbb0bd8e7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/component---src-templates-page-template-js-7a072258232bc504a6b5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/component---src-templates-post-template-js-726384056d08d4170ac9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/component---src-templates-tag-template-js-35d1c0167a28dba2fe25.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/component---src-templates-tags-list-template-js-0560f939022a5f225e64.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/icons/icon-144x144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/icons/icon-192x192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/icons/icon-256x256.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/icons/icon-384x384.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/icons/icon-48x48.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/icons/icon-512x512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/icons/icon-72x72.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/icons/icon-96x96.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/idb-keyval-iife.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.webmanifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/42-line-bible.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/gutenberg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/image-0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/image-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/image-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/image-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/image-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/movable-type.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/printing-press.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/media/type-through-time.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/offline-plugin-app-shell-fallback/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/404/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/categories/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/category/css/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/category/database/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/category/error/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/category/etc/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/category/html/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/category/javascript/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/category/node-js/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/category/python/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/category/react/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/category/seminar/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/category/webpack/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/index/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/offline-plugin-app-shell-fallback/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/page/1/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/page/2/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/page/3/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/page/4/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/pages/about/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/pages/contacts/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/css-display-attribute/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/html-encoding/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/js-event-basic/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/js-exception/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/js-htmlcollection-nodelist/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/js-timer/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/koa-api-tutorial/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/koa-router/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/markdown-image-tag/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/mysql-sudo-login/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/naver-tech-concert-review-1/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/naver-tech-concert-review-2/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/naver-tech-concert-review-3/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/naver-tech-concert-review-4/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/node-gyp-rebuild-error/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/primarykey-vs-uniqueindex/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/python-anaconda/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/react-tutorial-article/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/redux-middleware/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/shadow-dom/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/typescript-react-project/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/underfetching-overfetching/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/posts/webpack-introduce/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/tag/css/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/tag/database/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/tag/error/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/tag/etc/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/tag/front-end/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/tag/frontend/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/tag/html/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/tag/javascript/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/tag/markdown/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/tag/mysql/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/tag/node-js/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/tag/programming/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/tag/programming/page/1/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/tag/programming/page/2/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/tag/python/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/tag/react/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/tag/rest-api/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/tag/seminar/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/tag/web-development/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/tag/webpack/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page-data/tags/page-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/1/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/2/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/3/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/page/4/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/about/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/contacts/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/photo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/css-display-attribute/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/html-encoding/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/js-event-basic/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/js-exception/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/js-htmlcollection-nodelist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/js-timer/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/koa-api-tutorial/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/koa-router/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/markdown-image-tag/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/mysql-sudo-login/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/naver-tech-concert-review-1/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/naver-tech-concert-review-2/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/naver-tech-concert-review-3/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/naver-tech-concert-review-4/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/node-gyp-rebuild-error/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/primarykey-vs-uniqueindex/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/python-anaconda/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/react-tutorial-article/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/redux-middleware/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/shadow-dom/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/typescript-react-project/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/underfetching-overfetching/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/posts/webpack-introduce/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/rss.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/sitemap.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_AMS-Regular-7f06b4e30317f784d61d26686aed0ab2.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_AMS-Regular-aaf4eee9fba9907d61c3935e0b6a54ae.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_AMS-Regular-e78e28b4834954df047e4925e9dbf354.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Caligraphic-Bold-021dd4dc61ee5f5cdf315f43b48c094b.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Caligraphic-Bold-1e802ca9dedc4ed4e3c6f645e4316128.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Caligraphic-Bold-4ec58befa687e9752c3c91cd9bcf1bcb.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Caligraphic-Regular-7edb53b6693d75b8a2232481eea1a52c.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Caligraphic-Regular-d3b46c3a530116933081d9d74e3e9fe8.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Caligraphic-Regular-d49f2d55ce4f40f982d8ba63d746fbf9.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Fraktur-Bold-a31e7cba7b7221ebf1a2ae545fb306b2.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Fraktur-Bold-c4c8cab7d5be97b2bb283e531c077355.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Fraktur-Bold-d5b59ec9764e10f4a82369ae29f3ac58.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Fraktur-Regular-32a5339eb809f381a7357ba56f82aab3.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Fraktur-Regular-a48dad4f58c82e38a10da0ceebb86370.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Fraktur-Regular-b7d9c46bff5d51da6209e355cc4a235d.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Main-Bold-22086eb5d97009c3e99bcc1d16ce6865.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Main-Bold-8e1e01c4b1207c0a383d9a2b4f86e637.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Main-Bold-9ceff51b3cb7ce6eb4e8efa8163a1472.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Main-BoldItalic-284a17fe5baf72ff8217d4c7e70c0f82.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Main-BoldItalic-4c57dbc44bfff1fdf08a59cf556fdab3.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Main-BoldItalic-e8b44b990516dab7937bf240fde8b46a.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Main-Italic-29c86397e75cdcb3135af8295f1c2e28.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Main-Italic-99be0e10c38cd42466e6fe1665ef9536.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Main-Italic-e533d5a2506cf053cd671b335ec04dde.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Main-Regular-5c734d78610fa35282f3379f866707f2.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Main-Regular-5c94aef490324b0925dbe5f643e8fd04.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Main-Regular-b741441f6d71014d0453ca3ebc884dd4.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Math-BoldItalic-9a2834a9ff8ab411153571e0e55ac693.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Math-BoldItalic-b13731ef4e2bfc3d8d859271e39550fc.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Math-BoldItalic-d747bd1e7a6a43864285edd73dcde253.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Math-Italic-291e76b8871b84560701bd29f9d1dcc7.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Math-Italic-4ad08b826b8065e1eab85324d726538c.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Math-Italic-f0303906c2a67ac63bf1e8ccd638a89e.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_SansSerif-Bold-3fb419559955e3ce75619f1a5e8c6c84.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_SansSerif-Bold-6e0830bee40435e72165345e0682fbfc.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_SansSerif-Bold-7dc027cba9f7b11ec92af4a311372a85.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_SansSerif-Italic-4059868e460d2d2e6be18e180d20c43d.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_SansSerif-Italic-727a9b0d97d72d2fc0228fe4e07fb4d8.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_SansSerif-Italic-fba01c9c6fb2866a0f95bcacb2c187a5.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_SansSerif-Regular-2555754a67062cac3a0913b715ab982f.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_SansSerif-Regular-5c58d168c0b66d2c32234a6718e74dfb.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_SansSerif-Regular-d929cd671b19f0cfea55b6200fb47461.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Script-Regular-755e2491f13b5269f0afd5a56f7aa692.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Script-Regular-d12ea9efb375f9dc331f562e69892638.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Script-Regular-d524c9a5b62a17f98f4a97af37fea735.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Size1-Regular-7342d45b052c3a2abc21049959fbab7f.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Size2-Regular-eb130dcc661de766c999c60ba1525a88.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Size4-Regular-ad7672524b64b730dfd176140a8945cb.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Typewriter-Regular-257023560753aeb0b89b7e434d3da17f.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Typewriter-Regular-3fe216d2a5f736c560cde71984554b64.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/KaTeX_Typewriter-Regular-6cc31ea5c223c88705a13727a71417fa.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/d/1492469078.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/d/3964968768.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/static/d/4175916191.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/styles-a6bae84ba5d0565b29ef.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/styles.092e5a5503680ad352b3.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/sw.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tag/css/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tag/database/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tag/error/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tag/etc/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tag/front-end/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tag/frontend/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tag/html/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tag/javascript/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tag/markdown/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tag/mysql/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tag/node-js/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tag/programming/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tag/programming/page/1/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tag/programming/page/2/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tag/python/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tag/react/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tag/rest-api/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tag/seminar/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tag/web-development/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tag/webpack/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tags/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/webpack-runtime-f5a56a37bb602596a6a6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/webpack.stats.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-background-sync.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-background-sync.dev.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-background-sync.prod.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-background-sync.prod.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-broadcast-cache-update.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-broadcast-cache-update.dev.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-broadcast-cache-update.prod.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-broadcast-cache-update.prod.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-cache-expiration.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-cache-expiration.dev.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-cache-expiration.prod.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-cache-expiration.prod.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-cacheable-response.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-cacheable-response.dev.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-cacheable-response.prod.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-cacheable-response.prod.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-core.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-core.dev.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-core.prod.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-core.prod.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-google-analytics.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-google-analytics.dev.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-google-analytics.prod.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-google-analytics.prod.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-navigation-preload.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-navigation-preload.dev.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-navigation-preload.prod.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-navigation-preload.prod.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-precaching.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-precaching.dev.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-precaching.prod.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-precaching.prod.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-range-requests.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-range-requests.dev.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-range-requests.prod.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-range-requests.prod.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-routing.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-routing.dev.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-routing.prod.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-routing.prod.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-strategies.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-strategies.dev.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-strategies.prod.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-strategies.prod.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-streams.dev.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-streams.dev.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-streams.prod.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-streams.prod.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-sw.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/workbox-v3.6.3/workbox-sw.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/renovate.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icon/tag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/_base.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/base/_generic.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/init.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/mixins/_breakpoints.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/mixins/_line-height.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/mixins/_margin.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/mixins/_padding.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cms/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cms/preview-templates/page-preview.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cms/preview-templates/post-preview.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Feed/Feed.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Feed/Feed.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Feed/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/Icon.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/Icon.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Layout.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/Layout.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Page/Page.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Page/Page.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Page/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pagination/Pagination.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pagination/Pagination.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pagination/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post/Comments/Comments.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post/Comments/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post/Content/Content.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post/Content/Content.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post/Content/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post/Meta/Meta.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post/Meta/Meta.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post/Meta/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post/Post.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post/Post.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Post/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Author/Author.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Author/Author.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Author/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Menu/Menu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Menu/Menu.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Menu/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/icons.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/pagination.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/use-categories-list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/use-site-metadata.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/use-tags-list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/categories-list-template.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/category-template.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/index-template.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/not-found-template.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/page-template.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/post-template.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/tag-template.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/tags-list-template.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/get-contact-href.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/get-icon.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/admin/config.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/media/42-line-bible.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/media/gutenberg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/media/image-0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/media/image-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/media/image-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/media/image-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/media/image-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/media/movable-type.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/media/printing-press.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/media/type-through-time.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/photo.jpg" beforeDir="false" />
-    </list>
+    <list default="true" id="67e40d81-0fe9-4401-a1f6-292ff33cbbdf" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -528,16 +125,23 @@
       <option name="project" value="LOCAL" />
       <updated>1566454223786</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update">
+      <created>1566454425643</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1566454425643</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2629000" />
+    <option name="totallyTimeSpent" value="2811000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2769556" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2769556" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Messages" />
@@ -549,7 +153,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" visible="true" weight="0.270073" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.270073" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.44768855" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -603,10 +207,10 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="Initial Commit" />
-    <MESSAGE value="Update" />
     <MESSAGE value="Remove Test Code" />
     <MESSAGE value="Deploy Build" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deploy Build" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/config.js">
@@ -629,17 +233,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="22" column="14" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="22" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
