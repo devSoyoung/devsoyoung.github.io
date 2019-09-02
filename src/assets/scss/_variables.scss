@@ -1,0 +1,46 @@
+/**
+ * Variables
+ */
+
+// Colors
+$color-base: #222;
+$color-base-secondary: #c8c8a9;
+$color-primary: #fe4365;
+$color-secondary: #fc9d9a;
+$color-third: #f9cdad;
+
+$color-white: #FFF;
+$color-gray: lighten($color-base, 40%);
+$color-gray-border: lighten($color-base, 77%);
+$color-gray-bg: lighten($color-base, 79%);
+
+// Typographic
+$typographic-font-family: NanumSquare, sans-serif;
+
+$typographic-root-font-size: 100;
+$typographic-base-font-size: 15px;
+$typographic-small-font-size: 13px;
+
+$typographic-base-line-height: 1.6;
+
+$typographic-base-letter-spacing: -0.5px;
+$typographic-title-letter-spacing: -0.8px;
+
+$typographic-base-font-color: $color-base;
+$typographic-link-p-font-color: $color-primary;
+$typographic-link-s-font-color: $color-secondary;
+
+$typographic-leading: round(16 * ($typographic-root-font-size / 100) * $typographic-base-line-height);
+
+// Buttons
+$button-height: 35px;
+$button-border-radius: 20px;
+
+// Layout
+$layout-post-single-width: 945px;
+$layout-post-width: $layout-post-single-width - 305px;
+
+$layout-width: 1070px;
+$layout-breakpoint-sm: 685px;
+$layout-breakpoint-md: 960px;
+$layout-breakpoint-lg: 1100px;
