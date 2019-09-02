@@ -11,18 +11,18 @@ type Props = {
 };
 
 const Post = ({ post }: Props) => {
-  const sideButtonRef = useRef();
-  const position = useScroll();
+  // const sideButtonRef = useRef();
+  // const position = useScroll();
 
-  // Scroll 위치에 따라 사이드 버튼 노출 관리
-  useEffect(() => {
-    const { y } = position;
-    if (y < 500) {
-      sideButtonRef.current.classList.remove('show');
-    } else {
-      sideButtonRef.current.classList.add('show');
-    }
-  });
+  // // Scroll 위치에 따라 사이드 버튼 노출 관리
+  // useEffect(() => {
+    // const { y } = position;
+    // if (y < 500) {
+    //   sideButtonRef.current.classList.remove('show');
+    // } else {
+    //   sideButtonRef.current.classList.add('show');
+    // }
+  // });
 
   const { html } = post;
   const {
@@ -36,14 +36,14 @@ const Post = ({ post }: Props) => {
         <Content body={html} title={title} date={date} tags={tags} category={category} />
       </div>
 
-      <div className={styles['post__side-button']} ref={sideButtonRef}>
-        <div className={styles['post__side-button__move-top']}>
-          <span>TOP</span>
-        </div>
-        <div className={styles['post__side-button__move-home']}>
-          <span>HOME</span>
-        </div>
-      </div>
+      {/*<div className={styles['post__side-button']} ref={sideButtonRef}>*/}
+      {/*  <div className={styles['post__side-button__move-top']}>*/}
+      {/*    <span>TOP</span>*/}
+      {/*  </div>*/}
+      {/*  <div className={styles['post__side-button__move-home']}>*/}
+      {/*    <span>HOME</span>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
     </div>
   );
 };
