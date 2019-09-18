@@ -41,6 +41,9 @@
 
     & p {
       //text-align: justify;
+      font-size: $typographic-base-font-size * 1.1;
+      line-height: 32px;
+      margin-bottom: 2rem;
 
       & img {
         margin: 20px 0;
