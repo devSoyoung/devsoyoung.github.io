@@ -2,61 +2,109 @@
 @import '../../assets/scss/mixins';
 
 .post {
-  &__footer {
-    max-width: $layout-post-width;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
+  animation: fadein 0.5s;
+  padding-bottom: 50px;
+  max-width: 600px;
+  margin: auto;
+  position: relative;
 
-  &__comments {
-    max-width: $layout-post-width;
-    margin: 0 auto;
-    padding: 0 15px;
+  &__side-button {
+    display: none;
+
+    & span {
+      display: initial;
+      cursor: pointer;
+      font-weight: 800;
+      position: absolute;
+    }
+
+    & div {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      position: fixed;
+      right: 50%;
+
+      &:hover {
+        opacity: 0.7;
+        transition: 0.3s;
+      }
+    }
+
+    &__move-top {
+      border: 1px solid $color-primary;
+      //position: fixed;
+      z-index: 100;
+      border-radius: 25px;
+      bottom: 60px;
+      box-sizing: border-box;
+
+      & span {
+        right: 10px;
+        top: 13px;
+        color: $color-primary;
+      }
+    }
+
+    &__move-home {
+      //position: fixed;
+      z-index: 100;
+      border-radius: 25px;
+      bottom: 120px;
+      background: $color-primary;
+
+
+      & span {
+        color: #FFFFFF;
+        right: 5px;
+        top: 14px;
+      }
+    }
   }
 
   &__home-button {
     display: block;
-    max-width: 90px;
+    background: #fc9d9a;
+    max-width: 80px;
     height: $button-height;
     padding: 0 24px;
     line-height: $button-height;
     text-align: center;
-    color: $color-base;
-    border: 1px solid $color-gray-border;
+    color: #FFFFFF;
     border-radius: $button-border-radius;
-    font-size: $typographic-base-font-size;
-    font-weight: normal;
+    font-size: 14px;
+    font-weight: 900;
     margin-left: auto;
     margin-right: auto;
     @include margin-top(1);
 
     &:hover,
     &:focus {
-      color: $color-primary;
+      background: rgba(252, 157, 154, 0.7);
+      color: #FFFFFF;
+      transition: 0.2s;
     }
 
   }
 
+
+  &__footer {
+    padding: 0 15px;
+  }
+
+  &__comments {
+    padding: 0 15px;
+  }
 }
 
-@include breakpoint-md {
+@media (max-width: 800px) {
   .post {
-    &__footer {
-      padding: 0;
+    &__side-button {
+      //display: none !important;
     }
-
-    &__comments {
-      padding: 0;
-    }
-
-    &__home-button {
-      position: fixed;
-      max-width: auto;
-      margin: 0;
-      top: 30px;
-      left: 30px
-    }
-
   }
-
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

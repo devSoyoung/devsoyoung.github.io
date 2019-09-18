@@ -6,7 +6,7 @@ module.exports = {
   title: '큐트리 개발 블로그',
   subtitle: 'Cutelee Development Blog',
   copyright: '© All rights reserved.',
-  disqusShortname: '',
+  disqusShortname: 'cuteleeblog',
   postsPerPage: 5,
   googleAnalyticsId: '',
   useKatex: false,
