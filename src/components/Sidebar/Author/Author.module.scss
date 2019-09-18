@@ -2,15 +2,27 @@
 @import '../../../assets/scss/mixins';
 
 .author {
+  text-align: center;
+  letter-spacing: $typographic-title-letter-spacing * 0.9;
+
+  & p {
+    margin-bottom: 20px;
+  }
+
   &__photo {
-    display: inline-block;
-    margin-bottom: 0;
+    display: block;
+    margin: auto auto 0;
     border-radius: 50%;
-    background-clip: padding-box
+    background-clip: padding-box;
+
+    &:hover {
+      opacity: 0.5;
+      transition: all 0.2s;
+    }
   }
 
   &__title {
-    font-size: $typographic-base-font-size * 1.125;
+    font-size: $typographic-base-font-size * 1.3;
     font-weight: 600;
     @include line-height(1.125);
     @include margin(.5, 0, .5, 0);
@@ -28,9 +40,10 @@
   }
 
   &__subtitle {
-    color: $color-gray;
-    @include line-height(1);
-    @include margin-bottom(1)
+    font-size: 13px;
+    letter-spacing: -0.3px;
+    //font-weight: 300;
+    //font-family: initial;
   }
 
 }
