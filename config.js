@@ -27,7 +27,7 @@ module.exports = {
   author: {
     name: '큐트리',
     photo: '/photo.jpeg',
-    bio: '배운 것을 글로 남깁니다.',
+    bio: 'Ego sum operarius studens',
     contacts: {
       email: 'soyoung.dev@gmail.com',
       github: 'devSoyoung',
