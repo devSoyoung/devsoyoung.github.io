@@ -153,7 +153,7 @@ figcaption {
 }
 
 code[class*="language-"], pre[class*="language-"] {
-  font-size: 14px;
+  font-size: 14px !important;
 }
 
 :not(pre) > code[class*="language-text"] {
@@ -161,7 +161,7 @@ code[class*="language-"], pre[class*="language-"] {
   font-size: 13px;
 }
 :not(pre) > code[class*="language-"], pre[class*="language-"] {
-  background: #f4f4f4;
+  background: #f4f4f4 !important;
   border-radius: 10px;
 }
 .token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string {
