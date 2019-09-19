@@ -1,0 +1,35 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.category {
+  &__list {
+    overflow-x: scroll;
+    padding: 5px;
+    margin-bottom: 20px;
+
+    &__item {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      margin: 5px;
+      padding: 3px 7px;
+      border-radius: 20px;
+
+      a {
+        color: black;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      a:hover {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__show-more {
+    display: inline-block;
+  }
+}

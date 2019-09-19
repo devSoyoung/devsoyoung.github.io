@@ -6,7 +6,7 @@ import { useSiteMetadata } from '../../../hooks';
 
 const Author = () => {
   const { author } = useSiteMetadata();
-
+  console.log('author info:', author);
   return (
     <div className={styles['author']}>
       <p className={styles['author__bio']}>
