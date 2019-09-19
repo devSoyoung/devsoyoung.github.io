@@ -2,7 +2,7 @@
 title: "객체지향 프로그래밍과 함수형 프로그래밍(2)"
 date: "2019-09-03"
 template: "post"
-draft: false
+draft: true
 slug: "/posts/oop-vs-functional-programming-2/"
 description: "객체지향 프로그래밍과 함수형 프로그래밍에 대해 정리한 글입니다. 1, 2부로 나뉘어져 있으며 2부인 이 글은 함수형 프로그래밍에 대해 정리하였습니다."
 category: "Programming"
