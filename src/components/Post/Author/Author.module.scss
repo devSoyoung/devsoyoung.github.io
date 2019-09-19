@@ -4,16 +4,41 @@
 .author {
   border-top: 1px solid $color-gray-border;
   max-width: $layout-post-width;
-  padding-top: 20px;
+  padding-top: 35px;
   @include line-height(1);
-  @include margin-top(1);
+  @include margin-top(2);
   @include margin-bottom(2);
 
+  text-align: center;
+
   &__bio {
+    font-size: 14px;
     &-twitter {
       display: block;
       text-decoration: underline;
     }
+
+    &-name {
+      font-size: 16px;
+      font-weight: 800;
+      display: block;
+      margin-top: 10px;
+      margin-bottom: -2px;
+      letter-spacing: -1.5px;
+    }
+  }
+
+  &__image {
+    margin: auto;
+    width: 90px;
+    height: 90px;
+    border-radius: 100px;
+  }
+
+  &__image:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.2s;
   }
 }
 
