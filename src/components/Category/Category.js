@@ -19,7 +19,7 @@ const Category = ({ categories }: Props) => {
   return (
     <div className={styles['category']}>
       <div className={styles['category__list']}>
-        {Object.keys(categoryList).map(category => (
+        {Object.keys(categoryList).sort().map(category => (
           <span className={styles['category__list__item']}><Link to={categoryList[category]}>{category}</Link></span>
         ))}
       </div>
