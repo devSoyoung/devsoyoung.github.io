@@ -12,7 +12,7 @@ category: "React"
 
 Hooks는 [React v16.8](https://www.youtube.com/watch?v=dpw9EHDh2bM)에 새롭게 도입된 기능입니다. **함수형 컴포넌트에도 state를 제공**하는 API 입니다. 그 동안 어떤 기능인지 살펴보는 것을 미루고 있었는데, 근래의 `create-react-app`이나 보일러 플레이트에서 함수형 컴포넌트를 기본으로 하는 것을 보고 *'이제는 공부해봐야겠다'*는 생각이 들어서 정리하게 되었습니다 👻
 
-## 😱 Before Hooks..
+## Before Hooks..
 
 Hooks는 함수형 컴포넌트에 state를 제공함으로써 상태 관련 로직의 재사용을 이전보다 훨씬 쉽게 만들어줍니다. 그렇다면 Hooks가 나타나기 전, 우리는 **상태 관련 로직을 어떻게 재사용**했을까요?
 
@@ -69,7 +69,7 @@ Render Props 패턴으로 구현된 컴포넌트는 자체적으로 rendering �
 
 단지 로직의 재사용을 위해서 Component Tree에 또 하나의 depth가 추가되어야 한다니. **함수가 상태를 가질 수 있다면, 상태 로직을 재사용하는 방법을 보다 쉽게 바꿀 수 있지 않을까요?**
 
-## 🧐 What Are Hooks?
+## What Are Hooks?
 
 Hook는 바로 이런 문제를 해결합니다. 내장된 Hooks(`useState`, `useEffect`)로 함수에 state, lifecycle 등을 제공합니다. Hook이라는 이름은 *함수에 state와 lifecycle을 끌고와서 넣어준다는 의미로 지은 것일까요?*
 
@@ -77,7 +77,7 @@ Hook는 바로 이런 문제를 해결합니다. 내장된 Hooks(`useState`, `us
 
 Hooks는 **일반 JavaScript 함수**입니다. 그렇기 때문에, Hooks를 활용하는 Custom Hooks를 만들어서 상태를 가지는 로직을 함수로 쉽게 분리할 수 있습니다. Custom Hooks 자체가 React에서 지원하는 기능은 아니지만, Hooks가 디자인 된 방식을 통해 자연스럽게 사용이 가능해지는 것입니다.
 
-## 🤩 Hooks API: useEffect, useState
+## Hooks API: useEffect, useState
 
 Hooks가 제공하는 내장 API에는 useEffect와 useState가 있습니다.
 
@@ -195,7 +195,7 @@ Hooks는 HOC나 render-props 같은 패턴이 가져오는 Component Tree의 불
 
 클래스형 컴포넌트에서 componentDidMount와 componentWillUnmount에 흩어져있던 관련 코드도 state 마다 묶을 수 있기 때문에 좀 더 연관성 있는 코드끼리 모을 수 있습니다.
 
-## 🤗 글을 마무리하며
+## 글을 마무리하며
 
 이번 글을 쓰면서 Hooks가 왜 필요한지 이해하기 위해 꽤 많은 글을 읽었습니다. 그 중 아래 Reference 첫 번째 글인 **Making Sense of React Hooks**가 많은 도움이 되었습니다.
 

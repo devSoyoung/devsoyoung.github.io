@@ -4,7 +4,7 @@ date: "2019-09-22"
 template: "post"
 draft: false
 slug: "/posts/docker-tensorflow/"
-description: "Docker를 이용해 보다 쉽고 깔끔하게 Tensorflow 개발환경을 구축하는 방법에 대해 정리한 글입니다."
+description: "Docker를 이용한 Tensorflow 개발환경 구축방법을 정리한 글입니다."
 category: "Docker"
 ---
 

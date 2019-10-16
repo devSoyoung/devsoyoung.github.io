@@ -4,7 +4,7 @@ date: "2019-09-19"
 template: "post"
 draft: false
 slug: "/posts/how-to-use-gh-pages/"
-description: "GitHub의 User Site를 만들 때, 배포를 위한 브랜치와 코드를 위한 브랜치를 구분하는 방법에 대하여 정리한 글입니다."
+description: "GitHub의 User Site를 만들 때, 배포를 위한 브랜치와 소스코드를 위한 브랜치 구분 방법을 정리한 글입니다."
 category: "Etc"
 ---
 

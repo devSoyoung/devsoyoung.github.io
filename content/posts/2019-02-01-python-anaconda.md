@@ -6,9 +6,6 @@ draft: false
 slug: "/posts/python-anaconda/"
 description: "Python 배포판 아나콘다의 설치 방법과 자주 사용하는 명령어를 정리한 글입니다."
 category: "Python"
-tags:
-  - "Programming"
-  - "Python"
 ---
 
 ## 아나콘다란 무엇인가
