@@ -6,7 +6,6 @@ import Sidebar from '../components/Sidebar';
 import Category from '../components/Category';
 import Feed from '../components/Feed';
 import Page from '../components/Page';
-import Pagination from '../components/Pagination';
 import { useSiteMetadata } from '../hooks';
 import type { PageContext, AllMarkdownRemark } from '../types';
 
@@ -20,10 +19,6 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
 
   const {
     currentPage,
-    hasNextPage,
-    hasPrevPage,
-    prevPagePath,
-    nextPagePath
   } = pageContext;
 
   const { edges } = data.allMarkdownRemark;
@@ -33,19 +28,12 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
   }));
   const pageTitle = currentPage > 0 ? `Posts - Page ${currentPage} - ${siteTitle}` : siteTitle;
 
-  console.log('edges.length:', edges.length);
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
       <Sidebar isIndex />
       <Page>
-        <Category categories={categories}/>
+        {/*<Category categories={categories}/>*/}
         <Feed edges={edges} />
-        <Pagination
-          prevPagePath={prevPagePath}
-          nextPagePath={nextPagePath}
-          hasPrevPage={hasPrevPage}
-          hasNextPage={hasNextPage}
-        />
       </Page>
     </Layout>
   );
