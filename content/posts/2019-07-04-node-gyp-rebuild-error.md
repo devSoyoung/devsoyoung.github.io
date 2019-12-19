@@ -47,7 +47,7 @@ gyp ERR! stack     at Pipe._handle.close [as _onclose] (net.js:561:12)
 
 [node-gyp 레파지토리](https://github.com/nodejs/node-gyp#on-macos)를 보니 3.x버전은 추천하지 않는다고 적혀있었습니다.
 
-> [수정] 최근 다시 확인해보니 해당 부분이 수정되었습니다. Python 버전 문제는 해결된 것 같네요.
+> **[2019-10-16]** 다시 확인해보니 해당 부분이 수정되었습니다. Python 버전 문제는 해결되었나 봅니다 :)
 
 ## 두 번째 오류 : command-line tool
 ```
@@ -59,3 +59,10 @@ No Xcode or CLT version detected!
 ```
 
 Xcode나 CLT가 감지되지 않았다는 새로운 에러가 발생했습니다. 구글링 하면서 찾은 [글](https://github.com/nodejs/node-gyp/issues/773)에 이미 이 내용과 관련된 글을 읽어서 [Xcode를 설치](http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/)하여 금방 오류를 해결할 수 있었습니다.
+
+> **[2019-10-21]** 최근 맥에서 카탈리나로 업데이트를 하니 설치했던 xcode가 사라졌는지 다시 오류가 떴습니다. 멀쩡하던 프로젝트가 맥 업데이트 이후 실행이 안된다면 xcode 설치 여부를 먼저 확인하는 것을 추천드립니다 :)
+
+### xcode 설치 명령어
+```
+$ xcode-select --install
+```
