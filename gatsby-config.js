@@ -1,46 +1,47 @@
-'use strict';
-
-const siteConfig = require('./config.js');
-const postCssPlugins = require('./postcss-config.js');
+const siteMetadata = {
+  title: "큐트리 개발 블로그",
+  description: "Ego sum operarius studens",
+  author: "@devSoyoung",
+  disqusShortname: "cuteleeblog",
+  url: "https://devsoyoung.github.io",
+  siteUrl: "https://devsoyoung.github.io"
+}
 
 module.exports = {
-  pathPrefix: siteConfig.pathPrefix,
-  siteMetadata: {
-    url: siteConfig.url,
-    title: siteConfig.title,
-    subtitle: siteConfig.subtitle,
-    copyright: siteConfig.copyright,
-    disqusShortname: siteConfig.disqusShortname,
-    menu: siteConfig.menu,
-    author: siteConfig.author
-  },
+  siteMetadata,
   plugins: [
+    "gatsby-plugin-react-helmet",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // "gatsby-plugin-offline",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/content`,
-        name: 'pages'
-      }
+        name: "markdown-components",
+        path: `${__dirname}/contents`,
+      },
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-transformer-remark",
       options: {
-        path: `${__dirname}/static/media`,
-        name: 'media'
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'css',
-        path: `${__dirname}/static/css`
-      }
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'assets',
-        path: `${__dirname}/static`
+        plugins: [
+          "gatsby-remark-relative-images",
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 700,
+              withWebp: true,
+            }
+          },
+          {
+            resolve: "gatsby-remark-prismjs",
+            options: {
+
+            }
+          }
+        ]
       }
     },
     {
@@ -52,7 +53,7 @@ module.exports = {
               siteMetadata {
                 site_url: url
                 title
-                description: subtitle
+                description
               }
             }
           }
@@ -62,8 +63,8 @@ module.exports = {
             allMarkdownRemark.edges.map((edge) => Object.assign({}, edge.node.frontmatter, {
               description: edge.node.frontmatter.description,
               date: edge.node.frontmatter.date,
-              url: site.siteMetadata.site_url + edge.node.fields.slug,
-              guid: site.siteMetadata.site_url + edge.node.fields.slug,
+              url: site.siteMetadata.site_url + edge.node.frontmatter.path,
+              guid: site.siteMetadata.site_url + edge.node.frontmatter.path,
               custom_elements: [{ 'content:encoded': edge.node.html }]
             }))
           ),
@@ -77,14 +78,12 @@ module.exports = {
                   edges {
                     node {
                       html
-                      fields {
-                        slug
-                      }
                       frontmatter {
                         title
                         date
                         template
                         draft
+                        path
                         description
                       }
                     }
@@ -93,62 +92,18 @@ module.exports = {
               }
             `,
           output: '/rss.xml',
-          title: siteConfig.title
+          title: siteMetadata.title
         }]
       }
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: "gatsby-plugin-sitemap",
       options: {
-        plugins: [
-          'gatsby-remark-relative-images',
-          {
-            resolve: 'gatsby-remark-katex',
-            options: {
-              strict: 'ignore'
-            }
-          },
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 960,
-              withWebp: true,
-              ignoreFileExtensions: [],
-            }
-          },
-          {
-            resolve: 'gatsby-remark-responsive-iframe',
-            options: { wrapperStyle: 'margin-bottom: 1.0725rem' }
-          },
-          'gatsby-remark-autolink-headers',
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
-          'gatsby-remark-external-links'
-        ]
-      }
-    },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
-    'gatsby-plugin-netlify',
-    {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: `${__dirname}/src/cms/index.js`,
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-google-gtag',
-      options: {
-        trackingIds: [siteConfig.googleAnalyticsId],
-        pluginConfig: {
-          head: true,
-        },
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-sitemap',
-      options: {
+        output: "/sitemap.xml",
+        // Exclude specific components or groups of components using glob parameters
+        // See: https://github.com/isaacs/minimatch
+        // The example below will exclude the single `path/to/page` and all routes beginning with `category`
+        exclude: ["/til"],
         query: `
           {
             site {
@@ -156,52 +111,26 @@ module.exports = {
                 siteUrl: url
               }
             }
-            allSitePage(
-              filter: {
-                path: { regex: "/^(?!/404/|/404.html|/dev-404-page/)/" }
-              }
-            ) {
-              edges {
-                node {
-                  path
-                }
+  
+            allSitePage {
+              nodes {
+                path
               }
             }
-          }
-        `,
-        output: '/sitemap.xml',
-        serialize: ({ site, allSitePage }) => allSitePage.edges.map((edge) => ({
-          url: site.siteMetadata.siteUrl + edge.node.path,
-          changefreq: 'daily',
-          priority: 0.7
-        }))
+        }`,
+        resolveSiteUrl: ({ site, allSitePage }) => {
+          //Alternativly, you may also pass in an environment variable (or any location) at the beginning of your `gatsby-config.js`.
+          return site.siteMetadata.siteUrl;
+        },
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.nodes.map(node => {
+            return {
+              url: `${site.siteMetadata.siteUrl}${node.path}`,
+              changefreq: "daily",
+              priority: 0.7,
+            };
+          })
       }
-    },
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: siteConfig.title,
-        short_name: siteConfig.title,
-        start_url: '/',
-        background_color: '#FFF',
-        theme_color: '#F7A046',
-        display: 'standalone',
-        icon: 'static/photo.jpeg'
-      },
-    },
-    'gatsby-plugin-offline',
-    'gatsby-plugin-catch-links',
-    'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-plugin-sass',
-      options: {
-        postCssPlugins: [...postCssPlugins],
-        cssLoaderOptions: {
-          camelCase: false,
-        }
-      }
-    },
-    'gatsby-plugin-flow',
-    'gatsby-plugin-optimize-svgs',
-  ]
+    }
+  ],
 };

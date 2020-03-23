@@ -1,48 +1,32 @@
-// @flow strict
-import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
-import Post from '../components/Post';
-import { useSiteMetadata } from '../hooks';
-import type { MarkdownRemark } from '../types';
+import React from "react";
+import { graphql } from "gatsby";
 
-type Props = {
-  data: {
-    markdownRemark: MarkdownRemark
-  }
-};
+import Layout from "../components/layout";
+import Post from "../components/Post";
+import SEO from "../components/seo"
 
-const PostTemplate = ({ data }: Props) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
-  const { frontmatter } = data.markdownRemark;
-  const { title: postTitle, description: postDescription } = frontmatter;
-  const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
-
+const PostTemplate = ({ data }) => {
+  const { markdownRemark: { frontmatter, html }} = data;
   return (
-    <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription} >
-      <Post post={data.markdownRemark} />
+    <Layout type="post">
+      <SEO title={frontmatter.title} />
+      <Post {...frontmatter} html={html} />
     </Layout>
   );
-};
+}
 
-export const query = graphql`
-  query PostBySlug($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
+export default PostTemplate;
+
+export const pageQuery = graphql`
+  query($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
-      fields {
-        slug
-        tagSlugs
-      }
       frontmatter {
-        date
-        description
-        tags
+        date(formatString: "YYYY-MM-DD")
+        path
         title
         category
       }
     }
   }
 `;
-
-export default PostTemplate;

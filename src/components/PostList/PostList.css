@@ -1,0 +1,7 @@
+.post-list {
+    margin: auto;
+}
+
+.post-list:first-child {
+    margin-top: 15px;
+}

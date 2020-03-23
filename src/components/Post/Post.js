@@ -1,41 +1,36 @@
-// @flow
-import React, { useEffect, useRef } from 'react';
-import { Link } from 'gatsby';
-import Author from './Author';
-import Comments from './Comments';
-import Content from './Content';
-import Meta from './Meta';
-import Tags from './Tags';
-import styles from './Post.module.scss';
-import type { Node } from '../../types';
+import React, { useRef, useEffect } from "react";
 
-type Props = {
-  post: Node
-};
+import Comment from "./Comment";
+import Author from "./Author";
+// import OtherPost from "./OtherPost";
+import PostInfo from "./PostInfo";
 
-const Post = ({ post }: Props) => {
-  const { html } = post;
-  const { tagSlugs, slug } = post.fields;
-  const { tags, title, date, category } = post.frontmatter;
+import "./Post.css";
+
+const Post = ({ title, date, category, html, path }) => {
+  const titleRef = useRef();
+
+  useEffect(() => {
+    titleRef.current.scrollIntoView();
+  }, []);
 
   return (
-    <div className={styles['post']}>
-      <Link className={styles['post__home-button']} to="/">Home</Link>
-
-      <div className={styles['post__content']}>
-        <Content body={html} title={title} date={date} tags={tags} category={category} />
+    <div className="post-container" ref={titleRef}>
+      <div className="post-info-container">
+        <PostInfo category={category} date={date} />
+        <h2 className="post-title">{title}</h2>
       </div>
 
-      <div className={styles['post__footer']}>
-        {tags && tagSlugs && <Tags tags={tags} tagSlugs={tagSlugs} />}
-        <Author />
-      </div>
-
-      <div className={styles['post__comments']}>
-        <Comments postSlug={slug} postTitle={post.frontmatter.title} />
-      </div>
+      <div
+        className="post-content"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
+      <Author />
+      {/*<OtherPost />*/}
+      <Comment path={path} title={title} />
     </div>
   );
 };
 
 export default Post;
+

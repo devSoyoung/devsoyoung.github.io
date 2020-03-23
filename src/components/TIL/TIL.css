@@ -1,0 +1,19 @@
+.til-title {
+    margin-top: 25px;
+    font-size: 30px;
+}
+.til-subtitle {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    margin-top: 15px;
+    padding-left: 10px;
+}
+
+@media all and (min-width: 768px) {
+    .til-subtitle {
+        display: inline;
+        margin-left: 5px;
+    }
+}

@@ -1,19 +1,30 @@
-// @flow strict
-import React from 'react';
-import styles from './Author.module.scss';
-import { useSiteMetadata } from '../../../hooks';
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+
+import profile from "../../../../contents/profile.jpeg";
+
+import "./Author.css";
 
 const Author = () => {
-  const { author } = useSiteMetadata();
+  const data = useStaticQuery(graphql`
+    query AuthorQuery {
+      site {
+        siteMetadata {
+          author
+          description
+        }
+      }
+    }
+  `);
+
+  const { author, description } = data.site.siteMetadata;
   return (
-    <div className={styles['author']}>
-      <a href={`https://github.com/${author.contacts.github}`}>
-        <img className={styles['author__image']} alt="profile images" src={author.photo} />
-      </a>
-      <p className={styles['author__bio']}>
-        <span className={styles['author__bio-name']}>{author.name}</span>
-        {author.bio}
+    <div className="author-info">
+      <img className="author-image" alt="프로필 사진" src={profile} />
+      <p className="author-name">
+        <a href="https://github.com/devSoyoung" target="_blank">{author}</a>
       </p>
+      <p className="author-description">{description}</p>
     </div>
   );
 };
