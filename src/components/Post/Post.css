@@ -33,6 +33,7 @@
     padding-bottom: .3em;
     border-bottom: 1px solid #eaecef;
     margin: 30px 0 15px 0;
+    font-size: 25px;
 }
 
 .post-content hr {
@@ -45,6 +46,7 @@
 
 .post-content h3 {
     margin: 35px 0 20px 0px;
+    font-size: 22px;
 }
 
 .post-content a {
@@ -72,8 +74,9 @@
 
 .post-content code[class*="language-"], .post-content pre[class*="language-"] {
     background: #f6f8fa;
-    font-family: sans-serif;
+    font-size: 13px;
     color: black;
+    letter-spacing: -0.5px;
     padding: 3px;
 }
 
