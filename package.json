@@ -9,7 +9,7 @@
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-feed": "^2.4.0",
-    "gatsby-plugin-manifest": "^2.2.39",
+    "gatsby-plugin-manifest": "^2.3.1",
     "gatsby-plugin-offline": "^3.0.32",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-sharp": "^2.4.3",
@@ -44,7 +44,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "npm run clean && gatsby build --prefix-paths && cd public && rm *.map && cd .. && gh-pages -b master -d public"
+    "deploy": "npm run clean && gatsby build && cd public && rm *.map && cd .. && gh-pages -b master -d public"
   },
   "repository": {
     "type": "git",

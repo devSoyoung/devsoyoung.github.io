@@ -103,7 +103,7 @@ module.exports = {
         // Exclude specific components or groups of components using glob parameters
         // See: https://github.com/isaacs/minimatch
         // The example below will exclude the single `path/to/page` and all routes beginning with `category`
-        exclude: ["/til"],
+        exclude: [],
         query: `
           {
             site {
@@ -130,6 +130,18 @@ module.exports = {
               priority: 0.7,
             };
           })
+      }
+    },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: siteMetadata.siteUrl,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: "minimal-ui",
+        icon: "contents/profile.jpeg", // This path is relative to the root of the site.
       }
     }
   ],

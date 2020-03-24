@@ -27,12 +27,6 @@ exports.createPages = ({ actions, graphql }) => {
     context: {},
   });
 
-  createPage({
-    path: "/404",
-    component: path.resolve("src/pages/404.js"),
-    context: {}
-  })
-
   return graphql(`
     {
       allMarkdownRemark(
