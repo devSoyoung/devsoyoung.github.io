@@ -1,4 +1,299 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[큐트리 개발 블로그]]></title><description><![CDATA[Ego sum operarius studens]]></description><link>https://devsoyoung.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 24 Mar 2020 02:58:47 GMT</lastBuildDate><item><title><![CDATA[2019년을 돌아보며]]></title><description><![CDATA[2019년 한 해를 돌아보며 배우고 느꼈던 것을 정리했습니다.]]></description><link>https://devsoyoung.github.io/posts/goodbye-2019/</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/goodbye-2019/</guid><pubDate>Thu, 19 Dec 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;다른 개발블로그를 보면 한 해를 돌아보며 정리한 글을 올리시는 분들이 종종 계신다. 올해 블로그를 만들면서 &lt;strong&gt;&apos;나도 연말에 꼭 저렇게 한 해를 정리하는 글을 올려야지&apos;&lt;/strong&gt; 하는 생각을 했었다. 드디어 연말이 되었다. 한게 많이 없어서 &lt;strong&gt;&apos;쓸 내용이 없으면 어떡하지?&apos;&lt;/strong&gt;라는 고민을 했었는데 돌아보니 생각보다 많은 경험을 했고 많은 것을 배웠다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[큐트리 개발 블로그]]></title><description><![CDATA[Ego sum operarius studens]]></description><link>https://devsoyoung.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 24 Mar 2020 06:03:06 GMT</lastBuildDate><item><title><![CDATA[Gatsby로 블로그 만들기]]></title><description><![CDATA[Gatsby로 블로그를 만들었던 과정을 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/gatsby-blog/</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/gatsby-blog/</guid><pubDate>Tue, 24 Mar 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;2020년 새해 목표 중 하나는 블로그를 새로 만드는 것이었습니다. &lt;del&gt;(또 다른 목표는 매달 블로그 글 하나씩 쓰기였는데..)&lt;/del&gt; 지난 블로그도 Gatsby를 사용해서 만들었는데, 다른 개발자분이 만들어두신 스타터에 댓글을 추가하고 스타일만 수정해서 사용했습니다.  &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 700px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/617db351984dd9710998b838a6e24b5f/89587/prev-blog.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 72%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAACJElEQVQ4y41TyW4aQRCdI+BIiUBsInaWK2fnbkwkK/kLxBIsYYmecLEyH+EcOFgCwQ+wCV9yzTfYySGR2GIcdokZ1qYrVeOBTOzYoqU3r6u7+s2rnhrp5TOb5/Xe0+Tuiz3ZYbczh8PBnC4Xe+7xMK/bzey45vP52JOdHebzepnT6WQet4u92d9nfr+f2Ww2ZrFYZKvVmkT2SW8PA4eRcAgSicQGsVgMPiCikQiEQrh3cgLx42M9DofDEI1G4aMsQzKZ3MTxeByCweA7qVQuH6xWKw4Ay4fw49vl8uf3q4f2F8RCCF6tVo+kUqkUWC5pHQAXBT1oSsAX6fz1y4UO89oawshfLBZQqVSOpGKxGKBgLbjWxIM6U7Y2mYCqTSgBxH3cFzQ7vN03DXUC8+kUpojZbPaP2KaqxwSJNU2D/mAA2ngMM1WDOQrNDJjHVg6JByhWq9Wg1WrBr+traDab0Gg09FhVVR3z+Xx7h+RkjO6meHdU6oSA83XJdL+ErQVvHdbh980NdDodHaPRCDjnQAeJHy3Z/JWJ0IlAhwLvUmB5OqNTfZ0Y88Xfb3hHEPvwAAPyz3GPrPLhcMjr9Trvdjq82+3ydrvN+/0+7/V6HAU5/QjUyJRrNDcnDV2wUCgE4T+D3iiwNGH046Yv77aVaZTL5feSLMu72Wz2NJPJKIhPOFfS6bTy+exMyZ+fK/lcTsnl80reQI5ihJGvnzH4NJVKvfoDdBWfMZXGlAAAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/617db351984dd9710998b838a6e24b5f/c54d4/prev-blog.webp 175w,
+/static/617db351984dd9710998b838a6e24b5f/a3432/prev-blog.webp 350w,
+/static/617db351984dd9710998b838a6e24b5f/426ac/prev-blog.webp 700w,
+/static/617db351984dd9710998b838a6e24b5f/c139f/prev-blog.webp 1050w,
+/static/617db351984dd9710998b838a6e24b5f/7f403/prev-blog.webp 1400w,
+/static/617db351984dd9710998b838a6e24b5f/33c6a/prev-blog.webp 2624w&quot;
+          sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/617db351984dd9710998b838a6e24b5f/4edbd/prev-blog.png 175w,
+/static/617db351984dd9710998b838a6e24b5f/13ae7/prev-blog.png 350w,
+/static/617db351984dd9710998b838a6e24b5f/8c557/prev-blog.png 700w,
+/static/617db351984dd9710998b838a6e24b5f/e996b/prev-blog.png 1050w,
+/static/617db351984dd9710998b838a6e24b5f/2cefc/prev-blog.png 1400w,
+/static/617db351984dd9710998b838a6e24b5f/89587/prev-blog.png 2624w&quot;
+          sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/617db351984dd9710998b838a6e24b5f/8c557/prev-blog.png&quot;
+          alt=&quot;지난 블로그&quot;
+          title=&quot;지난 블로그&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;한 번쯤은 직접 만들어 보고싶어서 새해 목표로 정했는데, 연초에는 인턴을 하느라 시간이 나지 않아 미루다 드디어 만들었습니다. 유용한 플러그인도 많고, 공식 문서에 설명도 잘 되어있어서 생각보다 금방 만들었습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 700px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/16498b01ea08db756f938c4426a616d7/89587/new-blog.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 72%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAACnUlEQVQ4y5WSWU8TURTH5xNoEFkiwQ2fVIKGByFGbDssDQpWMSBQX6AUUQE7A0FZBAMu34AXlgcEI0JLcYHAVwECtTsQSFiazkzP8dw7UNli4kl+Oecu55//uTPCtbSE1KzrKY7c29mymJ8n5eRmSzezrkqXM9KljCvnpQsXz0kpqWekpOTTOkl6Ppv0d52ckiATjsTEU2nCjcxbYoFowfKyGnxSbkdL6VO0lFRjUUEZFohlKBotaMgrRcOdEp6Nd3VEwwMsFB9hvukh3X2MxeYKzMrMKRbuF7YZX9R81RprJ9SXNeNqY+03VW5wqq/skxypwcWRn7tUxzOn2lw3qTbZJlRHPd0hmmyTSnOdk/rGtdKi12ahyCCbbFUjaLd+QXv1GDBsVaNgq/wM9dYx6Gr5Dt1tP+FTzxy0O9xgp726asZoHN5TOYJmY4tZsJZ3m969+YF9nbPY2/EL+jpm8GP3PDGHH97O0d4Msr33nXruPQbrmQWmYa3oMQsul8sUjSoIgASAoqj42+NHvy+Iq6urqCgKsohpMYzF4ARi1IXANNxut1mYmpoyqaqKewFMYHFxEZeWljhMNBKJ4D8CGExjenpad7jvgh+QQ583gH5/AHd2dphr5kI/ZFaOA/tG4oIHHbJ6eXkFFxYWcG1tDaPRKG5vb8dH/29BduD1+rnY+vo6BgIB3NjYQL3vhHlPEjw4MtWwsrIMoVAIwuEwzyQMu7u7QG/JIcdAzwH7cUiQPoqRFuyRNILMaprPG9Q2Nzc1atKoWdva2joEaWh793kPy0yDCzqdzvyjY4RCYSLEx/V4PPQEXgwGg3zN8oGJDgX9NvcEWZbTh4aG2gcHB7uITpaHh4dZ3UX7vD5Kf38/Z2BgIN5DtLe2tl76A9cMR48pF8BvAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/16498b01ea08db756f938c4426a616d7/c54d4/new-blog.webp 175w,
+/static/16498b01ea08db756f938c4426a616d7/a3432/new-blog.webp 350w,
+/static/16498b01ea08db756f938c4426a616d7/426ac/new-blog.webp 700w,
+/static/16498b01ea08db756f938c4426a616d7/c139f/new-blog.webp 1050w,
+/static/16498b01ea08db756f938c4426a616d7/7f403/new-blog.webp 1400w,
+/static/16498b01ea08db756f938c4426a616d7/33c6a/new-blog.webp 2624w&quot;
+          sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/16498b01ea08db756f938c4426a616d7/4edbd/new-blog.png 175w,
+/static/16498b01ea08db756f938c4426a616d7/13ae7/new-blog.png 350w,
+/static/16498b01ea08db756f938c4426a616d7/8c557/new-blog.png 700w,
+/static/16498b01ea08db756f938c4426a616d7/e996b/new-blog.png 1050w,
+/static/16498b01ea08db756f938c4426a616d7/2cefc/new-blog.png 1400w,
+/static/16498b01ea08db756f938c4426a616d7/89587/new-blog.png 2624w&quot;
+          sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/16498b01ea08db756f938c4426a616d7/8c557/new-blog.png&quot;
+          alt=&quot;새 블로그&quot;
+          title=&quot;새 블로그&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;설치 및 시작하기&lt;/h2&gt;
+&lt;p&gt;먼저 gatsby를 설치한 후, 새 프로젝트를 생성합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ npm install -g gatsby-cli
+$ gatsby new gatsby-site&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-site&lt;/code&gt; 디렉토리 안에 프로젝트가 생성됩니다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;gatsby-cli를 설치하고 싶지 않다면 &lt;code class=&quot;language-text&quot;&gt;npx gatsby new gatsby-site&lt;/code&gt; 명령어를 실행하시면 됩니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby develop&lt;/code&gt; 커맨드를 실행하면 &lt;code class=&quot;language-text&quot;&gt;localhost:8000&lt;/code&gt;에서 핫 리로드가 적용된 페이지를 확인할 수 있습니다.&lt;/p&gt;
+&lt;h2&gt;마크다운 파일로 블로그 만들기&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-transformer-remark&lt;/code&gt; &lt;a href=&quot;https://www.gatsbyjs.org/docs/adding-markdown-pages/#transform-markdown-to-html-and-frontmatter-to-data-using-gatsby-transformer-remark&quot;&gt;플러그인&lt;/a&gt;을 사용하면 마크다운 파일을 HTML로 변환할 수 있습니다. Gatsby는 공식문서가 진짜 잘 정리되어 있어서 필요한 플러그인을 검색하면 설치부터 적용까지 정리된 문서를 볼 수 있습니다.&lt;/p&gt;
+&lt;h3&gt;📍 플러그인 설치&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ npm install --save gatsby-source-filesystem gatsby-transformer-remark&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-source-filesystem&lt;/code&gt; 플러그인은 파일을 읽어옵니다. 플러그인을 사용하기 위해서는 &lt;code class=&quot;language-text&quot;&gt;gatsby-config.js&lt;/code&gt; 파일에 사용할 플러그인을 등록해야 합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// gatsby-config.js&lt;/span&gt;
+plugins&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    resolve&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;gatsby-source-filesystem&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      name&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;markdown-pages&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      path&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;__dirname&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/src/markdown-pages&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;gatsby-markdown-remark&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;plugins&lt;/code&gt; 배열에 사용할 플러그인의 이름과 설정을 추가합니다. 다른 option이 필요없다면 플러그인 이름만 문자열로 넣어도 등록할 수 있습니다. &lt;code class=&quot;language-text&quot;&gt;options&lt;/code&gt;의 &lt;code class=&quot;language-text&quot;&gt;path&lt;/code&gt;에는 파일이 들어있는 디렉토리를 지정합니다.&lt;/p&gt;
+&lt;h3&gt;📍 마크다운 파일 만들기&lt;/h3&gt;
+&lt;p&gt;마크다운 파일에는 &lt;code class=&quot;language-text&quot;&gt;---&lt;/code&gt;로 둘러싸인 블록 안에 정보를 추가할 수 있습니다. 이 정보는 &lt;code class=&quot;language-text&quot;&gt;gatsby-markdown-remark&lt;/code&gt;가 &lt;code class=&quot;language-text&quot;&gt;frontmatter&lt;/code&gt;로 파싱합니다. graphql 쿼리로 이 데이터를 컴포넌트에서 쉽게 가져다 쓸 수 있습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;md&quot;&gt;&lt;pre class=&quot;language-md&quot;&gt;&lt;code class=&quot;language-md&quot;&gt;&lt;span class=&quot;token hr punctuation&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; date: &quot;2019-10-20&quot;
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; title: &quot;테스트용 게시글입니다.&quot;
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; description: &quot;게시글에 대한 설명입니다.&quot;
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; template: &quot;post&quot;
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; path: &quot;/posts/test-post&quot;
+&lt;span class=&quot;token list punctuation&quot;&gt;-&lt;/span&gt; draft: false
+
+&lt;span class=&quot;token hr punctuation&quot;&gt;---&lt;/span&gt;
+
+&lt;span class=&quot;token title important&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;##&lt;/span&gt; 게시글&lt;/span&gt;
+게시글 내용은 여기에 작성합니다.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;블록 안의 데이터 key는 원하는대로 지정할 수 있습니다. 저는 date, title, description, template, path, draft를 사용했습니다. 이 값을 이용해서 데이터를 필터링해 가져오거나 정렬할 수 있습니다. &lt;/p&gt;
+&lt;h3&gt;📍 템플릿 만들기&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;react&quot;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; graphql &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;gatsby&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Template&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; data &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; frontmatter&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; html &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;markdownRemark&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div className&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;blog-post-container&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+      &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div className&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;blog-post&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+        &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;h1&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;frontmatter&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;title&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;h1&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+        &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;h2&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;frontmatter&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;date&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;h2&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+        &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div
+          className&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;blog-post-content&quot;&lt;/span&gt;
+          dangerouslySetInnerHTML&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; __html&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; html &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+      &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+    &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; pageQuery &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; graphql&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;
+  query($path: String!) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
+      html
+      frontmatter {
+        date(formatString: &quot;YYYY-MM-DD&quot;)
+        path
+        title
+      }
+    }
+  }
+&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;pageQuery&lt;/code&gt;에서 정의한 graphql query 결과는 &lt;code class=&quot;language-text&quot;&gt;Template&lt;/code&gt; 컴포넌트에 &lt;code class=&quot;language-text&quot;&gt;data&lt;/code&gt;라는 이름의 &lt;code class=&quot;language-text&quot;&gt;props&lt;/code&gt;로 전달됩니다. 위 템플릿 예제는 공식 사이트 예제를 그대로 가져온 것인데, 블록 안의 데이터를 가져오고 싶다면 &lt;code class=&quot;language-text&quot;&gt;pageQuery&lt;/code&gt;의 &lt;code class=&quot;language-text&quot;&gt;frontmatter&lt;/code&gt;에 template, description 등의 필드를 추가하면 됩니다.&lt;/p&gt;
+&lt;p&gt;마크다운 파일의 내용은 html에 저장되고, &lt;code class=&quot;language-text&quot;&gt;dangerouslySetInnerHTML&lt;/code&gt;로 화면에 표시할 수 있습니다.&lt;/p&gt;
+&lt;h2&gt;소스코드 하이라이팅&lt;/h2&gt;
+&lt;p&gt;github는 아래와 같이 소스코드 블록 시작 기호 뒤에 언어를 표시하면 해당 언어의 문법에 맞게 예약어 등을 하이라이팅 해줍니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;```js&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-remark-prismjs&lt;/code&gt; &lt;a href=&quot;https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/&quot;&gt;플러그인&lt;/a&gt;을 사용하면 HTML로 변환할 때, 소스코드를 예쁘게 만들어줍니다.&lt;/p&gt;
+&lt;h3&gt;📍 플러그인 설치&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ npm install --save gatsby-remark-prismjs prismjs&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;플러그인과 &lt;code class=&quot;language-text&quot;&gt;prismjs&lt;/code&gt;를 설치한 후, &lt;code class=&quot;language-text&quot;&gt;gatsby-config.js&lt;/code&gt;에 설정을 추가해줍니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// gatsby-config.js&lt;/span&gt;
+plugins&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+  &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    resolve&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;gatsby-transformer-remark&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+     plugins&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+       &lt;span class=&quot;token string&quot;&gt;&quot;gatsby-remark-prismjs&quot;&lt;/span&gt;
+     &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-transformer-remark&lt;/code&gt; 플러그인의 &lt;code class=&quot;language-text&quot;&gt;options&lt;/code&gt;안에 &lt;code class=&quot;language-text&quot;&gt;gatsby-remark-prismjs&lt;/code&gt;를 추가해줍니다. 플러그인의 플러그인..&lt;/p&gt;
+&lt;h3&gt;📍 스타일 활성화&lt;/h3&gt;
+&lt;p&gt;테마를 로드하기 위해서 &lt;code class=&quot;language-text&quot;&gt;gatsby-browser.js&lt;/code&gt;에 CSS 파일을 추가해줍니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// gatsby-browser.js&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;prismjs/themes/prism-solarizedlight.css&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;themes&lt;/code&gt; 뒤에 css 파일은 있는 테마 중에서 원하는 걸 사용하면 됩니다. 다 바꿔봤는데 저게 제일 예뻤어요.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;라인 숫자, 언어 확장 등의 설정은 &lt;a href=&quot;https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/&quot;&gt;도큐먼트&lt;/a&gt;를 참고해주세요 :)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;마크다운 인라인 이미지&lt;/h2&gt;
+&lt;p&gt;이미지 파일을 읽어와서 표시하는 기능은 &lt;code class=&quot;language-text&quot;&gt;gatsby-remark-images&lt;/code&gt;&lt;a href=&quot;https://www.gatsbyjs.org/packages/gatsby-remark-images&quot;&gt;(공식문서)&lt;/a&gt;를 사용했습니다.&lt;/p&gt;
+&lt;h3&gt;📍 플러그인 설치&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ npm install --save gatsby-remark-images&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-remark-images&lt;/code&gt;를 사용하려면 &lt;code class=&quot;language-text&quot;&gt;gatsby-plugin-sharp&lt;/code&gt;도 필요한데, 이건 스타터에 포함되어 있어서 따로 설치하지 않았습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// gatsby-config.js&lt;/span&gt;
+module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  plugins&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;gatsby-plugin-sharp&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      resolve&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;gatsby-transformer-remark&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        plugins&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            resolve&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;gatsby-remark-images&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+              maxWidth&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;800&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+            &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+          &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      resolve&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;gatsby-source-filesystem&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      options&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        path&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;__dirname&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;/src/posts&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-transformer-remark&lt;/code&gt; 안의 플러그인에 추가해줍니다. 썸네일을 알아서 만들어주고 Lazy Loading 까지 구현되어 있어서 플러그인만 설치하면 구현할 게 없었다는 사실..&lt;/p&gt;
+&lt;h2&gt;sitemap.xml 만들기&lt;/h2&gt;
+&lt;p&gt;구글 검색결과에 노출되기 위해서 &lt;code class=&quot;language-text&quot;&gt;sitemap.xml&lt;/code&gt;을 만들어야하는데, 이것도 플러그인이 있어서 설정만 해주면 빌드할 때 깔끔하게 만들어줍니다.&lt;/p&gt;
+&lt;h3&gt;📍 플러그인 설치&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-plugin-sitemap&lt;/code&gt; &lt;a href=&quot;https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap/&quot;&gt;플러그인&lt;/a&gt;을 설치합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ npm install --save gatsby-plugin-sitemap&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;gatsby-config.js&lt;/code&gt;의 &lt;code class=&quot;language-text&quot;&gt;siteMetadata&lt;/code&gt;에 &lt;code class=&quot;language-text&quot;&gt;siteUrl&lt;/code&gt; 필드를 추가하고, 사이트 주소를 넣어줍니다. 그리고 plugin에 추가합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// gatsby-config.js&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  siteMetadata&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    siteUrl&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;https://www.example.com&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  plugins&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;gatsby-plugin-sitemap&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;페이지마다 Title 설정하는 것도 &lt;code class=&quot;language-text&quot;&gt;SEO&lt;/code&gt; 컴포넌트가 이미 만들어져 있어서 전달하는 값만 변경하면 되었습니다. 스타터가 잘 만들어져있어서, 필요한 플러그인만 슥슥 갖다붙이면 되는 엄청난 편리함을 느꼈습니다. &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 700px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/3240b310bb0d5dfc241e4145b05070f0/89587/graphqi.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 72%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAACLklEQVQ4y62TTW8SQRiA9woU44VEND1Um8a0B+NP6KIJ0Z8A5aOF3jiw9NR07xy4AKnFA9zUbPcj+IdMTCxaCQvd792ZndeZBaGilzZO8mTed2fmyTtvZrmnD+OPtjYf1Pdevmjs7e4Kz7a3hec7O8LjdFpIU1KplJBMJoV4PL4kxogt4lhMSCQSjY2NRJ3GT7jXmUymenwEwskJNBoNqNVqcFytQqFYhFKpBMViAfL5PORyuSUHB3koFApQLpejPUeHh1CpVIDn+Tecpqn7vmlj33ERDjECADSZTND16Dua6TNkGGaEaVrIMk2kT6fIoLNp0XxOYNk2+jmeYEm6zHKXksR/+TYG3fSoCwjD9z2i6yaZ6g4JAkIwInTM11zXI84arucTw7RAUbUsJzHh1QTGNy7gMIxOuq4LCGMImeUWYRiC7TgU9zaR9MYwQVbULCcrEj++moLvRwUQdsj3fRZCVPJCFsV0zYkkHjjuSsgqZEKFCT8PNX50PQXPoxWFmGBamed5K8ldhaoi819/6OChcHGeRBXeW/jh46dIaHno/wgVWeZH4xkYdiRZ9vD+V1ZV3rYtCKiEylgPCe0h+ddg60ywzh/C4XC4HwQBayBmj5rNNMeL/C/oE1kHUSGmwlBRqVDTtFdwh8FuT2BFOO8GBAiDLCtvOfr/bg4Gg9N+vy9Sztjc7XbFZrMptlotsdPpiO12e8n5+Tux13svXvR6vzm7oDn9dlqv17d+Af5UmaDkvZgkAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/3240b310bb0d5dfc241e4145b05070f0/c54d4/graphqi.webp 175w,
+/static/3240b310bb0d5dfc241e4145b05070f0/a3432/graphqi.webp 350w,
+/static/3240b310bb0d5dfc241e4145b05070f0/426ac/graphqi.webp 700w,
+/static/3240b310bb0d5dfc241e4145b05070f0/c139f/graphqi.webp 1050w,
+/static/3240b310bb0d5dfc241e4145b05070f0/7f403/graphqi.webp 1400w,
+/static/3240b310bb0d5dfc241e4145b05070f0/33c6a/graphqi.webp 2624w&quot;
+          sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/3240b310bb0d5dfc241e4145b05070f0/4edbd/graphqi.png 175w,
+/static/3240b310bb0d5dfc241e4145b05070f0/13ae7/graphqi.png 350w,
+/static/3240b310bb0d5dfc241e4145b05070f0/8c557/graphqi.png 700w,
+/static/3240b310bb0d5dfc241e4145b05070f0/e996b/graphqi.png 1050w,
+/static/3240b310bb0d5dfc241e4145b05070f0/2cefc/graphqi.png 1400w,
+/static/3240b310bb0d5dfc241e4145b05070f0/89587/graphqi.png 2624w&quot;
+          sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/3240b310bb0d5dfc241e4145b05070f0/8c557/graphqi.png&quot;
+          alt=&quot;graphiQL&quot;
+          title=&quot;graphiQL&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;graphql을 한 번도 사용해 본 적이 없어서 처음에 많이 낯설었는데, 다른 쿼리를 보면서 따라하니까 금방 적응되었습니다. 그리고 개발 할 때 &lt;code class=&quot;language-text&quot;&gt;localhost:8000/__graphql&lt;/code&gt;로 접근하면 graphiQL로 더 쉽게 쿼리를 만들 수 있습니다.&lt;/p&gt;
+&lt;p&gt;블로그 제작 툴을 고민하고 있다면, Gatsby 추천드립니다. 👍🏻&lt;/p&gt;</content:encoded></item><item><title><![CDATA[2019년을 돌아보며]]></title><description><![CDATA[2019년 한 해를 돌아보며 배우고 느꼈던 것을 정리했습니다.]]></description><link>https://devsoyoung.github.io/posts/goodbye-2019/</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/goodbye-2019/</guid><pubDate>Thu, 19 Dec 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;다른 개발블로그를 보면 한 해를 돌아보며 정리한 글을 올리시는 분들이 종종 계신다. 올해 블로그를 만들면서 &lt;strong&gt;&apos;나도 연말에 꼭 저렇게 한 해를 정리하는 글을 올려야지&apos;&lt;/strong&gt; 하는 생각을 했었다. 드디어 연말이 되었다. 한게 많이 없어서 &lt;strong&gt;&apos;쓸 내용이 없으면 어떡하지?&apos;&lt;/strong&gt;라는 고민을 했었는데 돌아보니 생각보다 많은 경험을 했고 많은 것을 배웠다.&lt;/p&gt;
 &lt;h2&gt;3번의 인턴 🏢&lt;/h2&gt;
 &lt;p&gt;올해는 절반 이상을 회사에서 보냈다. 7개월동안 3개의 팀에서 일을 해보았는데, 지나고나서 돌아보니 새로운 팀에 가서 사람들과 친해지고 일을 배우는게 은근히 스트레스 였던 것 같다. 다행히 정말 좋은 분들과 일할 수 있었지만, &lt;strong&gt;새로운 업무 방식과 문화에 적응하는 것은 에너지가 많이 드는 일&lt;/strong&gt;이라는 걸 알았다.&lt;/p&gt;
 &lt;p&gt;3학년을 끝내지도 못하고 인턴을 하게 되어서 정말 부족한 점이 많았는데, 친절한 개발자분들이 옆에서 알려주고 도와주셔서 좀 더 성장할 수 있었다. 첫 인턴을 한 회사에서 첫 주간회의에 함께 들어가서 이야기하는 것을 들었을 때, 외계어로 소통하는 줄 알았다. &lt;em&gt;분명 한국어로 말하는데 나는 왜…&lt;/em&gt; &lt;/p&gt;
@@ -2533,55 +2828,7 @@ target2El&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
 &lt;li&gt;현재 블록에 catch나 finally가 없는 경우 상위 블록이나 호출한 함수로 이동&lt;/li&gt;
 &lt;li&gt;catch가 존재하지 않는 경우, finally를 실행하고, catch 될 수 있는 구문을 찾아서 이동&lt;/li&gt;
 &lt;li&gt;catch 구문에서 에러가 처리되고, 이후 코드를 실행&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[JS] Timer: setTimeout, setInterval]]></title><description><![CDATA[Javascript의 Timer 관련 함수인 setTimeout, setInterval에 대해 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/js-timer</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/js-timer</guid><pubDate>Tue, 26 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;타이머 함수의 활용&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;특정 함수나 기능을 바로 실행하지 않고, 약간의 &lt;strong&gt;시간이 지난 후에 실행&lt;/strong&gt;하고 싶을 때&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;어떤 정보를 표시한 후, 몇 초 뒤에 다른 페이지로 이동&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;특정 함수를 지속적으로 &lt;strong&gt;반복 실행&lt;/strong&gt;하고 싶을 때&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;특정 시간마다 화면을 갱신하기 위해서 서버에 새로운 정보를 요청&lt;/li&gt;
-&lt;li&gt;남은 로그인 유지 시간 표시&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;setInterval&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;setInterval(fn, delay);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;일정시간 &lt;strong&gt;마다&lt;/strong&gt; 함수를 실행&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token function&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;				&lt;span class=&quot;token comment&quot;&gt;// 1초마다 출력&lt;/span&gt;
-	console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;setInterval&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;setInterval&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;		&lt;span class=&quot;token comment&quot;&gt;// 1번만 출력&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;주의할 점은 &lt;strong&gt;함수 안의 내용을 반복적으로 수행&lt;/strong&gt;하는 것(함수 자체를 반복해주지 않음)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;setInterval은 &lt;code class=&quot;language-text&quot;&gt;timerId&lt;/code&gt;를 반환하므로, 이를 활용해서 clearInterval로 반복을 멈출 수 있음&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;timerId&lt;/code&gt;는 int 값&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;clearInterval로 반복 취소하기&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; timerId &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;token comment&quot;&gt;// 반복할 내용&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;정지할 조건&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;clearInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;timerId&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;간혹 &lt;code class=&quot;language-text&quot;&gt;clearInterval&lt;/code&gt;이 작동하지 않는 경우가 있는데, 그럴 때는 넘겨준 타이머 값을 콘솔에 찍어서 일치하는지 확인해보자.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;setTimeout&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;setTimeout(fn, delay);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;일정시간 &lt;strong&gt;후&lt;/strong&gt; 함수를 한 번만 실행&lt;/p&gt;
-&lt;h2&gt;활용&lt;/h2&gt;
-&lt;h3&gt;setTimeout, setInterval 동시에 활용하기&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; intervalId &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;token comment&quot;&gt;// 수행할 내용&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;token function&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;token function&quot;&gt;clearInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;invervalId&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;50000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;setInterval로 반복실행하다가 정해진 시간 후에 clearInterval을 실행(setTimeout)해서 반복을 중지시킴&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[JS] HTMLCollection과 NodeList 차이]]></title><description><![CDATA[Javascript의 Element Collection인 HTMLCollection과 NodeList의 공통점, 차이점을 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/js-htmlcollection-nodelist</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/js-htmlcollection-nodelist</guid><pubDate>Tue, 26 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;공통점과 차이점 요약&lt;/h2&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[JS] HTMLCollection과 NodeList 차이]]></title><description><![CDATA[Javascript의 Element Collection인 HTMLCollection과 NodeList의 공통점, 차이점을 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/js-htmlcollection-nodelist</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/js-htmlcollection-nodelist</guid><pubDate>Tue, 26 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;공통점과 차이점 요약&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;공통점&lt;/strong&gt; : DOM nodes의 모음&lt;/li&gt;
 &lt;li&gt;
@@ -2672,7 +2919,55 @@ document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;body&lt;sp
 &lt;span class=&quot;token comment&quot;&gt;// NodeList(34) [text, script, text, ul#nav-access, text, comment, text, header#main-header.header-main, ...]&lt;/span&gt;
 
 &lt;span class=&quot;token comment&quot;&gt;// &gt; staticNList&lt;/span&gt;
-&lt;span class=&quot;token comment&quot;&gt;// NodeList(52) [div.nav-toolbox-wrapper, div#nav-tech-submenu.submenu.js-submenu, div.submenu-column, div#nav-learn-submenu.submenu.js-submenu, ...]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[아나콘다 설치방법, 주요 명령어 정리]]></title><description><![CDATA[Python 배포판 아나콘다의 설치 방법과 자주 사용하는 명령어를 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/python-anaconda/</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/python-anaconda/</guid><pubDate>Fri, 01 Feb 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;아나콘다란 무엇인가&lt;/h2&gt;
+&lt;span class=&quot;token comment&quot;&gt;// NodeList(52) [div.nav-toolbox-wrapper, div#nav-tech-submenu.submenu.js-submenu, div.submenu-column, div#nav-learn-submenu.submenu.js-submenu, ...]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[[JS] Timer: setTimeout, setInterval]]></title><description><![CDATA[Javascript의 Timer 관련 함수인 setTimeout, setInterval에 대해 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/js-timer</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/js-timer</guid><pubDate>Tue, 26 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;타이머 함수의 활용&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;특정 함수나 기능을 바로 실행하지 않고, 약간의 &lt;strong&gt;시간이 지난 후에 실행&lt;/strong&gt;하고 싶을 때&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;어떤 정보를 표시한 후, 몇 초 뒤에 다른 페이지로 이동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;특정 함수를 지속적으로 &lt;strong&gt;반복 실행&lt;/strong&gt;하고 싶을 때&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;특정 시간마다 화면을 갱신하기 위해서 서버에 새로운 정보를 요청&lt;/li&gt;
+&lt;li&gt;남은 로그인 유지 시간 표시&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;setInterval&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;setInterval(fn, delay);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;일정시간 &lt;strong&gt;마다&lt;/strong&gt; 함수를 실행&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token function&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;				&lt;span class=&quot;token comment&quot;&gt;// 1초마다 출력&lt;/span&gt;
+	console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;setInterval&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;setInterval&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;		&lt;span class=&quot;token comment&quot;&gt;// 1번만 출력&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;주의할 점은 &lt;strong&gt;함수 안의 내용을 반복적으로 수행&lt;/strong&gt;하는 것(함수 자체를 반복해주지 않음)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;setInterval은 &lt;code class=&quot;language-text&quot;&gt;timerId&lt;/code&gt;를 반환하므로, 이를 활용해서 clearInterval로 반복을 멈출 수 있음&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;timerId&lt;/code&gt;는 int 값&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;clearInterval로 반복 취소하기&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; timerId &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token comment&quot;&gt;// 반복할 내용&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;정지할 조건&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;clearInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;timerId&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;간혹 &lt;code class=&quot;language-text&quot;&gt;clearInterval&lt;/code&gt;이 작동하지 않는 경우가 있는데, 그럴 때는 넘겨준 타이머 값을 콘솔에 찍어서 일치하는지 확인해보자.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;setTimeout&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;setTimeout(fn, delay);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;일정시간 &lt;strong&gt;후&lt;/strong&gt; 함수를 한 번만 실행&lt;/p&gt;
+&lt;h2&gt;활용&lt;/h2&gt;
+&lt;h3&gt;setTimeout, setInterval 동시에 활용하기&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; intervalId &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token comment&quot;&gt;// 수행할 내용&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token function&quot;&gt;clearInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;invervalId&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;50000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;setInterval로 반복실행하다가 정해진 시간 후에 clearInterval을 실행(setTimeout)해서 반복을 중지시킴&lt;/p&gt;</content:encoded></item><item><title><![CDATA[아나콘다 설치방법, 주요 명령어 정리]]></title><description><![CDATA[Python 배포판 아나콘다의 설치 방법과 자주 사용하는 명령어를 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/python-anaconda/</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/python-anaconda/</guid><pubDate>Fri, 01 Feb 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;아나콘다란 무엇인가&lt;/h2&gt;
 &lt;p&gt;Continuum Analytics에서 제작한 파이썬 배포판이다. 수학, 과학 등과 관련된 다양한 파이썬 패키지를 포함하고 있으며, 상업용으로도 무료 사용이 가능하다. &lt;strong&gt;패키지 의존성을 관리&lt;/strong&gt;해주기 때문에, 가상환경에 따라 독립적으로 패키지 관리를 쉽게 할 수 있다는 장점을 가지고 있다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;현재 아나콘다 홈페이지에는 최신 파이썬 버전인 python 3.7 버전의 설치 파일을 제공하고 있다. 다른 버전의 파이썬을 깔고 싶다면, 설치한 후에 다음 명령어를 실행하면 된다. &lt;a href=&quot;http://docs.anaconda.com/anaconda/user-guide/faq/#how-do-i-get-the-latest-anaconda-with-python-3-5&quot;&gt;[공식홈페이지 링크]&lt;/a&gt;&lt;/p&gt;
