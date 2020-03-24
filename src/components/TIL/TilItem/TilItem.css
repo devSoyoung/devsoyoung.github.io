@@ -1,5 +1,5 @@
 .til-item-container {
-    max-width: 400px;
+    max-width: 500px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     padding: 10px 30px;
@@ -11,35 +11,97 @@
 
 .til-item-date {
     font-size: 13px;
-    float: right;
     font-family: 'Montserrat', sans-serif;
 }
-
+.til-item-btn {
+    float: right;
+    font-size: 13px;
+    margin-right: -7px;
+    color: rgba(27,31,35,.5);
+    cursor: pointer;
+}
 .til-item-subjects {
-    margin-bottom: 10px;
+    /*margin-bottom: 10px;*/
 }
 .til-item-subject {
-    background: #fbd14b;
+    background: #dedcee;
     font-size: 13px;
     font-weight: 300;
     font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
-    padding: 0 5px;
+    padding: 0 5px 2px;
     margin-right: 5px;
-    border-radius: 5px;
+    border-radius: 7px;
+    letter-spacing: -0.5px;
 }
 
 .til-item-content {
     font-size: 15px;
     letter-spacing: -1px;
+    height: 200px;
+    overflow: hidden;
+}
+.til-item-content.visible {
+    height: initial;
 }
 .til-item-content h2 {
     font-size: 20px;
-    margin-bottom: 5px;
+    border-bottom: 1px solid #eaecef;
+    margin-bottom: 7px;
+    padding: 7px 0;
+}
+.til-item-content h3 {
+    font-size: 17px;
+    margin-bottom: 7px;
+    margin-top: 12px;
+    line-height: 1.5;
+}
+.til-item-content h4 {
+    margin-bottom: 7px;
+    margin-top: 12px;
+    line-height: 1.4;
+    font-size: 15px;
 }
 .til-item-content p {
-    margin-bottom: 10px;
+    margin-bottom: 3px;
+    text-align: justify;
+}
+.til-item-content ul, .til-item-content ol {
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+.til-item-content li {
+    margin-bottom: 0px;
+}
+.til-item-content li ul {
+    margin: 0 0 0 15px;
+}
+.til-item-content :not(pre) > code[class*="language-"] {
+    background: rgba(27,31,35,.05);
+    color: black;
+    font-family: sans-serif;
+    padding: 0 5px;
 }
 
+.til-item-content code[class*="language-"] {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: black;
+}
+.til-item-content pre[class*="language-"] {
+    background: rgba(27,31,35,.05);
+}
+.til-item-content a {
+    text-decoration: none;
+    color: #6a60a9;
+}
+.til-item-content blockquote {
+    border-left: .25em solid #dfe2e5;
+    padding-left: 15px;
+    margin: 13px 0;
+    color: rgba(27,31,35,.5);
+}
+.til-item-content hr {
+    margin-bottom: 10px;
+}
 @media all and (min-width: 768px) {
     .til-item-container {
         margin-bottom: 25px;
