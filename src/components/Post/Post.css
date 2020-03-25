@@ -25,9 +25,6 @@
     margin-bottom: 1rem;
     text-align: justify;
 }
-.post-content p:first-letter {
-    margin-left: 12px;
-}
 
 .post-content h2 {
     padding-bottom: .3em;
@@ -68,20 +65,30 @@
     line-height: 1.6;
     text-align: initial;
 }
-.post-content blockquote p:first-letter {
-    margin-left: 0;
-}
 
-.post-content code[class*="language-"], .post-content pre[class*="language-"] {
-    background: #f6f8fa;
+.post-content code[class*="language-"],
+.post-content pre[class*="language-"] {
+    font-family: 'Source Code Pro', monospace;;
     font-size: 13px;
     color: black;
     letter-spacing: -0.5px;
     padding: 3px;
 }
 
+.post-content code[class*="language-"] {
+    background: rgba(166,168,170,.1);
+}
+
 .post-content pre[class*="language-"] {
+    background: rgba(166,168,170, .07);
     padding: 10px 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,.08);
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.post-content pre[class*="language-"] code[class*="language-"] {
+    background: none;
 }
 
 .post-content ol {

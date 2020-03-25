@@ -63,7 +63,7 @@ To access the notebook, open this file in a browser:
 
 야무지게 그려놓은 Tensorflow 글자와 함께, localhost의 8888 포트로 접근하라고 토큰값과 함께 알려줍니다. 그리고 브라우저를 켜서 8888 포트로 접속하면
 
-<img style="width: 350px; margin: auto;" src="../image/2019-09-22-tensorflow/omg.jpeg" />
+<img style="width: 350px; margin: auto;" src="../../image/2019/2019-09-22-tensorflow/omg.jpeg" />
 
 안됩니다. *역시 한번에 잘될리가..* 
 
@@ -77,7 +77,7 @@ $ docker run -p 8888:8888 tensorflow/tensorflow:latest-py3-jupyter
 
 그리고 다시 브라우저에서 8888 포트로 접속하면 jupyter의 로그인 화면이 뜹니다. 
 
-![login page](../image/2019-09-22-tensorflow/jupyter-login.png)
+![login page](../../image/2019/2019-09-22-tensorflow/jupyter-login.png)
 
 여기에 아까 실행화면에서 포트정보와 함께 보여줬던 토큰값을 입력하고 로그인하면 파일들을 확인할 수 있습니다.
 
@@ -86,7 +86,7 @@ $ docker run -p 8888:8888 tensorflow/tensorflow:latest-py3-jupyter
 ## 호스트와 파일 공유
 이제 여기에서 신나게 작업을 하다가 컨테이너를 종료하는 순간, 망합니다. 아까 [위에서 말했듯이](#이미지와-컨테이너) 컨테이너는 휘발성이기 때문이죠.
 
-<img style="height: 350px; margin: auto;" src="../image/2019-09-22-tensorflow/omg2.png" />
+<img style="height: 350px; margin: auto;" src="../../image/2019/2019-09-22-tensorflow/omg2.png" />
 
 컨테이너가 종료되면 컨테이너의 파일시스템도 날아가기 때문에, 저장되어야 할 파일은 다른 곳에 두어야합니다. 호스트에 위치시켜야 해요. 
 

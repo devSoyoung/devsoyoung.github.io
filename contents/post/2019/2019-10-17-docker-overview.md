@@ -13,7 +13,7 @@ Docker는 컨테이너 기반의 오픈소스 가상화 플랫폼입니다. **�
 ## Open Source
 Docker가 처음 세상에 등장한 것은 Pycon 2013에서의 *"The future of Linux containers"*라는 제목의 발표였습니다. 첫 등장은 5분 가량의 짧은 소개에 불과했지만 이후 꾸준한 인기를 얻으면서 널리 사용되고 있습니다.
 
-![docker trends](../image/2019-10-17-docker-overview/docker-trends.png)
+![docker trends](../../image/2019/2019-10-17-docker-overview/docker-trends.png)
 
 Docker는 오픈소스이며, Apache License 2.0 라이센스를 따르고 있습니다. Docker 소스는 [github](https://github.com/docker/docker-ce)에서 볼 수 있습니다.
 

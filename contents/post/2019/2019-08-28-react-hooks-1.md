@@ -73,7 +73,7 @@ Render Props 패턴으로 구현된 컴포넌트는 자체적으로 rendering �
 
 Hook는 바로 이런 문제를 해결합니다. 내장된 Hooks(`useState`, `useEffect`)로 함수에 state, lifecycle 등을 제공합니다. Hook이라는 이름은 *함수에 state와 lifecycle을 끌고와서 넣어준다는 의미로 지은 것일까요?*
 
-![gvsc_image](../image/gvsc_hooks.png)
+![gvsc_image](../../image/gvsc_hooks.png)
 
 Hooks는 **일반 JavaScript 함수**입니다. 그렇기 때문에, Hooks를 활용하는 Custom Hooks를 만들어서 상태를 가지는 로직을 함수로 쉽게 분리할 수 있습니다. Custom Hooks 자체가 React에서 지원하는 기능은 아니지만, Hooks가 디자인 된 방식을 통해 자연스럽게 사용이 가능해지는 것입니다.
 

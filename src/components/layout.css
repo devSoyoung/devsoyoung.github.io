@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans+KR|Source+Code+Pro|Ubuntu&display=swap');
 
 html {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Ubuntu Mono', 'Noto Sans KR', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -194,7 +194,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Ubuntu', 'Noto Sans KR', sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
