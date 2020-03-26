@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import PostList from "../components/PostList";
 
-const IndexPage = () => {
+const IndexTemplate = () => {
   const { allMarkdownRemark: { edges: data }} = useStaticQuery(graphql`
     query PostListQuery {
       allMarkdownRemark(
@@ -35,4 +35,4 @@ const IndexPage = () => {
   );
 }
 
-export default IndexPage;
+export default IndexTemplate;

@@ -12,6 +12,7 @@ exports.createPages = ({ actions, graphql }) => {
   const blogPostTemplate = path.resolve("src/templates/post-template.js");
   const indexTemplate = path.resolve("src/templates/index-template.js");
   const tilTemplate = path.resolve("src/templates/til-template.js");
+  const categoryTemplate = path.resolve("src/templates/category-template.js");
 
   // MAIN
   createPage({
@@ -24,6 +25,13 @@ exports.createPages = ({ actions, graphql }) => {
   createPage({
     path: "/til",
     component: tilTemplate,
+    context: {},
+  });
+
+  // Category
+  createPage({
+    path: "/category",
+    component: categoryTemplate,
     context: {},
   });
 

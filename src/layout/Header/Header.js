@@ -9,11 +9,17 @@ const Header = ({ siteTitle, siteDescription, type }) => {
       <div className="header-container">
         <div className="header-menu-container">
           <Link className={"header-menu-item".concat(type === "main" ? " selected" : "")} to="/">
-            포스트
+            Post
           </Link>
           <Link className={"header-menu-item".concat(type === "til" ? " selected" : "")} to="/til">
-            Today I Learned
+            TIL
           </Link>
+          <Link className={"header-menu-item".concat(type === "category" ? " selected" : "")} to="/category">
+            Category
+          </Link>
+          {/*<Link className={"header-menu-item".concat(type === "about" ? " selected" : "")} to="/about">*/}
+          {/*  About*/}
+          {/*</Link>*/}
           <a className="header-menu-item link github" href="https://github.com/devSoyoung" target="_blank">
             <i className="fab fa-github-alt"></i>
           </a>
