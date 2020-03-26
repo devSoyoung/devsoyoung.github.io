@@ -75,6 +75,13 @@
     padding: 3px;
 }
 
+.post-content h1 code[class*="language-"],
+.post-content h2 code[class*="language-"],
+.post-content h3 code[class*="language-"],
+.post-content h4 code[class*="language-"]{
+    font-size: inherit;
+}
+
 .post-content code[class*="language-"] {
     background: rgba(166,168,170,.1);
 }
