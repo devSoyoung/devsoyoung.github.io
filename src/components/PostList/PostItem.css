@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+.post-item-container {
+    margin-bottom: 30px;
+}
+
 /* All Device */
 .post-item-container a {
     text-decoration: none;
@@ -45,13 +49,6 @@
     font-size: 16px;
     letter-spacing: -0.7px;
     cursor: default;
-}
-
-/* Mobile Device */
-@media all and (max-width: 768px) {
-    .post-item-container {
-        margin-bottom: 15px;
-    }
 }
 
 /* Tablet, Desktop Device */
