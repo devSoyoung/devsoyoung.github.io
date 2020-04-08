@@ -1,7 +1,8 @@
 @charset "utf-8";
 
 .post-item-container {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    /*border-bottom: 1px dashed #DEDCEE;*/
 }
 
 /* All Device */
@@ -55,5 +56,6 @@
 @media all and (min-width: 768px) {
     .post-item-container {
         padding: 15px;
+        margin-bottom: 0;
     }
 }
