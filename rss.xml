@@ -1,4 +1,166 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[큐트리 개발 블로그]]></title><description><![CDATA[Ego sum operarius studens]]></description><link>https://devsoyoung.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 04 Jun 2020 16:35:45 GMT</lastBuildDate><item><title><![CDATA[Redux 말고 Context API로 간단하게 상태관리를 해봅시다]]></title><description><![CDATA[Context API의 사용 방법에 대한 포스트입니다. 간단한 사용법부터 best practice까지 정리해보았습니다.]]></description><link>https://devsoyoung.github.io/posts/react-context-api/</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/react-context-api/</guid><pubDate>Thu, 04 Jun 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;졸업 프로젝트에 React를 사용하고 있습니다. 복잡한 애플리케이션이 아니라서 리덕스 없이 사용하고 있었는데, 머나먼 거리에 떨어진 컴포넌트끼리 상태를 공유해야 하는 일이 생겼습니다. &lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[큐트리 개발 블로그]]></title><description><![CDATA[Ego sum operarius studens]]></description><link>https://devsoyoung.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 06 Jun 2020 08:17:58 GMT</lastBuildDate><item><title><![CDATA[npm package의 사이즈를 확인하는 방법]]></title><description><![CDATA[npm package의 size를 측정하는 방법을 정리했습니다.]]></description><link>https://devsoyoung.github.io/posts/npm-package-size/</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/npm-package-size/</guid><pubDate>Sat, 06 Jun 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;문득 궁금해졌습니다. 🤔 npm 패키지의 사이즈는 어떻게 측정하지? 그래서 찾아보았습니다. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;이 포스트는 StackOverflow의 &lt;a href=&quot;https://stackoverflow.com/questions/40642008/how-do-i-view-the-size-of-npm-packages&quot;&gt;이 질문&lt;/a&gt;을 참고해서 작성하였습니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;&lt;a href=&quot;https://github.com/siddharthkp/cost-of-modules&quot;&gt;cost-of-modules&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt;을 바탕으로 패키지의 크기를 알려주는 라이브러리가 있습니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ npm install -g cost-of-modules&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;먼저 전역에 설치합니다. 그리고 패키지 크기를 측정하고 싶은 프로젝트 폴더로 이동합니다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ cost-of-modules&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;패키지 크기를 측정하고 싶은 디렉토리에서 &lt;code class=&quot;language-text&quot;&gt;cost-of-modules&lt;/code&gt; 커맨드를 실행하면 &lt;strong&gt;패키지를 설치하고 각 패키지의 크기를 표시&lt;/strong&gt;합니다. 몇 가지 옵션도 있습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;--no-install&lt;/code&gt; : 패키지를 설치하지 않고 크기를 측정합니다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;--less&lt;/code&gt; : 가장 크기가 큰 10개의 패키지 크기를 측정합니다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;--yarn&lt;/code&gt; : 패키지를 설치할 때, npm 대신 yarn 을 사용합니다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;--include-dev&lt;/code&gt; : devDependencies의 패키지 크기도 측정합니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 700px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/09686e0dbdbe0549562308498131b2b5/5faa8/cost-of-modules-result.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 90.28571428571429%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABYlAAAWJQFJUiTwAAACw0lEQVQ4y52TW08TQRTHS5Rtn+ext5m9787OdlssURAV2vpgYnyQxBAxRIOEIOUeb4lfgQcuX8Qvpcl+AbELczyz2y0NRCFu8s+cmZ759dymUMDv++KL4tG3OfL200vydfuA7G1ukP7aKjk42CUbO32y/n6V7PQ/kP3tPtnd2iT7O1ukv7FOPu7tkjevl8jSq0WytvquWMi/59Ptz8967bO53uzPp91e3Ot144WF+bjX6cS9+fn4yeNHcUftu524i2fKzvcPZ2d+zDy4P5hut7+MgLROT/xGE/xGBF4zAjcUYIsQAi+AlmmDbdvguh54vg8+52BZuPe8VEzXwTRNKJcrpyOgrhtHQRgCF2JgO84FY+xC1/VUbCh9bL2i35ZlQaVSOR4B1cY2DKD1ekIplegEuWwVgW5kkagzxtBmo9/xz5NrwGq1enyPC3AcJ3FcVw4dwTRMUOe+YQHFfeC40MA9G4KvAE8uI0Rg2GxBGDUTz+eSUZoB0dHG2imYOvODAKLWVA76O1BFGAQCRNhIsI4So8yAWGzVDGUrKZuj3+2AIgNiU6SB9cyBFnZY2VjbtMuqeTnsn8AQR0YBAxHKdBxSIKbsOFmECHQ9BOI4KftGoKoNppt4np81BS+pSFWUl8AsZcbo7SLEaBKEyDRVdFKrgqqLWco8A94UYa1WO46wy5gOpiwkx26qy7btjIAqKoz+1hEehZEam9YAR0eKRkMiTOLYSN0wJaVM1utU+jyQHGs8HP5UCBxcG+xarXoyFXGYnhLnnHuYupvWy7YtiIQDjcAG7pkguAvtFgdj7CWhzofA0/Gnd2iaOjrSM6xPUscnWM+eYWLoDOvK0hVTxZWm52P6pcpSLpcPc96EpmlC04rLk1pxpVhElUrZipqc1DJp2gr6oF0c/ZarVCotK4ZiFXBYUyjqDuruf0rdnQiCoPAHDdaUf2QCVksAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/09686e0dbdbe0549562308498131b2b5/c54d4/cost-of-modules-result.webp 175w,
+/static/09686e0dbdbe0549562308498131b2b5/a3432/cost-of-modules-result.webp 350w,
+/static/09686e0dbdbe0549562308498131b2b5/426ac/cost-of-modules-result.webp 700w,
+/static/09686e0dbdbe0549562308498131b2b5/c139f/cost-of-modules-result.webp 1050w,
+/static/09686e0dbdbe0549562308498131b2b5/7f403/cost-of-modules-result.webp 1400w,
+/static/09686e0dbdbe0549562308498131b2b5/6a202/cost-of-modules-result.webp 1444w&quot;
+          sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/09686e0dbdbe0549562308498131b2b5/4edbd/cost-of-modules-result.png 175w,
+/static/09686e0dbdbe0549562308498131b2b5/13ae7/cost-of-modules-result.png 350w,
+/static/09686e0dbdbe0549562308498131b2b5/8c557/cost-of-modules-result.png 700w,
+/static/09686e0dbdbe0549562308498131b2b5/e996b/cost-of-modules-result.png 1050w,
+/static/09686e0dbdbe0549562308498131b2b5/2cefc/cost-of-modules-result.png 1400w,
+/static/09686e0dbdbe0549562308498131b2b5/5faa8/cost-of-modules-result.png 1444w&quot;
+          sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/09686e0dbdbe0549562308498131b2b5/8c557/cost-of-modules-result.png&quot;
+          alt=&quot;cost-of-modules 패키지 크기 측정 결과&quot;
+          title=&quot;cost-of-modules 패키지 크기 측정 결과&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;a href=&quot;https://bundlephobia.com/&quot;&gt;BUNDLEPHOBIA&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;설치하기 전에 크기가 궁금한 경우는 BUNDLEPHOBIA에서 검색하면 됩니다. &lt;del&gt;사실 위에 언급한 방법보다 훨씬 간단하고 많이 사용할 것 같은..&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 700px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/515d2eac062ffc1a27e863c996608cf5/c27e7/bundle-phobia-homepage.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 78.28571428571428%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAACVUlEQVQ4y62T3W4SQRTHNxq9Uz66YLaWaqk3JlIsLYuIlgsDiSmk1Y2JfRK1Fz6DfYH6AFZo7LUaUym7hZJwZy9JmlDBUGBZYT9mj2em0NA2plo9yS9D5vznz5xzZrmbF/lLE9f5x15h5JnX433Ke3iJ53lJEAQpFApJkUhECodFKRgMSrcmJyVhVJC8Y2OYH5XcHrfkcDoll9P5xOFwPne5XBPcjSvXBHH69sGMeBei96IQj8chFosBmkEymYT5+XlIJBIQn5uD+9EoiLNheCSGYXZmGqbvhCAQCMDU1BQEgwHw+/0vuNjDB+MfP32ul0ol2N7etorFIikUCkRRFLK1tUVyuRxb8/k8Q5EVsiPLmJdJQSmQYoHpjd3db/B2dXWZW1xc9FmmWYfDIIh9Dgx6uFwuv+JSqZSv2Wz+oBuWZREEBhBCoNfrwd7eHlSrVajXD/93WNPHpPtYwTKXTqd97XabGdq2TRAYMIharQaVSgW63S70dcc0uDJDbNNpQxgKXddhf3+fGTYaDcBKwDCMYcnA+PeGVECNKJ1O56jUVquFhgegqirL0VbQcs+8ITWkvaPQ34ZpMnTdQBOdmdBCTNyjmj8yHEbTfkJH00DtaNBqq0cln9sQnxQrjw6ETf7EwM7s4UDEHiXeAHNsGLSHbbUDpmUfm/SpG9J3iOLvfQMTsYahz46Ch3C1LftEnoKh0/OyLL/kFhYWxrEkDf5D4Of7mhNF0fNubS2bXV/PZzLZzUw2+/Uv2XyfyXz5sLGx82ZlZYnDuIBcRXhk5B9wI5d/AUj91wq8jcuFAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/515d2eac062ffc1a27e863c996608cf5/c54d4/bundle-phobia-homepage.webp 175w,
+/static/515d2eac062ffc1a27e863c996608cf5/a3432/bundle-phobia-homepage.webp 350w,
+/static/515d2eac062ffc1a27e863c996608cf5/426ac/bundle-phobia-homepage.webp 700w,
+/static/515d2eac062ffc1a27e863c996608cf5/c139f/bundle-phobia-homepage.webp 1050w,
+/static/515d2eac062ffc1a27e863c996608cf5/7f403/bundle-phobia-homepage.webp 1400w,
+/static/515d2eac062ffc1a27e863c996608cf5/80ed4/bundle-phobia-homepage.webp 2144w&quot;
+          sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/515d2eac062ffc1a27e863c996608cf5/4edbd/bundle-phobia-homepage.png 175w,
+/static/515d2eac062ffc1a27e863c996608cf5/13ae7/bundle-phobia-homepage.png 350w,
+/static/515d2eac062ffc1a27e863c996608cf5/8c557/bundle-phobia-homepage.png 700w,
+/static/515d2eac062ffc1a27e863c996608cf5/e996b/bundle-phobia-homepage.png 1050w,
+/static/515d2eac062ffc1a27e863c996608cf5/2cefc/bundle-phobia-homepage.png 1400w,
+/static/515d2eac062ffc1a27e863c996608cf5/c27e7/bundle-phobia-homepage.png 2144w&quot;
+          sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/515d2eac062ffc1a27e863c996608cf5/8c557/bundle-phobia-homepage.png&quot;
+          alt=&quot;bundlephobia 사이트&quot;
+          title=&quot;bundlephobia 사이트&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;홈페이지도 귀염뽀짝 깔끔한데 사용하기도 무척 편리합니다. 위에서 설치한 &lt;code class=&quot;language-text&quot;&gt;cost-of-modules&lt;/code&gt; 패키지 크기를 확인해보겠습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 700px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1410194dd9c14a6984b140208f1bc084/c27e7/bundle-size-result.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 78.28571428571428%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC90lEQVQ4y6WTW08TQRTHNyb4ZKSFgrYJRMqbgYYWqWl54AE1ECBENib6SVQe/CaEj+AT8QViL9tukYDhBbygUKHQ0qW0u+1ud3dmjmemXNSAMfFsfntmz+z895wzs1KwrbvtXqBz0nfH+6zL1zXn8/lkTiAQkMPhsByNRuWRkRF5aGhI7g/2y36/X8z5/Xdlr69Dbm9vlz0ez1OPx/vc6/X2Sb23uv0PI/dPo7EIxGNxGBsbg3g8DpFwGB6Nj8Pk5CRMTEzAOI7jsRigeGt++AEMD0QgNBiCUAgZHIBgsO+l9HjiSe/S0rvy8vIKrKysEFVV6cbGBl1bW6Orq6sXqFmVptMKzWQywitKhmaVLM1iPKuqTi6nwsLCwrwkz8k9tm2XoWUUYY1GgxFChK/X68yyTObgRYjL+PwVOHzx5ubma2lqaqqnWq1qQg2tVtNhf/8AyloFDgpHkM8fCF8ol+Dk9BRqeh2spgNNRNcNwGRwHXH5eqxuXpqZmenRdV0IMoZTlPIXwDHL4Foagt48xmdNPPO4ZRTBaeoo5gJ/nzEmBLE1fwoyXjJguUCJg9jAqCMAXMOoK3wLCpf2F0Eu1sQyLMsG02peLmFnDWOX8JtDGWgW/V2wVqsJwWKxyHcRdna+C5HtrS1IJBJwUjmF66xuo1CeXJ2h4zi0rJ2IZnOr4Cb8wA3ijXddFzfCFtkLcOw6NlR0Gz58c68vmYlaWsbLt22Hx6FcPoFCoQiHRyU4PCxBASkWS/B1rwTKl6YQzOX+EDw7h9BomGCaFtiOeyFeqVShdKyhsAbHKH6MXtM0yBc0+LhntwR5htPT0/wclnjAMAx3+9NnYhh1glmR3d1dcnhUFGOr2ST4EVKtm8RAqrpJ8MMiZvOeiAxzr6TZ2dle0zQb55n8ugG8l7pRh3+19fX1N9Lo6GgX/sNvU6mUmkwm02gKeuV9IqEkUykF40qCjzHGSaeSGEOfTp7H0jifxNOxvri4+EJCu4HcRnxI53/Qgdz8CfPvz2saLcLyAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/1410194dd9c14a6984b140208f1bc084/c54d4/bundle-size-result.webp 175w,
+/static/1410194dd9c14a6984b140208f1bc084/a3432/bundle-size-result.webp 350w,
+/static/1410194dd9c14a6984b140208f1bc084/426ac/bundle-size-result.webp 700w,
+/static/1410194dd9c14a6984b140208f1bc084/c139f/bundle-size-result.webp 1050w,
+/static/1410194dd9c14a6984b140208f1bc084/7f403/bundle-size-result.webp 1400w,
+/static/1410194dd9c14a6984b140208f1bc084/80ed4/bundle-size-result.webp 2144w&quot;
+          sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/1410194dd9c14a6984b140208f1bc084/4edbd/bundle-size-result.png 175w,
+/static/1410194dd9c14a6984b140208f1bc084/13ae7/bundle-size-result.png 350w,
+/static/1410194dd9c14a6984b140208f1bc084/8c557/bundle-size-result.png 700w,
+/static/1410194dd9c14a6984b140208f1bc084/e996b/bundle-size-result.png 1050w,
+/static/1410194dd9c14a6984b140208f1bc084/2cefc/bundle-size-result.png 1400w,
+/static/1410194dd9c14a6984b140208f1bc084/c27e7/bundle-size-result.png 2144w&quot;
+          sizes=&quot;(max-width: 700px) 100vw, 700px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/1410194dd9c14a6984b140208f1bc084/8c557/bundle-size-result.png&quot;
+          alt=&quot;크기 측정 결과&quot;
+          title=&quot;크기 측정 결과&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;버전에 따른 크기, Minified, +gzipped 등 다양한 결과를 한눈에 보여줍니다. 로컬에 있는 &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; 파일을 업로드하면 프로젝트에 사용된 패키지들의 크기도 확인할 수 있습니다.&lt;/p&gt;
+&lt;h2&gt;글을 마무리하며&lt;/h2&gt;
+&lt;p&gt;이 외에도 다양한 패키지 크기 측정 방법이 있습니다만, 위에 두 가지 방법도 충분히 만족스러워서 더 찾아보지는 않았습니다 😈 혹시 더 편리하거나 좋은 방법을 알고 계시다면 많이 소개해주세요 :)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Redux 말고 Context API로 간단하게 상태관리를 해봅시다]]></title><description><![CDATA[Context API의 사용 방법에 대한 포스트입니다. 간단한 사용법부터 best practice까지 정리해보았습니다.]]></description><link>https://devsoyoung.github.io/posts/react-context-api/</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/react-context-api/</guid><pubDate>Thu, 04 Jun 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;졸업 프로젝트에 React를 사용하고 있습니다. 복잡한 애플리케이션이 아니라서 리덕스 없이 사용하고 있었는데, 머나먼 거리에 떨어진 컴포넌트끼리 상태를 공유해야 하는 일이 생겼습니다. &lt;/p&gt;
 &lt;p&gt;Flux 패턴을 구현한 Redux를 사용하면 상태를 한 곳에서 관리합니다. 덕분에 props로 여러 컴포넌트에 불필요한 상태를 전달할 필요가 없어 효율적입니다. 다양한 미들웨어로 상태를 변경하는 과정에 날개를 달아줄 수도 있습니다. 하지만 다소 준비해줄 것이 많습니다.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -2972,54 +3134,7 @@ d ㅋㅌ* minify(주석제거, 공백제거), obfuscation(변수명 변경), gzi
 &lt;li&gt;균형감 찾기&lt;/li&gt;
 &lt;li&gt;각각의 Request를 균등한 크기로 만들기&lt;/li&gt;
 &lt;li&gt;지나치게 큰 CSS나 JS가 없도록&lt;/li&gt;
-&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[[TECHCON] 빠르게 훑어보는 웹 개발 트렌드]]></title><description><![CDATA[2019년 4월 11일, 네이버 프론트엔드 테크콘서트에서 진행되었던 [빠르게 훑어보는 웹 개발 트렌드] 세미나를 듣고 내용을 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/naver-tech-concert-review-3</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/naver-tech-concert-review-3</guid><pubDate>Fri, 12 Apr 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;2019년 4월 11일, 네이버 프론트엔드 테크콘서트에서 진행되었던 &lt;a href=&quot;https://www.slideshare.net/NaverEngineering/naver-tech-concertfe2019&quot;&gt;빠르게 훑어보는 웹 개발 트렌드&lt;/a&gt; 세미나를 듣고 내용을 정리한 글입니다.&lt;/p&gt;
-&lt;h2&gt;웹 개발 트렌드&lt;/h2&gt;
-&lt;h3&gt;서버 중심으로 개발&lt;/h3&gt;
-&lt;p&gt;미리 만들어두거나 서버에서 만든 페이지를 제공&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/42922453/55972502-91baf080-5cbe-11e9-8fab-d57e27afda4c.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;사용자가 요청한 화면을 서버에서 페이지 단위로 생성해서 제공&lt;/li&gt;
-&lt;li&gt;Java Applet, Java Servlet, PHP ..&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;클라이언트 중심으로 개발&lt;/h3&gt;
-&lt;p&gt;페이지를 부분적으로 갱신, 서버는 API 역할에 집중&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/42922453/55972659-e8282f00-5cbe-11e9-95ac-86db2138cdba.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;일단 클라이언트를 준비하고, 추가로 필요한 데이터를 클라이언트가 주도적으로 요청&lt;/li&gt;
-&lt;li&gt;이미 화면에 떠있는 페이지에 요청한 데이터를 추가&lt;/li&gt;
-&lt;li&gt;DOM에 적극적으로 개입&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;요청&lt;/strong&gt; - Ajax, &lt;strong&gt;DOM 조작&lt;/strong&gt; - jQuery&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;고도화&lt;/h3&gt;
-&lt;p&gt;프론트엔드 로직이 복잡해지면서 다양한 라이브러리를 적극 활용&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/42922453/55972830-39382300-5cbf-11e9-8885-8c132f1f87fa.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
-&lt;h2&gt;요즘 웹 개발&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;주의 : 모든 프로젝트에 해당하는 것은 아님, 트렌드가 향하는 방향일 뿐&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;Angular, Vue.js, React.js 등 다양한 프레임워크나 라이브러리 활용&lt;/li&gt;
-&lt;li&gt;Component 기반 개발&lt;/li&gt;
-&lt;li&gt;Task Runner, CLI 사용&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;공부하면 좋은 것들&lt;/h2&gt;
-&lt;h3&gt;기본 지식&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;레이아웃 구성&lt;/strong&gt; : HTML, HTML5&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;스타일 지정&lt;/strong&gt; : CSS, CSS3, flex/grid model, 스타일 라이브러리, 전처리기&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;반응, 로직 처리&lt;/strong&gt; : JavaScript, ES6, TypeScript, 프레임워크&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;그 외&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;개발 툴 : git, github&lt;/li&gt;
-&lt;li&gt;UI/UX, 디자인 시스템&lt;/li&gt;
-&lt;li&gt;데이터 시각화&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;정리&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;프론트엔드 개발 트렌드는 빠르게 변하므로 계속 공부해야 함&lt;/li&gt;
-&lt;li&gt;Full-stack : 물리적인 한계가 존재하므로 선택과 집중을 하는 것이 효율적일 수 있음&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[TECHCON] 데이터 상태 관리, 그것을 알려주마!]]></title><description><![CDATA[2019년 4월 11일, 네이버 프론트엔드 테크콘서트에서 진행되었던 [데이터 상태 관리, 그것을 알려주마!] 세미나를 듣고 내용을 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/naver-tech-concert-review-2</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/naver-tech-concert-review-2</guid><pubDate>Fri, 12 Apr 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;2019년 4월 11일, 네이버 프론트엔드 테크콘서트에서 진행되었던 &lt;a href=&quot;https://www.slideshare.net/NaverEngineering/naver-tech-concertfe2019-140432157&quot;&gt;데이터 상태 관리, 그것을 알려주마!&lt;/a&gt; 세미나를 듣고 내용을 정리한 글입니다.&lt;/p&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[[TECHCON] 데이터 상태 관리, 그것을 알려주마!]]></title><description><![CDATA[2019년 4월 11일, 네이버 프론트엔드 테크콘서트에서 진행되었던 [데이터 상태 관리, 그것을 알려주마!] 세미나를 듣고 내용을 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/naver-tech-concert-review-2</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/naver-tech-concert-review-2</guid><pubDate>Fri, 12 Apr 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;2019년 4월 11일, 네이버 프론트엔드 테크콘서트에서 진행되었던 &lt;a href=&quot;https://www.slideshare.net/NaverEngineering/naver-tech-concertfe2019-140432157&quot;&gt;데이터 상태 관리, 그것을 알려주마!&lt;/a&gt; 세미나를 듣고 내용을 정리한 글입니다.&lt;/p&gt;
 &lt;h2&gt;FE에서의 상태관리&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;상태는 각 뷰에서, 때로는 뷰와 상관없이 필요에 의해서 실시간, 비동기로 계속 변화&lt;/li&gt;
@@ -3186,6 +3301,53 @@ d ㅋㅌ* minify(주석제거, 공백제거), obfuscation(변수명 변경), gzi
 &lt;li&gt;모든 요구사항을 플랫폼 공통 코드로 소화할 수 없음&lt;/li&gt;
 &lt;li&gt;때로는 스펙 협의, 커뮤니케이션이 설계보다 중요할 수 있음&lt;/li&gt;
 &lt;li&gt;플랫폼 공통 코드는 불변이 아니며, 지속적 리팩토링이 필요&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[TECHCON] 빠르게 훑어보는 웹 개발 트렌드]]></title><description><![CDATA[2019년 4월 11일, 네이버 프론트엔드 테크콘서트에서 진행되었던 [빠르게 훑어보는 웹 개발 트렌드] 세미나를 듣고 내용을 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/naver-tech-concert-review-3</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/naver-tech-concert-review-3</guid><pubDate>Fri, 12 Apr 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;2019년 4월 11일, 네이버 프론트엔드 테크콘서트에서 진행되었던 &lt;a href=&quot;https://www.slideshare.net/NaverEngineering/naver-tech-concertfe2019&quot;&gt;빠르게 훑어보는 웹 개발 트렌드&lt;/a&gt; 세미나를 듣고 내용을 정리한 글입니다.&lt;/p&gt;
+&lt;h2&gt;웹 개발 트렌드&lt;/h2&gt;
+&lt;h3&gt;서버 중심으로 개발&lt;/h3&gt;
+&lt;p&gt;미리 만들어두거나 서버에서 만든 페이지를 제공&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/42922453/55972502-91baf080-5cbe-11e9-8fab-d57e27afda4c.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;사용자가 요청한 화면을 서버에서 페이지 단위로 생성해서 제공&lt;/li&gt;
+&lt;li&gt;Java Applet, Java Servlet, PHP ..&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;클라이언트 중심으로 개발&lt;/h3&gt;
+&lt;p&gt;페이지를 부분적으로 갱신, 서버는 API 역할에 집중&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/42922453/55972659-e8282f00-5cbe-11e9-95ac-86db2138cdba.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;일단 클라이언트를 준비하고, 추가로 필요한 데이터를 클라이언트가 주도적으로 요청&lt;/li&gt;
+&lt;li&gt;이미 화면에 떠있는 페이지에 요청한 데이터를 추가&lt;/li&gt;
+&lt;li&gt;DOM에 적극적으로 개입&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;요청&lt;/strong&gt; - Ajax, &lt;strong&gt;DOM 조작&lt;/strong&gt; - jQuery&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;고도화&lt;/h3&gt;
+&lt;p&gt;프론트엔드 로직이 복잡해지면서 다양한 라이브러리를 적극 활용&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/42922453/55972830-39382300-5cbf-11e9-8885-8c132f1f87fa.png&quot; alt=&quot;image&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;요즘 웹 개발&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;주의 : 모든 프로젝트에 해당하는 것은 아님, 트렌드가 향하는 방향일 뿐&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Angular, Vue.js, React.js 등 다양한 프레임워크나 라이브러리 활용&lt;/li&gt;
+&lt;li&gt;Component 기반 개발&lt;/li&gt;
+&lt;li&gt;Task Runner, CLI 사용&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;공부하면 좋은 것들&lt;/h2&gt;
+&lt;h3&gt;기본 지식&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;레이아웃 구성&lt;/strong&gt; : HTML, HTML5&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;스타일 지정&lt;/strong&gt; : CSS, CSS3, flex/grid model, 스타일 라이브러리, 전처리기&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;반응, 로직 처리&lt;/strong&gt; : JavaScript, ES6, TypeScript, 프레임워크&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;그 외&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;개발 툴 : git, github&lt;/li&gt;
+&lt;li&gt;UI/UX, 디자인 시스템&lt;/li&gt;
+&lt;li&gt;데이터 시각화&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;정리&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;프론트엔드 개발 트렌드는 빠르게 변하므로 계속 공부해야 함&lt;/li&gt;
+&lt;li&gt;Full-stack : 물리적인 한계가 존재하므로 선택과 집중을 하는 것이 효율적일 수 있음&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[CSS] display: inline과 block의 차이]]></title><description><![CDATA[CSS의 주요속성 중 하나인 display 속성과, 속성값 중 inline과 block이 어떤 차이가 있는지 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/css-display-attribute/</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/css-display-attribute/</guid><pubDate>Tue, 26 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;display 속성&lt;/h2&gt;
 &lt;p&gt;요소를 화면에 보이거나 숨길 때 사용한다.&lt;/p&gt;
 &lt;ul&gt;
@@ -3221,7 +3383,33 @@ d ㅋㅌ* minify(주석제거, 공백제거), obfuscation(변수명 변경), gzi
 &lt;li&gt;block 요소에 text-align을 주면 요소 자체가 아닌, 내부의 모든 인라인 요소에 적용되는 것&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;block 요소 태그의 종류&lt;/h4&gt;
-&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;address&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;article&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;aside&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;audio&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;blockquote&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;canvas&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;dd&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;div&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;dl&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;fieldset&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;figcaption&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;figure&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;footer&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;form&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;h1&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;h2&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;h3&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;h4&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;h5&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;h6&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;header&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;hgroup&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;hr&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;noscript&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;ol&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;output&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;p&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;pre&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;section&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;table&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;ul&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;video&lt;/code&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[JS] 이벤트 등록: addEventListener()]]></title><description><![CDATA[Javascript에서 가장 많이 수행하는 event 등록, event 관련 메소드에 대해 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/js-event-basic</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/js-event-basic</guid><pubDate>Tue, 26 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;이벤트 등록하기&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;address&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;article&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;aside&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;audio&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;blockquote&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;canvas&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;dd&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;div&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;dl&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;fieldset&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;figcaption&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;figure&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;footer&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;form&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;h1&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;h2&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;h3&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;h4&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;h5&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;h6&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;header&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;hgroup&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;hr&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;noscript&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;ol&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;output&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;p&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;pre&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;section&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;table&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;ul&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;video&lt;/code&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[JS] 예외처리: try, catch, finally]]></title><description><![CDATA[Javascript의 예외처리 방법에 대해 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/js-exception</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/js-exception</guid><pubDate>Tue, 26 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;예외처리의 필요성&lt;/h2&gt;
+&lt;p&gt;예상치 못하게 발생한 에러를 잘 처리해야 프로그램 전체가 멈추지 않고 동작할 수 있음&lt;/p&gt;
+&lt;h2&gt;Try, Catch, Finally&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token comment&quot;&gt;// 실행하고 싶은 코드&lt;/span&gt;
+	&lt;span class=&quot;token comment&quot;&gt;// 여기서 실행하다가 에러가 발생하면 catch 블록으로 이동&lt;/span&gt;
+	&lt;span class=&quot;token keyword&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;전달할 e 값&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;		&lt;span class=&quot;token comment&quot;&gt;// catch 블록으로 이동&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;e&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token comment&quot;&gt;// 에러가 발생했을 때,&lt;/span&gt;
+	&lt;span class=&quot;token comment&quot;&gt;// 에러를 파라미터로 받아서 처리함&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;finally&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token comment&quot;&gt;// 가장 마지막에 항상 실행되어야 할 코드&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;try는 반드시 있어야 함&lt;/li&gt;
+&lt;li&gt;catch나 finally는 둘 중 하나만 있어도 실행 가능&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;throw&lt;/code&gt; : 에러를 발생시키는 명령어&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;에러 처리 과정&lt;/h3&gt;
+&lt;p&gt;throw가 발생하면 catch 구문을 찾아서 이동&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;현재 블록에 catch나 finally가 없는 경우 상위 블록이나 호출한 함수로 이동&lt;/li&gt;
+&lt;li&gt;catch가 존재하지 않는 경우, finally를 실행하고, catch 될 수 있는 구문을 찾아서 이동&lt;/li&gt;
+&lt;li&gt;catch 구문에서 에러가 처리되고, 이후 코드를 실행&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[JS] 이벤트 등록: addEventListener()]]></title><description><![CDATA[Javascript에서 가장 많이 수행하는 event 등록, event 관련 메소드에 대해 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/js-event-basic</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/js-event-basic</guid><pubDate>Tue, 26 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;이벤트 등록하기&lt;/h2&gt;
 &lt;p&gt;이벤트 대상(target)의 &lt;code class=&quot;language-text&quot;&gt;addEventListener&lt;/code&gt; 메소드로 지정한 이벤트가 대상에 전달되었을 때 실행할 함수를 등록할 수 있음&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;대상&lt;/strong&gt;: Element, Document, Window, XMLHTTPRequest 등, 이벤트를 지원하는 모든 대상&lt;/li&gt;
@@ -3288,81 +3476,7 @@ target2El&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span 
 &lt;h2&gt;참고링크&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/API/EventTarget/addEventListener&quot;&gt;MDN - EventTarget.addEventListener&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[JS] 예외처리: try, catch, finally]]></title><description><![CDATA[Javascript의 예외처리 방법에 대해 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/js-exception</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/js-exception</guid><pubDate>Tue, 26 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;예외처리의 필요성&lt;/h2&gt;
-&lt;p&gt;예상치 못하게 발생한 에러를 잘 처리해야 프로그램 전체가 멈추지 않고 동작할 수 있음&lt;/p&gt;
-&lt;h2&gt;Try, Catch, Finally&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;try&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;token comment&quot;&gt;// 실행하고 싶은 코드&lt;/span&gt;
-	&lt;span class=&quot;token comment&quot;&gt;// 여기서 실행하다가 에러가 발생하면 catch 블록으로 이동&lt;/span&gt;
-	&lt;span class=&quot;token keyword&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;전달할 e 값&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;		&lt;span class=&quot;token comment&quot;&gt;// catch 블록으로 이동&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;catch&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;e&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;token comment&quot;&gt;// 에러가 발생했을 때,&lt;/span&gt;
-	&lt;span class=&quot;token comment&quot;&gt;// 에러를 파라미터로 받아서 처리함&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;finally&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;token comment&quot;&gt;// 가장 마지막에 항상 실행되어야 할 코드&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;ul&gt;
-&lt;li&gt;try는 반드시 있어야 함&lt;/li&gt;
-&lt;li&gt;catch나 finally는 둘 중 하나만 있어도 실행 가능&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;throw&lt;/code&gt; : 에러를 발생시키는 명령어&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;에러 처리 과정&lt;/h3&gt;
-&lt;p&gt;throw가 발생하면 catch 구문을 찾아서 이동&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;현재 블록에 catch나 finally가 없는 경우 상위 블록이나 호출한 함수로 이동&lt;/li&gt;
-&lt;li&gt;catch가 존재하지 않는 경우, finally를 실행하고, catch 될 수 있는 구문을 찾아서 이동&lt;/li&gt;
-&lt;li&gt;catch 구문에서 에러가 처리되고, 이후 코드를 실행&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[JS] Timer: setTimeout, setInterval]]></title><description><![CDATA[Javascript의 Timer 관련 함수인 setTimeout, setInterval에 대해 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/js-timer</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/js-timer</guid><pubDate>Tue, 26 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;타이머 함수의 활용&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;특정 함수나 기능을 바로 실행하지 않고, 약간의 &lt;strong&gt;시간이 지난 후에 실행&lt;/strong&gt;하고 싶을 때&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;어떤 정보를 표시한 후, 몇 초 뒤에 다른 페이지로 이동&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;특정 함수를 지속적으로 &lt;strong&gt;반복 실행&lt;/strong&gt;하고 싶을 때&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;특정 시간마다 화면을 갱신하기 위해서 서버에 새로운 정보를 요청&lt;/li&gt;
-&lt;li&gt;남은 로그인 유지 시간 표시&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;setInterval&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;setInterval(fn, delay);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;일정시간 &lt;strong&gt;마다&lt;/strong&gt; 함수를 실행&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token function&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;				&lt;span class=&quot;token comment&quot;&gt;// 1초마다 출력&lt;/span&gt;
-	console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;setInterval&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token function&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;setInterval&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;		&lt;span class=&quot;token comment&quot;&gt;// 1번만 출력&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;주의할 점은 &lt;strong&gt;함수 안의 내용을 반복적으로 수행&lt;/strong&gt;하는 것(함수 자체를 반복해주지 않음)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;setInterval은 &lt;code class=&quot;language-text&quot;&gt;timerId&lt;/code&gt;를 반환하므로, 이를 활용해서 clearInterval로 반복을 멈출 수 있음&lt;/li&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;timerId&lt;/code&gt;는 int 값&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;clearInterval로 반복 취소하기&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; timerId &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;token comment&quot;&gt;// 반복할 내용&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;정지할 조건&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;clearInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;timerId&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote&gt;
-&lt;p&gt;간혹 &lt;code class=&quot;language-text&quot;&gt;clearInterval&lt;/code&gt;이 작동하지 않는 경우가 있는데, 그럴 때는 넘겨준 타이머 값을 콘솔에 찍어서 일치하는지 확인해보자.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;setTimeout&lt;/h2&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;setTimeout(fn, delay);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;일정시간 &lt;strong&gt;후&lt;/strong&gt; 함수를 한 번만 실행&lt;/p&gt;
-&lt;h2&gt;활용&lt;/h2&gt;
-&lt;h3&gt;setTimeout, setInterval 동시에 활용하기&lt;/h3&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; intervalId &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;token comment&quot;&gt;// 수행할 내용&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;token function&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-	&lt;span class=&quot;token function&quot;&gt;clearInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;invervalId&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;50000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;setInterval로 반복실행하다가 정해진 시간 후에 clearInterval을 실행(setTimeout)해서 반복을 중지시킴&lt;/p&gt;</content:encoded></item><item><title><![CDATA[HTMLCollection과 NodeList 살펴보기]]></title><description><![CDATA[Javascript의 Element Collection인 HTMLCollection과 NodeList의 공통점, 차이점을 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/js-htmlcollection-nodelist</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/js-htmlcollection-nodelist</guid><pubDate>Tue, 26 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;HTMLCollection&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;NodeList&lt;/code&gt;는 DOM을 조작하다보면 종종 만나게 되는 컬렉션입니다. 둘 다 배열처럼 비슷하게 생겼지만 차이점을 가지고 있습니다. 각각 제공하는 메서드나 가지고 있는 노드의 타입이 다릅니다. 각각의 특징에 대해서 정리해봤습니다.
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[HTMLCollection과 NodeList 살펴보기]]></title><description><![CDATA[Javascript의 Element Collection인 HTMLCollection과 NodeList의 공통점, 차이점을 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/js-htmlcollection-nodelist</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/js-htmlcollection-nodelist</guid><pubDate>Tue, 26 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;HTMLCollection&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;NodeList&lt;/code&gt;는 DOM을 조작하다보면 종종 만나게 되는 컬렉션입니다. 둘 다 배열처럼 비슷하게 생겼지만 차이점을 가지고 있습니다. 각각 제공하는 메서드나 가지고 있는 노드의 타입이 다릅니다. 각각의 특징에 대해서 정리해봤습니다.
 &lt;/p&gt;
 &lt;h2&gt;&lt;a href=&quot;https://developer.mozilla.org/ko/docs/Web/API/HTMLCollection&quot;&gt;HTMLCollection&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;HTMLCollection&lt;/code&gt;은 문서 내에 순서대로 정렬된 노드의 컬렉션으로, 유사 배열입니다. &lt;code class=&quot;language-text&quot;&gt;HTMLCollection&lt;/code&gt;을 얻을 수 있는 간단한 방법은 HTML 엘리먼트의 &lt;code class=&quot;language-text&quot;&gt;children&lt;/code&gt; 프로퍼티에 접근하는 것입니다.&lt;/p&gt;
@@ -3480,7 +3594,55 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;NodeList&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;text&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; script&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; text&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; ul#nav&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;access&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; text&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; comment&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; text&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; header#main&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;header&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;header&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;main&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
 
 console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;staticNList&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;NodeList&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;52&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;div&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nav&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;toolbox&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;wrapper&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; div#nav&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;tech&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;submenu&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;submenu&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;js&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;submenu&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; div&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;submenu&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;column&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; div#nav&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;learn&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;submenu&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;submenu&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;js&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;submenu&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[아나콘다 설치방법, 주요 명령어 정리]]></title><description><![CDATA[Python 배포판 아나콘다의 설치 방법과 자주 사용하는 명령어를 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/python-anaconda/</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/python-anaconda/</guid><pubDate>Fri, 01 Feb 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;아나콘다란 무엇인가&lt;/h2&gt;
+&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;NodeList&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;52&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;div&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;nav&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;toolbox&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;wrapper&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; div#nav&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;tech&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;submenu&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;submenu&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;js&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;submenu&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; div&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;submenu&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;column&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; div#nav&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;learn&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;submenu&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;submenu&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;js&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;submenu&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[[JS] Timer: setTimeout, setInterval]]></title><description><![CDATA[Javascript의 Timer 관련 함수인 setTimeout, setInterval에 대해 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/js-timer</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/js-timer</guid><pubDate>Tue, 26 Mar 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;타이머 함수의 활용&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;특정 함수나 기능을 바로 실행하지 않고, 약간의 &lt;strong&gt;시간이 지난 후에 실행&lt;/strong&gt;하고 싶을 때&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;어떤 정보를 표시한 후, 몇 초 뒤에 다른 페이지로 이동&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;특정 함수를 지속적으로 &lt;strong&gt;반복 실행&lt;/strong&gt;하고 싶을 때&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;특정 시간마다 화면을 갱신하기 위해서 서버에 새로운 정보를 요청&lt;/li&gt;
+&lt;li&gt;남은 로그인 유지 시간 표시&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;setInterval&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;setInterval(fn, delay);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;일정시간 &lt;strong&gt;마다&lt;/strong&gt; 함수를 실행&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token function&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;				&lt;span class=&quot;token comment&quot;&gt;// 1초마다 출력&lt;/span&gt;
+	console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;setInterval&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;setInterval&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;		&lt;span class=&quot;token comment&quot;&gt;// 1번만 출력&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;주의할 점은 &lt;strong&gt;함수 안의 내용을 반복적으로 수행&lt;/strong&gt;하는 것(함수 자체를 반복해주지 않음)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;setInterval은 &lt;code class=&quot;language-text&quot;&gt;timerId&lt;/code&gt;를 반환하므로, 이를 활용해서 clearInterval로 반복을 멈출 수 있음&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;timerId&lt;/code&gt;는 int 값&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;clearInterval로 반복 취소하기&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; timerId &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token comment&quot;&gt;// 반복할 내용&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;정지할 조건&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;clearInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;timerId&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;간혹 &lt;code class=&quot;language-text&quot;&gt;clearInterval&lt;/code&gt;이 작동하지 않는 경우가 있는데, 그럴 때는 넘겨준 타이머 값을 콘솔에 찍어서 일치하는지 확인해보자.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;setTimeout&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;setTimeout(fn, delay);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;일정시간 &lt;strong&gt;후&lt;/strong&gt; 함수를 한 번만 실행&lt;/p&gt;
+&lt;h2&gt;활용&lt;/h2&gt;
+&lt;h3&gt;setTimeout, setInterval 동시에 활용하기&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; intervalId &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;setInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token comment&quot;&gt;// 수행할 내용&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token function&quot;&gt;clearInterval&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;invervalId&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;50000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;setInterval로 반복실행하다가 정해진 시간 후에 clearInterval을 실행(setTimeout)해서 반복을 중지시킴&lt;/p&gt;</content:encoded></item><item><title><![CDATA[아나콘다 설치방법, 주요 명령어 정리]]></title><description><![CDATA[Python 배포판 아나콘다의 설치 방법과 자주 사용하는 명령어를 정리한 글입니다.]]></description><link>https://devsoyoung.github.io/posts/python-anaconda/</link><guid isPermaLink="false">https://devsoyoung.github.io/posts/python-anaconda/</guid><pubDate>Fri, 01 Feb 2019 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;아나콘다란 무엇인가&lt;/h2&gt;
 &lt;p&gt;Continuum Analytics에서 제작한 파이썬 배포판이다. 수학, 과학 등과 관련된 다양한 파이썬 패키지를 포함하고 있으며, 상업용으로도 무료 사용이 가능하다. &lt;strong&gt;패키지 의존성을 관리&lt;/strong&gt;해주기 때문에, 가상환경에 따라 독립적으로 패키지 관리를 쉽게 할 수 있다는 장점을 가지고 있다.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;현재 아나콘다 홈페이지에는 최신 파이썬 버전인 python 3.7 버전의 설치 파일을 제공하고 있다. 다른 버전의 파이썬을 깔고 싶다면, 설치한 후에 다음 명령어를 실행하면 된다. &lt;a href=&quot;http://docs.anaconda.com/anaconda/user-guide/faq/#how-do-i-get-the-latest-anaconda-with-python-3-5&quot;&gt;[공식홈페이지 링크]&lt;/a&gt;&lt;/p&gt;
