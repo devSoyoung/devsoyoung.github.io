@@ -26,12 +26,12 @@ const arr = new Array(LIMIT);
 
 console.time("Array Insert");
 for (let i = 0; i < LIMIT; i++) {
-  arr[i] = i;
+    arr[i] = i;
 }
 console.timeEnd("Array Insert");
 ```
 
-위 코드는 길이가 LIMIT인 배열에 값을 설정하는 시간을 측정합니다. 측정할 구간의 시작과 끝을 각각 `console.time()`과 `console.timeEnd()`로 감싸고 파라미터로 동일한 이름을 전달하면 됩니다. 
+위 코드는 길이가 LIMIT인 배열에 값을 설정하는 시간을 측정합니다. 측정할 구간의 시작과 끝을 각각 `console.time()`과 `console.timeEnd()`로 감싸고 파라미터로 동일한 이름을 전달하면 됩니다.
 
 ![실행 결과](../../image/2020/2020-03-26-console-time/result.png)
 

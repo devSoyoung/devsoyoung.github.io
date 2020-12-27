@@ -11,11 +11,13 @@ category: "Error"
 얼마 전, 새로운 회사에서 인턴을 시작하게 되었습니다. 설치, 설정 과정에서 워낙 오류가 자주 발생하는 불운한 편이라 개발환경 구축을 두려워합니다. _왜 맨날 나만 오류나고.._
 
 ## Problem
+
 `npm install`로 필요한 라이브러리를 설치할 때 `scrypt`의 설치 과정에서 오류가 발생했습니다. `node-gyp rebuild` 명령어를 실행했을 때 두 번의 오류가 발생했습니다 :(
 
 아래에 두 가지 에러의 종류와 각각의 해결 과정을 정리했습니다. 같은 에러로 문제를 겪는 분들께 도움이 되었으면 좋겠습니다. Mac OS 기준입니다.
 
 ### 📍 Solution Summary
+
 ```
 1. Python 버전 문제 : 2.7 버전으로 다운그레이드
 2. No Xcode or CLT version detected : XCode 설치
@@ -50,6 +52,7 @@ gyp ERR! stack     at Pipe._handle.close [as _onclose] (net.js:561:12)
 > **[2019-10-16]** 다시 확인해보니 해당 부분이 수정되었습니다. Python 버전 문제는 해결되었나 봅니다 :)
 
 ## 두 번째 오류 : command-line tool
+
 ```
 node-gyp rebuild
 
@@ -62,8 +65,8 @@ Xcode나 CLT가 감지되지 않았다는 새로운 에러가 발생했습니다
 
 > **[2019-10-21]** 최근 맥에서 카탈리나로 업데이트를 하니 설치했던 xcode가 사라졌는지 다시 오류가 떴습니다. 멀쩡하던 프로젝트가 맥 업데이트 이후 실행이 안된다면 xcode 설치 여부를 먼저 확인하는 것을 추천드립니다 :)
 
-
 ### xcode 설치 명령어
+
 ```
 $ xcode-select --install
 ```
