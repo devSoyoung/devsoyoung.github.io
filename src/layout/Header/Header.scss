@@ -31,38 +31,35 @@ header {
     padding: 15px 0;
     text-align: left;
     margin-bottom: 25px;
-}
-.header-menu-container:first-child {
-    margin-left: 15px;
-}
-
-.header-menu-item {
-    text-decoration: none;
-    margin: 10px;
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: -0.3px;
-    color: white;
-    opacity: 0.4;
-}
-.header-menu-item.link .fab {
-    float: right;
-    padding-top: 5px;
-    font-size: 20px;
-    margin-left: 20px;
-}
-.header-menu-item.selected {
-    opacity: 1;
-    font-weight: 800;
-}
-
-.header-menu-item:hover {
-    opacity: 1;
-    transition: 0.3s;
-}
-
-.header-menu-item.github .fab {
-    margin-right: 15px;
+    &:first-child {
+        margin-left: 15px;
+    }
+    a {
+        text-decoration: none;
+        margin: 10px;
+        font-size: 16px;
+        font-weight: 300;
+        letter-spacing: -0.3px;
+        color: white;
+        opacity: 0.4;
+        &:hover {
+            opacity: 1;
+            transition: 0.3s;
+        }
+        &.selected {
+            opacity: 1;
+            font-weight: 800;
+        }
+        &.link .fab {
+            float: right;
+            padding-top: 5px;
+            font-size: 20px;
+            margin-left: 20px;
+        }
+        &.github .fab {
+            margin-right: 15px;
+        }
+    }
 }
 
 @media all and (min-width: 768px) {

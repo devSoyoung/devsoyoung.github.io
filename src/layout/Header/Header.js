@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import "./Header.css";
+import "./Header.scss";
 
 const Header = ({ siteTitle, siteDescription, type }) => {
     return (
@@ -9,30 +9,26 @@ const Header = ({ siteTitle, siteDescription, type }) => {
             <div className="header-container">
                 <div className="header-menu-container">
                     <Link
-                        className={"header-menu-item".concat(
-                            type === "main" ? " selected" : ""
-                        )}
+                        className={type === "main" ? "selected" : null}
                         to="/"
                     >
                         Post
                     </Link>
                     <Link
-                        className={"header-menu-item".concat(
-                            type === "category" ? " selected" : ""
-                        )}
+                        className={type === "category" ? "selected" : null}
                         to="/category"
                     >
                         Category
                     </Link>
                     <a
-                        className="header-menu-item link github"
+                        className="link github"
                         href="https://github.com/devSoyoung"
                         target="_blank"
                     >
                         <i className="fab fa-github-alt" />
                     </a>
                     <a
-                        className="header-menu-item link"
+                        className="link"
                         href="https://www.linkedin.com/in/cutelee/"
                         target="_blank"
                     >
