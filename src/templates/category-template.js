@@ -37,11 +37,8 @@ const CategoryTemplate = () => {
     const categories = data
         .map(item => item.node.frontmatter.category)
         .reduce((acc, category) => {
-            if (acc[category]) {
-                acc[category] += 1;
-            } else {
-                acc[category] = 1;
-            }
+            if (acc[category]) acc[category] += 1;
+            else acc[category] = 1;
             return acc;
         }, {});
 

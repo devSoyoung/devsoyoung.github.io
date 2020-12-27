@@ -29,14 +29,14 @@ const Header = ({ siteTitle, siteDescription, type }) => {
                         href="https://github.com/devSoyoung"
                         target="_blank"
                     >
-                        <i className="fab fa-github-alt"/>
+                        <i className="fab fa-github-alt" />
                     </a>
                     <a
                         className="header-menu-item link"
                         href="https://www.linkedin.com/in/cutelee/"
                         target="_blank"
                     >
-                        <i className="fab fa-linkedin-in"/>
+                        <i className="fab fa-linkedin-in" />
                     </a>
                 </div>
                 <h1 className="header-title">{siteTitle}</h1>
