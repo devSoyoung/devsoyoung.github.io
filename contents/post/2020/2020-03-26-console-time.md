@@ -26,7 +26,7 @@ const arr = new Array(LIMIT);
 
 console.time("Array Insert");
 for (let i = 0; i < LIMIT; i++) {
-    arr[i] = i;
+  arr[i] = i;
 }
 console.timeEnd("Array Insert");
 ```

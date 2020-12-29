@@ -20,14 +20,14 @@ category: "React"
 import React from "react";
 
 class MyComponent extends React.Component {
-    constructor(props) {
-        super(props);
-        this.myRef = React.createRef();
-    }
+  constructor(props) {
+    super(props);
+    this.myRef = React.createRef();
+  }
 
-    render() {
-        return <div ref={this.myRef} />;
-    }
+  render() {
+    return <div ref={this.myRef} />;
+  }
 }
 ```
 

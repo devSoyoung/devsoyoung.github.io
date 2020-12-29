@@ -16,7 +16,7 @@ category: "React"
 
 Redux는 Flux 패턴을 구현했습니다. MVC 패턴에서 모델과 뷰의 양방향 데이터 전달로 인해 발생하는 상태 관리의 어려움을 해결하고자 데이터의 흐름을 단방향으로 통일했습니다.
 
--   **참고링크** : [Redux를 이해하자 - landvibe - Medium](https://medium.com/@ljs0705/redux%EB%A5%BC-%EC%9D%B4%ED%95%B4%ED%95%98%EC%9E%90-7c9e8de0ab7f)
+- **참고링크** : [Redux를 이해하자 - landvibe - Medium](https://medium.com/@ljs0705/redux%EB%A5%BC-%EC%9D%B4%ED%95%B4%ED%95%98%EC%9E%90-7c9e8de0ab7f)
 
 ![image:5B55B8BD-BBF6-44C4-9527-A79F8BB51C5E-48703-0001AE056D9272F9/999442465BA51F4D22.png](http://webframeworks.kr/tutorials/react/imgs/complex_mvc.png)
 
@@ -26,7 +26,7 @@ Redux는 Flux 패턴을 구현했습니다. MVC 패턴에서 모델과 뷰의 �
 
 이 Flux 패턴을 그대로 적용하면 hot-reloading 할 때 기존의 상태와 이벤트 구독이 사라진다는 문제점이 있습니다. 이를 해결하기 위해 Redux에서는 Flux의 store가 가지고 있는 **상태 변환을 위한 로직**과 **현재 애플리케이션의 상태**를 분리해서 reducer를 만들고, reducer가 상태 변환 로직을 가지도록 합니다.
 
--   **참고링크** : [핫 리로딩(hot reloading)과 시간 여행 디버깅(time travel debugging)이 도대체 무엇일까? - bestalign’s dev blog](https://bestalign.github.io/2015/10/27/redux-hot-reloading-and-time-travel-debugging/)
+- **참고링크** : [핫 리로딩(hot reloading)과 시간 여행 디버깅(time travel debugging)이 도대체 무엇일까? - bestalign’s dev blog](https://bestalign.github.io/2015/10/27/redux-hot-reloading-and-time-travel-debugging/)
 
 ![image:E22EC3CC-E2FA-4D75-882A-EB7CE40800AE-48703-000193A5969AA995/JYrQR.png](https://blog.novoda.com/content/images/2018/03/redux-architecture-overview.png)
 
@@ -41,34 +41,34 @@ Redux는 Flux 패턴을 구현했습니다. MVC 패턴에서 모델과 뷰의 �
 ```javascript
 // userActions.js
 export function loginSuccess(username) {
-    return {
-        type: "LOGIN_SUCCESS",
-        payload: {
-            username
-        }
-    };
+  return {
+    type: "LOGIN_SUCCESS",
+    payload: {
+      username
+    }
+  };
 }
 ```
 
 ```js
 // userReducer.js
 export const initialState = {
-    isLogin: false,
-    username: ""
+  isLogin: false,
+  username: ""
 };
 
 const userReducer = (state = initialState, action) => {
-    switch (action.type) {
-        case "LOGIN_SUCCESS":
-            return {
-                ...state, // es6 spread 문법
-                isLogin: true,
-                username: action.payload.username
-            };
+  switch (action.type) {
+    case "LOGIN_SUCCESS":
+      return {
+        ...state, // es6 spread 문법
+        isLogin: true,
+        username: action.payload.username
+      };
 
-        default:
-            return state;
-    }
+    default:
+      return state;
+  }
 };
 
 export default userReducer;
@@ -79,7 +79,7 @@ export default userReducer;
 import { combineReducers } from "redux";
 import userReducer from "./userReducer";
 const rootReducer = combineReducers({
-    user: userReducer
+  user: userReducer
 });
 
 export default rootReducer;
@@ -91,8 +91,8 @@ import { createStore } from "redux";
 import rootReducer from "./reducers";
 
 const store = createStore(
-    rootReducer,
-    {} // initial state
+  rootReducer,
+  {} // initial state
 );
 
 export default store;
@@ -106,21 +106,21 @@ import store from "./store";
 import { loginSuccess } from "./userActions";
 
 class App extends React.Component {
-    render() {
-        const username = "Lily";
-        store.dispatch(loginSuccess(username));
-        /* store.dispatch({
+  render() {
+    const username = "Lily";
+    store.dispatch(loginSuccess(username));
+    /* store.dispatch({
       type: 'LOGIN_SUCCESS',
       payload: { username },
     }); */
-        console.log(store.getState());
+    console.log(store.getState());
 
-        return <Provider store={store}>// components</Provider>;
-    }
+    return <Provider store={store}>// components</Provider>;
+  }
 }
 ```
 
--   [combineReducers · Redux](https://redux.js.org/api/combinereducers)
+- [combineReducers · Redux](https://redux.js.org/api/combinereducers)
 
 ## Redux Middleware
 
@@ -128,7 +128,7 @@ class App extends React.Component {
 
 ![image:C0AEED6F-5F56-43D9-B6E1-B61F65CB48FF-48703-000194BCD3EE5016/redux-architecture-overview.png](https://i.stack.imgur.com/JYrQR.png)
 
--   **미들웨어** : dispatch() 메소드를 통해 store로 가고 있는 액션을 가로채는 코드 \* [Redux-Thunk vs Redux-Saga를 비교해 봅시다!](https://velog.io/@dongwon2/Redux-Thunk-vs-Redux-Saga%EB%A5%BC-%EB%B9%84%EA%B5%90%ED%95%B4-%EB%B4%85%EC%8B%9C%EB%8B%A4-)
+- **미들웨어** : dispatch() 메소드를 통해 store로 가고 있는 액션을 가로채는 코드 \* [Redux-Thunk vs Redux-Saga를 비교해 봅시다!](https://velog.io/@dongwon2/Redux-Thunk-vs-Redux-Saga%EB%A5%BC-%EB%B9%84%EA%B5%90%ED%95%B4-%EB%B4%85%EC%8B%9C%EB%8B%A4-)
 
 API 요청을 하면 REQUEST 액션을 디스패치해서 로딩 아이콘을 띄우고, 요청에 대한 처리가 완료되면 결과에 따라 SUCCESS나 FAILURE 액션을 디스패치 하는 방식으로 많이 활용됩니다.
 
@@ -142,16 +142,16 @@ thunk 미들웨어는 객체가 아니라 함수를 반환하는 **액션 생성
 const INCREMENT_COUNTER = "INCREMENT_COUNTER";
 
 const increment = gap => {
-    return {
-        type: INCREMENT_COUNTER,
-        payload: { gap }
-    };
+  return {
+    type: INCREMENT_COUNTER,
+    payload: { gap }
+  };
 };
 
 const incrementAsync = (sec, gap) => dispatch => {
-    setTimeout(() => {
-        dispatch(increment(gap));
-    }, sec);
+  setTimeout(() => {
+    dispatch(increment(gap));
+  }, sec);
 };
 ```
 
@@ -159,11 +159,11 @@ thunk에서 액션생성자는 필요한 값을 파라미터로 받아 **함수�
 
 ```js
 function incrementAsync(sec, gap) {
-    return function(dispatch) {
-        setTimeout(() => {
-            dispatch(increment(gap));
-        }, sec);
-    };
+  return function(dispatch) {
+    setTimeout(() => {
+      dispatch(increment(gap));
+    }, sec);
+  };
 }
 ```
 
@@ -181,7 +181,7 @@ function incrementIfOdd() {
 }
 ```
 
--   **참고링크** : [React -redux thunk, redux saga](https://ideveloper2.tistory.com/53)
+- **참고링크** : [React -redux thunk, redux saga](https://ideveloper2.tistory.com/53)
 
 이 thunk 미들웨어의 문제점은 action에서 너무 많은 일을 한다는 점입니다. 액션생성자는 type과 payload가 담긴 **객체를 생성해서 반환**하는 역할을 수행하기로 했는데, thunk 미들웨어에서는 API 요청이나 비동기 처리가 껴서 본래 역할이 모호해집니다. 어떨 때는 객체를 반환하고, 어떨 때는 함수를 반환합니다.
 
@@ -199,35 +199,35 @@ import axios from "axios";
 // api
 const RequestApi = axios.create();
 const signin = signinAccountData => {
-    return RequestApi.post("/account/signin", { ...signinAccountData });
+  return RequestApi.post("/account/signin", { ...signinAccountData });
 };
 
 // Action Creator
 const signinRequest = () => {
-    return { type: "ACCOUNT_SIGNIN_REQUEST" };
+  return { type: "ACCOUNT_SIGNIN_REQUEST" };
 };
 const signinSuccess = response => {
-    return {
-        type: "ACCOUNT_SIGNIN_SUCCESS",
-        payload: response
-    };
+  return {
+    type: "ACCOUNT_SIGNIN_SUCCESS",
+    payload: response
+  };
 };
 const signinFailure = error => {
-    return {
-        type: "ACCOUNT_SIGNIN_FAILURE",
-        payload: error
-    };
+  return {
+    type: "ACCOUNT_SIGNIN_FAILURE",
+    payload: error
+  };
 };
 
 // Saga
 export function* signin(action) {
-    try {
-        yield put(signinRequest());
-        const response = yield call(signin, action.payload);
-        yield put(signinSuccess(response));
-    } catch (error) {
-        yield put(signinFailure(error));
-    }
+  try {
+    yield put(signinRequest());
+    const response = yield call(signin, action.payload);
+    yield put(signinSuccess(response));
+  } catch (error) {
+    yield put(signinFailure(error));
+  }
 }
 
 export const accountSagas = [takeLatest("ACCOUNT_SIGNIN_INDEX", signin)];
@@ -235,10 +235,10 @@ export const accountSagas = [takeLatest("ACCOUNT_SIGNIN_INDEX", signin)];
 
 put, call, takeLatest 외에도 몇 가지 미들웨어에서 제공하는 메소드가 있습니다. 위 코드에 나온 메소드만 간략하게 정리했습니다. 더 자세한 내용은 [이 글](https://gracefullight.dev/2017/12/06/Why-redux-saga/)의 2-3 부분을 보시면 도움 될 것 같습니다.
 
--   `put` : 액션을 호출하는 `dispatch()`의 역할을 수행합니다.
--   `call` : Function.prototype.call() 함수와 같습니다.
--   `takeLatest` : 액션 호출시에 같은 액션이 실행 중이면 그 액션은 파기되고 마지막 호출만 실행됩니다. POST, PUT, DELETE 같은 리소스 변경 메소드에 사용합니다.
--   `takeEvery` : `takeLatest`와 다르게 모든 액션마다 실행됩니다. GET 메소드에 사용합니다.
+- `put` : 액션을 호출하는 `dispatch()`의 역할을 수행합니다.
+- `call` : Function.prototype.call() 함수와 같습니다.
+- `takeLatest` : 액션 호출시에 같은 액션이 실행 중이면 그 액션은 파기되고 마지막 호출만 실행됩니다. POST, PUT, DELETE 같은 리소스 변경 메소드에 사용합니다.
+- `takeEvery` : `takeLatest`와 다르게 모든 액션마다 실행됩니다. GET 메소드에 사용합니다.
 
 이렇게 생성한 Saga는 store를 생성할 때, 연결하고 listen을 수행하도록 실행시켜주면 됩니다.
 
@@ -248,7 +248,7 @@ import { all } from "redux-saga/effects";
 import { accountSagas } from "./account/account.saga";
 
 export default function* rootSaga() {
-    yield all([...accountSagas]);
+  yield all([...accountSagas]);
 }
 ```
 
@@ -263,9 +263,9 @@ import rootSaga from "./rootSaga";
 const initialState = {};
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(
-    rootReducer,
-    initialState,
-    applyMiddleware(sagaMiddleware)
+  rootReducer,
+  initialState,
+  applyMiddleware(sagaMiddleware)
 );
 
 sagaMiddleware.run(rootSaga);
@@ -279,18 +279,18 @@ import { connect } from "react-redux";
 import { signinIndex } from "./actions";
 
 class Comp extends React.Component {
-    render() {
-        const { signin, userinfo } = this.props;
-        return <Button onClick={signin}>로그인</Button>;
-    }
+  render() {
+    const { signin, userinfo } = this.props;
+    return <Button onClick={signin}>로그인</Button>;
+  }
 }
 
 const mapStateToProps = state => ({
-    userinfo: state.user.userinfo
+  userinfo: state.user.userinfo
 });
 
 const mapDispatchToProps = dispatch => ({
-    signin: userInfo => dispatch(signinIndex(userInfo))
+  signin: userInfo => dispatch(signinIndex(userInfo))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Comp);
@@ -304,4 +304,4 @@ redux를 적용하기 전에, 미들웨어에 대해서도 충분히 고려해�
 
 ## Reference
 
--   https://orezytivarg.github.io/from-redux-thunk-to-sagas/
+- https://orezytivarg.github.io/from-redux-thunk-to-sagas/

@@ -24,7 +24,7 @@ category: "Webpack"
 
 개발 할 때 필요한 패키지이므로, `--save-dev` 옵션을 주어 설치한다.
 
--   **webpack-cli** : 웹팩 4버전부터는 webpack-cli를 같이 설치해야 커맨드라인에서 webpack 명령어를 사용 가능함
+- **webpack-cli** : 웹팩 4버전부터는 webpack-cli를 같이 설치해야 커맨드라인에서 webpack 명령어를 사용 가능함
 
 ## Webpack 설정하기 (feat.핵심개념)
 
@@ -32,7 +32,7 @@ category: "Webpack"
 
 > 설정파일 명을 다른 것으로 할 수도 있는데, 이렇게 할 경우 웹팩이 바로 찾을 수 없기 때문에 커맨드라인에서 실행할 때 config 옵션으로 설정파일 위치를 알려주어야 한다.
 
--   **config 옵션** : `webpack --config webpack.config.prod.js`
+- **config 옵션** : `webpack --config webpack.config.prod.js`
 
 config 파일에서 설정해주어야 하는 영역은 크게 4가지이다. entry, output, loader, plugin이 있다. 간단하게 말하면 entry는 파일을 가져오는 것, output은 웹팩 빌드 결과, loader와 plugin은 부가적인 기능 추가이다.
 
@@ -42,24 +42,24 @@ config 파일에서 설정해주어야 하는 영역은 크게 4가지이다. en
 
 의존성 그래프의 시작점으로 웹팩이 파일을 읽어들이기 시작하는 부분을 지정해준다.
 
--   자바스크립트가 로딩하는 모듈이 많아질수록, 모듈 간의 의존성(=복잡도) 증가
--   엔트리를 통해 필요한 모듈을 로딩하고, 하나의 파일로 묶음
+- 자바스크립트가 로딩하는 모듈이 많아질수록, 모듈 간의 의존성(=복잡도) 증가
+- 엔트리를 통해 필요한 모듈을 로딩하고, 하나의 파일로 묶음
 
 ```js
 // webpack.config.js
 module.exports = {
-    entry: {
-        main: ".src/main.js",
-        submain: "./src/main2.js"
-    }
+  entry: {
+    main: ".src/main.js",
+    submain: "./src/main2.js"
+  }
 };
 ```
 
 html 파일에서 로딩할 자바스크립트 파일의 시작점, 여기에서는 `src/main.js`로 설정했다.
 
--   entry의 key 이름으로 value값 위치의 파일이 변환된 파일이 생성
--   entry에 다수의 파일을 (key-value 형태로) 지정할 경우 여러 개의 파일로 분리 가능
--   **하나의 엔트리에 여러 파일을 넣고 싶을 때** : value 자리에 파일 경로가 담긴 배열을 전달
+- entry의 key 이름으로 value값 위치의 파일이 변환된 파일이 생성
+- entry에 다수의 파일을 (key-value 형태로) 지정할 경우 여러 개의 파일로 분리 가능
+- **하나의 엔트리에 여러 파일을 넣고 싶을 때** : value 자리에 파일 경로가 담긴 배열을 전달
 
 ```js
 {
@@ -73,14 +73,14 @@ html 파일에서 로딩할 자바스크립트 파일의 시작점, 여기에서
 // 전체 설정파일 예시
 const path = require(`path`);
 module.exports = {
-    mode: "development",
-    entry: {
-        main: `./src/js/index.js`,
-        submain: `./src/js/components/subcomponent/index.js`
-    },
-    output: {
-        path: path.resolve(__dirname, `dist`)
-    }
+  mode: "development",
+  entry: {
+    main: `./src/js/index.js`,
+    submain: `./src/js/components/subcomponent/index.js`
+  },
+  output: {
+    path: path.resolve(__dirname, `dist`)
+  }
 };
 ```
 
@@ -93,16 +93,16 @@ module.exports = {
 const path = require(`path`);
 
 module.exports = {
-    mode: "development",
-    entry: {
-        main: `./src/js/index.js`,
-        submain: `./src/js/components/subcomponent/index.js`
-    },
-    output: {
-        path: path.resolve(__dirname, `dist`),
-        filename: `[name].js`,
-        publicPath: `/`
-    }
+  mode: "development",
+  entry: {
+    main: `./src/js/index.js`,
+    submain: `./src/js/components/subcomponent/index.js`
+  },
+  output: {
+    path: path.resolve(__dirname, `dist`),
+    filename: `[name].js`,
+    publicPath: `/`
+  }
 };
 ```
 
@@ -110,8 +110,8 @@ module.exports = {
 
 ```html
 <body>
-    <script src="./dist/main.js"></script>
-    <script src="./dist/submain.js"></script>
+  <script src="./dist/main.js"></script>
+  <script src="./dist/submain.js"></script>
 </body>
 ```
 
@@ -126,9 +126,9 @@ Utils.log("Hello, webpack");
 ```js
 // Util.js
 export default class Utils {
-    static log(msg) {
-        console.log("LOG ${msg}");
-    }
+  static log(msg) {
+    console.log("LOG ${msg}");
+  }
 }
 ```
 
@@ -136,14 +136,14 @@ export default class Utils {
 
     $ npx webpack
 
--   **결과** : output의 path로 지정한 dist 폴더 내에 번들링된 자바스크립트 파일 생성
+- **결과** : output의 path로 지정한 dist 폴더 내에 번들링된 자바스크립트 파일 생성
 
 ### loader
 
 트랜스 컴파일링, css 로딩 등 부가적인 기능을 추가할 수 있다.
 
--   `test` : 로딩할 파일을 지정
--   `use` : 적용할 로더를 설정
+- `test` : 로딩할 파일을 지정
+- `use` : 적용할 로더를 설정
 
 > rules나 use 대신 loaders를 쓰고, options 대신 query를 쓰는 곳이 있다면, 웹팩1에 대한 강좌이며, 웹팩2에서 바뀜. 그렇게 사용할 경우 에러가 발생함.
 
@@ -155,26 +155,26 @@ export default class Utils {
 
 로더를 사용하기 위해서는 npm으로 설치가 필요
 
--   `test`에 ES6로 작성한 자바스크립트 파일을 지정하고, `use`에 변환작업을 수행할 바벨 로더 지정
--   `exclude` : 제외할 파일을 지정
+- `test`에 ES6로 작성한 자바스크립트 파일을 지정하고, `use`에 변환작업을 수행할 바벨 로더 지정
+- `exclude` : 제외할 파일을 지정
 
 ```js
 // webpack.config.js
 module.exports = {
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                exclude: "node_modules",
-                use: {
-                    loader: "babel-loader",
-                    options: {
-                        presets: ["env"]
-                    }
-                }
-            }
-        ]
-    }
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: "node_modules",
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["env"]
+          }
+        }
+      }
+    ]
+  }
 };
 ```
 
@@ -191,22 +191,22 @@ exports.push([module.i, "body {\n background-color: green;\n}\n", ""]);
 
     $ npm install --save-dev css-loader style-loader
 
--   `css-loader` : CSS 파일을 읽어줌
--   `style-loader` : 읽은 CSS 파일을 `<style>`태그로 만들어 `<head>`태그 안에 넣어줌
+- `css-loader` : CSS 파일을 읽어줌
+- `style-loader` : 읽은 CSS 파일을 `<style>`태그로 만들어 `<head>`태그 안에 넣어줌
 
 > style 태그 대신 css파일로 만들고 싶은 경우에 mini-css-extract-plugin을 사용하면 됨
 
 ```js
 {
-    module: {
-        rules: [
-            // ..
-            {
-                test: /\.css/,
-                use: ["style-loader", "css-loader"]
-            }
-        ];
-    }
+  module: {
+    rules: [
+      // ..
+      {
+        test: /\.css/,
+        use: ["style-loader", "css-loader"]
+      }
+    ];
+  }
 }
 ```
 
@@ -216,8 +216,8 @@ entry의 js파일 상단에서 `require('app.css');`를 하면 알아서 읽어�
 
 압축, 핫 리로딩, 파일 복사 등 부수적인 작업을 수행한다.
 
--   번들된 자바스크립트 난독화
--   특정 텍스트 추출
+- 번들된 자바스크립트 난독화
+- 특정 텍스트 추출
 
 #### CSS 파일 번들링: 하나의 CSS 파일 생성
 
@@ -255,19 +255,19 @@ style-loader의 역할을 수행하지만, 플러그인이기 때문에 **module
 
 ```js
 module.exports = {
-    // ...
-    mode: "development"
-    // ...
+  // ...
+  mode: "development"
+  // ...
 };
 ```
 
--   **development** : 개발용
--   **production** : 배포용, 알아서 최적화가 적용됨
+- **development** : 개발용
+- **production** : 배포용, 알아서 최적화가 적용됨
 
 ---
 
 ## 참고링크
 
--   [요즘 잘나가는 프론트엔드 개발 환경 만들기(2018): Webpack](https://meetup.toast.com/posts/153)
--   [웹팩의 기본 개념](http://blog.jeonghwan.net/js/2017/05/15/webpack.html)
--   [웹팩4(Webpack) 설정하기](https://www.zerocho.com/category/Webpack/post/58aa916d745ca90018e5301d)
+- [요즘 잘나가는 프론트엔드 개발 환경 만들기(2018): Webpack](https://meetup.toast.com/posts/153)
+- [웹팩의 기본 개념](http://blog.jeonghwan.net/js/2017/05/15/webpack.html)
+- [웹팩4(Webpack) 설정하기](https://www.zerocho.com/category/Webpack/post/58aa916d745ca90018e5301d)
