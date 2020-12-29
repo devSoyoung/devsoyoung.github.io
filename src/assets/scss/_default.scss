@@ -1,0 +1,20 @@
+:root {
+    --default-color: #000;
+    --default-bg: #fff;
+
+    --header-bg: #e9afa3;
+
+    --post-info-category-bg: #fc9d9a;
+    --post-item-hover-color: #fe4365;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --default-color: #e3dede;
+        --default-bg: #272625;
+
+        --header-bg: #2b2a2a;
+
+        --post-info-category-bg: #54546c;
+    }
+}

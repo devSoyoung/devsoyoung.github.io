@@ -1,13 +1,13 @@
 import React from "react";
 
-import "./PostInfo.css";
+import "./PostInfo.scss";
 
 const PostInfo = ({ category, date }) => {
     return (
-        <>
-            <span className="post-info-category">{category}</span>
-            <span className="post-info-date">{date}</span>
-        </>
+        <div className="post-info">
+            <span className="category">{category}</span>
+            <span className="date">{date}</span>
+        </div>
     );
 };
 

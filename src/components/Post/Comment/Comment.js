@@ -3,13 +3,11 @@ import ReactDisqusComments from "react-disqus-comments";
 
 import { useSiteMetaData } from "../../../hooks";
 
+import "./Comment.scss";
+
 const Comment = ({ title, path }) => {
     const { disqusShortname, url } = useSiteMetaData();
-
-    if (!disqusShortname) {
-        return;
-    }
-
+    if (!disqusShortname) return;
     return (
         <div style={{ marginTop: 20 }}>
             <ReactDisqusComments
