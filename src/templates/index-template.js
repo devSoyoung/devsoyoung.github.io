@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import PostList from "../components/PostList";
+import CategoryList from "../components/Category/CategoryList";
 
 const IndexTemplate = () => {
     const {
@@ -38,6 +39,7 @@ const IndexTemplate = () => {
         <Layout type="main">
             <SEO title="Home" />
             <PostList posts={data} />
+            {/*<CategoryList categories={[]} />*/}
         </Layout>
     );
 };

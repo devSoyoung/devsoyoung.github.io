@@ -1,6 +1,7 @@
 /* All Device */
 .post-container {
     padding-top: 30px;
+    max-width: 600px;
 }
 
 .post-title {
@@ -69,12 +70,15 @@
         padding: 10px 20px;
         margin-bottom: 15px;
         font-size: 14px;
+        code[class*="language-text"] {
+            color: inherit;
+        }
     }
     code[class*="language-text"] {
         background: transparent;
         padding: 0 2px 0 0;
     }
-    p > code[class*="language-text"] {
+    code[class*="language-text"] {
         color: #fe4365;
     }
     ol {

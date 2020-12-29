@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Noto+Sans+KR|Source+Code+Pro|Ubuntu&display=swap');
 @import "../assets/scss/_default.scss";
+@import "../assets/scss/_variables.scss";
 
 html {
     -ms-text-size-adjust: 100%;
@@ -12,7 +13,7 @@ body {
 }
 
 main {
-    max-width: 700px;
+    max-width: $app-max-width;
     margin: auto;
 }
 

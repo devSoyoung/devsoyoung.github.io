@@ -8,13 +8,13 @@ import "./PostItem.scss";
 const PostItem = ({ item }) => {
     const { title, description, path, date, category } = item;
     return (
-        <div className="post-item">
+        <li className="post-item">
             <PostInfo category={category} date={date} />
             <h2>
                 <Link to={path}>{title}</Link>
             </h2>
             <div className="description">{description}</div>
-        </div>
+        </li>
     );
 };
 
