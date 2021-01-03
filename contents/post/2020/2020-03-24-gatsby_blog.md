@@ -20,16 +20,15 @@ category: "Programming"
 
 먼저 gatsby를 설치한 후, 새 프로젝트를 생성합니다.
 
-```
+```bash
 $ npm install -g gatsby-cli
 $ gatsby new gatsby-site
 ```
 
-`gatsby-site` 디렉토리 안에 프로젝트가 생성됩니다.
+`gatsby-site` 디렉토리 안에 프로젝트가 생성됩니다.  
+`gatsby develop` 커맨드를 실행하면 `localhost:8000`에서 페이지를 확인할 수 있습니다.
 
-> gatsby-cli를 설치하고 싶지 않다면 `npx gatsby new gatsby-site` 명령어를 실행하시면 됩니다.
-
-`gatsby develop` 커맨드를 실행하면 `localhost:8000`에서 핫 리로드가 적용된 페이지를 확인할 수 있습니다.
+> gatsby-cli를 설치하고 싶지 않다면 `npx gatsby new gatsby-site` 명령어를 실행하면 됩니다.
 
 ## 마크다운 파일로 블로그 만들기
 
@@ -53,11 +52,11 @@ plugins: [
             path: `${__dirname}/src/markdown-pages`
         }
     },
-    "gatsby-markdown-remark"
+    "gatsby-transformer-remark"
 ];
 ```
 
-`plugins` 배열에 사용할 플러그인의 이름과 설정을 추가합니다. 다른 option이 필요없다면 플러그인 이름만 문자열로 넣어도 등록할 수 있습니다. `options`의 `path`에는 파일이 들어있는 디렉토리를 지정합니다.
+`plugins` 배열에 사용할 플러그인의 이름과 설정을 추가합니다. 다른 옵션이 필요없다면 플러그인 이름만 문자열로 넣어도 등록할 수 있습니다. `options`의 `path`에는 파일이 들어있는 디렉토리를 지정합니다.
 
 ### 📍 마크다운 파일 만들기
 
@@ -65,14 +64,15 @@ plugins: [
 
 ```md
 ---
-
 -   date: "2019-10-20"
 -   title: "테스트용 게시글입니다."
 -   description: "게시글에 대한 설명입니다."
 -   template: "post"
 -   path: "/posts/test-post"
 -   draft: false
-    ---## 게시글
+---
+
+## 게시글
 
 게시글 내용은 여기에 작성합니다.
 ```
