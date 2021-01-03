@@ -42,9 +42,9 @@ On-Premise 방식에서는 각 서버에 애칭을 붙입니다. 소중한 서�
 
 ![iaas, paas, saas](https://i2.wp.com/www.jamesserra.com/wp-content/uploads/2014/09/01-Comparison2.jpg?w=1002&ssl=1)
 
-- Iaas(Infrastructure as a Service)
-- Paas(Platform as a Service)
-- Saas(Software as a Service)
+-   Iaas(Infrastructure as a Service)
+-   Paas(Platform as a Service)
+-   Saas(Software as a Service)
 
 위의 세 가지는 대표적인 클라우드 서비스입니다. 아래로 갈수록 관리하는 자원이 적어집니다. IaaS는 운영체제 레벨부터, PaaS는 응용프로그램과 데이터 레벨부터 사용자가 관리합니다. SaaS는 이미 준비된 응용프로그램을 사용하기만 하면 됩니다.
 
@@ -84,11 +84,11 @@ microservices and continuous delivery.”
 
 위에서의 설치 과정을 코드화하여 누구나 어디에서든 미리 만들어 둔 코드만 실행하면 동일한 설정이 가능하게끔 하는 것이 바로 IaC입니다. 설치 환경, Dependencies, 설치 순서 등을 코드로 정의해두는 것입니다.
 
-- Speed and simplicity
-- Configuration consistency
-- Minimization of risk
-- Increased efficiency in software development
-- Cost savings
+-   Speed and simplicity
+-   Configuration consistency
+-   Minimization of risk
+-   Increased efficiency in software development
+-   Cost savings
 
 이를 통해 더 빠르고 간단하게 설정할 수 있고, 일관성을 유지할 수도 있습니다. 또 다양한 환경에서 발생하는 문제를 최대한 통일하여 위험을 최소화합니다. 개발에서의 효율성을 높이면서 비용을 절약할 수도 있습니다. _시간은 금이니까요._
 

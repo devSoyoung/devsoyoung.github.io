@@ -45,14 +45,14 @@ $ npm install --save gatsby-source-filesystem gatsby-transformer-remark
 ```js
 // gatsby-config.js
 plugins: [
-  {
-    resolve: "gatsby-source-filesystem",
-    options: {
-      name: "markdown-pages",
-      path: `${__dirname}/src/markdown-pages`
-    }
-  },
-  "gatsby-transformer-remark"
+    {
+        resolve: "gatsby-source-filesystem",
+        options: {
+            name: "markdown-pages",
+            path: `${__dirname}/src/markdown-pages`
+        }
+    },
+    "gatsby-transformer-remark"
 ];
 ```
 
@@ -86,32 +86,32 @@ import React from "react";
 import { graphql } from "gatsby";
 
 export default function Template({ data }) {
-  const { frontmatter, html } = data.markdownRemark;
-  return (
-    <div className="blog-post-container">
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </div>
-    </div>
-  );
+    const { frontmatter, html } = data.markdownRemark;
+    return (
+        <div className="blog-post-container">
+            <div className="blog-post">
+                <h1>{frontmatter.title}</h1>
+                <h2>{frontmatter.date}</h2>
+                <div
+                    className="blog-post-content"
+                    dangerouslySetInnerHTML={{ __html: html }}
+                />
+            </div>
+        </div>
+    );
 }
 
 export const pageQuery = graphql`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        date(formatString: "YYYY-MM-DD")
-        path
-        title
-      }
+    query($path: String!) {
+        markdownRemark(frontmatter: { path: { eq: $path } }) {
+            html
+            frontmatter {
+                date(formatString: "YYYY-MM-DD")
+                path
+                title
+            }
+        }
     }
-  }
 `;
 ```
 
@@ -182,28 +182,28 @@ $ npm install --save gatsby-remark-images
 ```js
 // gatsby-config.js
 module.exports = {
-  plugins: [
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
+    plugins: [
+        `gatsby-plugin-sharp`,
+        {
+            resolve: `gatsby-transformer-remark`,
             options: {
-              maxWidth: 800
+                plugins: [
+                    {
+                        resolve: `gatsby-remark-images`,
+                        options: {
+                            maxWidth: 800
+                        }
+                    }
+                ]
             }
-          }
-        ]
-      }
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/posts`
-      }
-    }
-  ]
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `${__dirname}/src/posts`
+            }
+        }
+    ]
 };
 ```
 

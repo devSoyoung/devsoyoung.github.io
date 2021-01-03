@@ -44,11 +44,11 @@ import ChildComponent from "./ChildComponent";
 export const ThemeContext = React.createContext("light");
 
 function App() {
-  return (
-    <ThemeContext.Provider value="dark">
-      <ChildComponent />
-    </ThemeContext.Provider>
-  );
+    return (
+        <ThemeContext.Provider value="dark">
+            <ChildComponent />
+        </ThemeContext.Provider>
+    );
 }
 
 export default App;
@@ -90,11 +90,11 @@ import React from "react";
 import { ThemeContext } from "./App.jsx";
 
 function Theme() {
-  return (
-    <ThemeContext.Consumer>
-      {value => <span>테마 : {value}</span>}
-    </ThemeContext.Consumer>
-  );
+    return (
+        <ThemeContext.Consumer>
+            {value => <span>테마 : {value}</span>}
+        </ThemeContext.Consumer>
+    );
 }
 
 export default Theme;
@@ -125,9 +125,9 @@ import React from "react";
 import { ThemeContext } from "./App";
 
 class MyComponent extends React.Component {
-  constructor() {
-    console.log(this.context);
-  }
+    constructor() {
+        console.log(this.context);
+    }
 }
 MyComponent.contextType = ThemeContext;
 ```
@@ -159,19 +159,19 @@ MyComponent.contextType = ThemeContext;
 import { createContext } from "react";
 
 export const themes = {
-  light: {
-    foreground: "#000000",
-    background: "#eeeeee"
-  },
-  dark: {
-    foreground: "#ffffff",
-    background: "#222222"
-  }
+    light: {
+        foreground: "#000000",
+        background: "#eeeeee"
+    },
+    dark: {
+        foreground: "#ffffff",
+        background: "#222222"
+    }
 };
 
 export const ThemeContext = createContext({
-  theme: themes.light,
-  setTheme: () => {}
+    theme: themes.light,
+    setTheme: () => {}
 });
 ```
 
@@ -185,12 +185,12 @@ import React, { useState } from "react";
 import { ThemeContext, themes } from "./theme-context";
 
 function App() {
-  const [theme, setTheme] = useState(themes.dark);
-  return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      <ChildComponent />
-    </ThemeContext.Provider>
-  );
+    const [theme, setTheme] = useState(themes.dark);
+    return (
+        <ThemeContext.Provider value={{ theme, setTheme }}>
+            <ChildComponent />
+        </ThemeContext.Provider>
+    );
 }
 ```
 
@@ -235,14 +235,14 @@ function Theme() {
 import { createContext } from "react";
 
 export const themes = {
-  light: {
-    foreground: "#000000",
-    background: "#eeeeee"
-  },
-  dark: {
-    foreground: "#ffffff",
-    background: "#222222"
-  }
+    light: {
+        foreground: "#000000",
+        background: "#eeeeee"
+    },
+    dark: {
+        foreground: "#ffffff",
+        background: "#222222"
+    }
 };
 ```
 

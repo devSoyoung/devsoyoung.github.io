@@ -36,12 +36,12 @@ HTML 문서의 `<head>` 태그 내에 아래와 같은 `<meta>` 태그를 삽입
 
 ```html
 <html>
-  <head>
-    <meta charset="utf-8" />
-  </head>
-  <body>
-    ...
-  </body>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        ...
+    </body>
 </html>
 ```
 

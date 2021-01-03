@@ -32,11 +32,11 @@ const Koa = require("koa");
 const app = new Koa();
 
 app.use(async ctx => {
-  ctx.body = "Hello, World!";
+    ctx.body = "Hello, World!";
 });
 
 app.listen(3000, () => {
-  console.log("Connect!");
+    console.log("Connect!");
 });
 ```
 
@@ -52,8 +52,8 @@ Koa 프레임워크를 `require()`로 가져온 후, app을 생성합니다. `us
 
 Koa는 여러 미들웨어가 연결되어 구성됩니다. `app.use()`를 통해 사용할 미들웨어를 애플리케이션에 등록해줄 수 있습니다. `use()`의 파라미터로 넘겨준 미들웨어 함수는 `ctx`와 `next`를 전달받습니다.
 
-- `ctx` : 웹 요청과 응답에 대한 정보를 저장
-- `next` : 다음 미들웨어를 실행시키는 함수
+-   `ctx` : 웹 요청과 응답에 대한 정보를 저장
+-   `next` : 다음 미들웨어를 실행시키는 함수
 
 미들웨어에서 `next`를 실행하게 되면 다음 미들웨어로 전달되고, 실행하지 않으면 해당 미들웨어에서 요청 처리를 완료하고 응답하게 됩니다. 미들웨어는 등록한 순서대로 실행됩니다. 아래 예제를 확인하면 더 쉽게 이해할 수 있습니다.
 
@@ -62,20 +62,20 @@ const Koa = require("koa");
 const app = new Koa();
 
 app.use((ctx, next) => {
-  console.log("middleware 1");
-  next();
+    console.log("middleware 1");
+    next();
 });
 
 app.use((ctx, next) => {
-  console.log("middleware 2");
+    console.log("middleware 2");
 });
 
 app.use((ctx, next) => {
-  console.log("middleware 3");
+    console.log("middleware 3");
 });
 
 app.listen(3000, () => {
-  console.log("Connect!");
+    console.log("Connect!");
 });
 ```
 
@@ -90,18 +90,18 @@ const Koa = require("koa");
 const app = new Koa();
 
 app.use((ctx, next) => {
-  console.log("--- middleware 1 ---");
-  ctx.body = "Hello, World!";
-  console.log("middleware 1's body:", ctx.body);
-  next().then(() => {
-    console.log("Body Message Changed!");
-  });
+    console.log("--- middleware 1 ---");
+    ctx.body = "Hello, World!";
+    console.log("middleware 1's body:", ctx.body);
+    next().then(() => {
+        console.log("Body Message Changed!");
+    });
 });
 
 app.use((ctx, next) => {
-  console.log("--- middleware 2 ---");
-  ctx.body = "Goodbye, World!";
-  console.log("middleware 2's body:", ctx.body);
+    console.log("--- middleware 2 ---");
+    ctx.body = "Goodbye, World!";
+    console.log("middleware 2's body:", ctx.body);
 });
 
 app.listen(3000);
@@ -123,18 +123,18 @@ const Koa = require("koa");
 const app = new Koa();
 
 app.use(async (ctx, next) => {
-  console.log("--- middleware 1 ---");
-  ctx.body = "Hello, World!";
-  console.log("middleware 1's body:", ctx.body);
+    console.log("--- middleware 1 ---");
+    ctx.body = "Hello, World!";
+    console.log("middleware 1's body:", ctx.body);
 
-  await next();
-  console.log("Body Message Changed!");
+    await next();
+    console.log("Body Message Changed!");
 });
 
 app.use((ctx, next) => {
-  console.log("--- middleware 2 ---");
-  ctx.body = "Goodbye, World!";
-  console.log("middleware 2's body:", ctx.body);
+    console.log("--- middleware 2 ---");
+    ctx.body = "Goodbye, World!";
+    console.log("middleware 2's body:", ctx.body);
 });
 
 app.listen(3000);

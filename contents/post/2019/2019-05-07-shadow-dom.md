@@ -24,9 +24,9 @@ HTML 문서의 모든 요소와 스타일로 구성되어 있는 DOM은 하나�
 
 iframe은 내부 프레임(inline frame)이라는 의미로, 하나의 HTML 문서 내에 다른 HTML 문서를 보여주고자 할 때 사용한다. 하지만 `<iframe>` 태그를 사용하면 다음과 같은 단점이 있다.
 
-- http 요청이 한차례 더 일어난다.
-- 별도의 페이지이기 때문에, 소비되는 리소스도 높고 느리다.
-- **iframe의 주소가 같은 도메인이 아닌 경우 접근이 불가능하다.**
+-   http 요청이 한차례 더 일어난다.
+-   별도의 페이지이기 때문에, 소비되는 리소스도 높고 느리다.
+-   **iframe의 주소가 같은 도메인이 아닌 경우 접근이 불가능하다.**
 
 여기에서 소개할 shadow-dom을 사용하면 위의 단점 없이 기존 DOM에 독립적인 요소를 만들 수 있다.
 
@@ -47,7 +47,7 @@ newAreaEl.attachShadow({ mode: `open` });
 
 ```html
 <div class="new-area">
-  #shadow-root (open)
+    #shadow-root (open)
 </div>
 ```
 
@@ -61,8 +61,8 @@ newAreaEl.shadowRoot.appendChild(document.createElement(`a`));
 
 ```html
 <div class="new-area">
-  #shadow-root (open)
-  <a></a>
+    #shadow-root (open)
+    <a></a>
 </div>
 ```
 
@@ -74,9 +74,9 @@ newAreaEl.appendChild(document.createElement(`div`));
 
 ```html
 <div class="new-area">
-  #shadow-root (open)
-  <a></a>
-  <div></div>
+    #shadow-root (open)
+    <a></a>
+    <div></div>
 </div>
 ```
 
@@ -88,9 +88,9 @@ newAreaEl.innerHTML = `<p>clear inner html</p>`;
 
 ```html
 <div class="new-area">
-  #shadow-root (open)
-  <a></a>
-  <p>clear inner html</p>
+    #shadow-root (open)
+    <a></a>
+    <p>clear inner html</p>
 </div>
 ```
 
@@ -110,7 +110,7 @@ newAreaEl.shadowRoot.appendChild(styleEl);
 
 Shadow DOM을 생성하기 위해서는 `attachShadow()`을 사용하는데, 파라미터로 mode를 넘긴다. mode는 open, closed 두 가지 종류가 있다.
 
-- [open, close에 대한 자세한 설명 포스트](https://medium.com/@emilio_martinez/shadow-dom-open-vs-closed-1a8cf286088a)
+-   [open, close에 대한 자세한 설명 포스트](https://medium.com/@emilio_martinez/shadow-dom-open-vs-closed-1a8cf286088a)
 
 ## Shadow DOM 알쓸신잡
 
@@ -128,5 +128,5 @@ Shadow DOM 내에 또 다른 Shadow DOM을 생성해서 DOM, 부모 Shadow DOM�
 
 ## 참고링크
 
-- [(번역) Shadow DOM은 무엇일까?](https://wit.nts-corp.com/2019/03/27/5552)
-- [웹 컴포넌트(3) — 쉐도우 돔(#SHADOW DOM)](https://kyu.io/ko/%EC%9B%B9-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B83%E2%80%8A-%E2%80%8A%EC%89%90%EB%8F%84%EC%9A%B0-%EB%8F%94shadow-dom/)
+-   [(번역) Shadow DOM은 무엇일까?](https://wit.nts-corp.com/2019/03/27/5552)
+-   [웹 컴포넌트(3) — 쉐도우 돔(#SHADOW DOM)](https://kyu.io/ko/%EC%9B%B9-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B83%E2%80%8A-%E2%80%8A%EC%89%90%EB%8F%84%EC%9A%B0-%EB%8F%94shadow-dom/)

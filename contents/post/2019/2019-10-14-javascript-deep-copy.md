@@ -18,8 +18,8 @@ Javascript에서의 Deep copy 구현 코드가 궁금하신 분은 [여기](#dee
 
 객체를 복사하는 방법 두 가지가 있습니다. 변수가 참조하 객체의 정보(주소)를 복사하는 방법과 객체 내의 모든 값을 복사하여 또 다른 객체를 생성하는 방법입니다. 전자를 얕은 복사(Shallow copy), 후자를 깊은 복사(Deep copy)라고 부릅니다.
 
-- **얕은 복사(Shallow copy)** : 변수가 가리키고 있는 객체의 정보(주소)를 복사
-- **깊은 복사(Deep copy)** : 객체의 모든 값을 복사하여 새로운 객체를 생성
+-   **얕은 복사(Shallow copy)** : 변수가 가리키고 있는 객체의 정보(주소)를 복사
+-   **깊은 복사(Deep copy)** : 객체의 모든 값을 복사하여 새로운 객체를 생성
 
 > Shallow copy는 Bitwise copy, Deep copy는 Memberwise copy라고 부르기도 합니다. 이에 대한 자세한 설명은 [여기](https://social.msdn.microsoft.com/Forums/vstudio/en-US/c9289b1c-c3ff-4498-a14d-4136693af7ac/shallow-copy-deep-copy-memberwise-copy-bitwise-copy?forum=vclanguage)를 참고하세요 :)
 
@@ -144,5 +144,5 @@ console.log(arr1); // [{ apple: 'xphone'}, { samsung: 'galaxy' }]
 
 ## Reference
 
-- https://blueshw.github.io/2016/01/20/shallow-copy-deep-copy/
-- https://hyunseob.github.io/2016/02/08/copy-object-in-javascript/
+-   https://blueshw.github.io/2016/01/20/shallow-copy-deep-copy/
+-   https://hyunseob.github.io/2016/02/08/copy-object-in-javascript/

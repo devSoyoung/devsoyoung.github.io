@@ -1,9 +1,10 @@
 module.exports = {
-  extends: ["react-app"],
-  rules: {
-    semi: ["error", "always"],
-    quotes: ["error", "double"],
-    "comma-dangle": ["error", "never"],
-    "quote-props": ["error", "consistent-as-needed"]
-  }
+    extends: ["react-app"],
+    rules: {
+        "semi": ["warn", "always"],
+        "quotes": ["warn", "double"],
+        "comma-dangle": ["warn", "never"],
+        "quote-props": ["warn", "consistent-as-needed"],
+        "indent": ["warn", 4]
+    }
 };

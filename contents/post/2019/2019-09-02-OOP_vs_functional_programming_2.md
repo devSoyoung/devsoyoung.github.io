@@ -78,11 +78,11 @@ Calculator 클래스의 plus 메소드를 봅시다. number라는 변수가 사�
 
 ```js
 function makeCounter(func) {
-  var count = 0;
-  return function() {
-    count = func(count);
-    return count;
-  };
+    var count = 0;
+    return function() {
+        count = func(count);
+        return count;
+    };
 }
 ```
 
@@ -90,5 +90,5 @@ function makeCounter(func) {
 
 ## Reference
 
-- [(번역) 함수형 프로그래밍이란 무엇인가?](https://medium.com/@jooyunghan/%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80-fab4e960d263)
-- [왜 함수형 프로그래밍이 좋을까?](http://ruaa.me/why-functional-matters/)
+-   [(번역) 함수형 프로그래밍이란 무엇인가?](https://medium.com/@jooyunghan/%ED%95%A8%EC%88%98%ED%98%95-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%EC%9D%B4%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80-fab4e960d263)
+-   [왜 함수형 프로그래밍이 좋을까?](http://ruaa.me/why-functional-matters/)

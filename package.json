@@ -1,57 +1,57 @@
 {
-  "name": "devsoyoung.github.io",
-  "private": true,
-  "description": "Cutelee's Dev Blog",
-  "version": "0.1.0",
-  "author": "soyoung <soyoung.dev@gmail.com>",
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.12.1",
-    "gatsby": "^2.19.7",
-    "gatsby-image": "^2.2.39",
-    "gatsby-plugin-feed": "^2.4.0",
-    "gatsby-plugin-manifest": "^2.3.1",
-    "gatsby-plugin-offline": "^3.0.32",
-    "gatsby-plugin-react-helmet": "^3.1.21",
-    "gatsby-plugin-sass": "^2.8.0",
-    "gatsby-plugin-sharp": "^2.4.3",
-    "gatsby-plugin-sitemap": "^2.3.0",
-    "gatsby-remark-images": "^3.2.0",
-    "gatsby-remark-prismjs": "^3.4.0",
-    "gatsby-remark-relative-images": "^0.3.0",
-    "gatsby-source-filesystem": "^2.1.55",
-    "gatsby-transformer-remark": "^2.13.1",
-    "gatsby-transformer-sharp": "^2.3.13",
-    "prismjs": "^1.19.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-disqus-comments": "^1.4.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
-  },
-  "devDependencies": {
-    "eslint": "^7.16.0",
-    "gh-pages": "2.1.1",
-    "prettier": "^1.19.1",
-    "rimraf": "3.0.0",
-    "sass": "^1.30.0"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "lint": "node_modules/.bin/eslint *.js src/**/*.js --fix",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\" && npm run lint",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "npm run clean && gatsby build && cd public && rm *.map && cd .. && gh-pages -b master -d public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/devSoyoung/devsoyoung.github.io"
-  }
+    "name": "devsoyoung.github.io",
+    "private": true,
+    "description": "Cutelee's Dev Blog",
+    "version": "0.1.0",
+    "author": "soyoung <soyoung.dev@gmail.com>",
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.12.1",
+        "gatsby": "^2.19.7",
+        "gatsby-image": "^2.2.39",
+        "gatsby-plugin-feed": "^2.4.0",
+        "gatsby-plugin-manifest": "^2.3.1",
+        "gatsby-plugin-offline": "^3.0.32",
+        "gatsby-plugin-react-helmet": "^3.1.21",
+        "gatsby-plugin-sass": "^2.8.0",
+        "gatsby-plugin-sharp": "^2.4.3",
+        "gatsby-plugin-sitemap": "^2.3.0",
+        "gatsby-remark-images": "^3.2.0",
+        "gatsby-remark-prismjs": "^3.4.0",
+        "gatsby-remark-relative-images": "^0.3.0",
+        "gatsby-source-filesystem": "^2.1.55",
+        "gatsby-transformer-remark": "^2.13.1",
+        "gatsby-transformer-sharp": "^2.3.13",
+        "prismjs": "^1.19.0",
+        "prop-types": "^15.7.2",
+        "react": "^16.12.0",
+        "react-disqus-comments": "^1.4.0",
+        "react-dom": "^16.12.0",
+        "react-helmet": "^5.2.1"
+    },
+    "devDependencies": {
+        "eslint": "^7.16.0",
+        "gh-pages": "2.1.1",
+        "prettier": "^1.19.1",
+        "rimraf": "3.0.0",
+        "sass": "^1.30.0"
+    },
+    "keywords": [
+        "gatsby"
+    ],
+    "license": "MIT",
+    "scripts": {
+        "build": "gatsby build",
+        "develop": "gatsby develop",
+        "lint": "node_modules/.bin/eslint *.js src/**/*.js --fix",
+        "format": "prettier --write \"**/*.{js,jsx,json,md}\" && npm run lint",
+        "start": "npm run develop",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean",
+        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+        "deploy": "npm run clean && gatsby build && cd public && rm *.map && cd .. && gh-pages -b master -d public"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/devSoyoung/devsoyoung.github.io"
+    }
 }

@@ -20,33 +20,33 @@ Jest 로 React 테스트 코드를 작성하는 튜토리얼을 따라하던 중
 import React, { useState } from "react";
 
 const STATUS = {
-  HOVERED: "hovered",
-  NORMAL: "normal"
+    HOVERED: "hovered",
+    NORMAL: "normal"
 };
 const classState = STATUS.HOVERED;
 
 function Link({ children, url }) {
-  const [classState, setClassState] = useState();
-  console.log("classState: ", classState); // 💡 이 코드가 두 번 실행됩니다.
+    const [classState, setClassState] = useState();
+    console.log("classState: ", classState); // 💡 이 코드가 두 번 실행됩니다.
 
-  function _onMouseEnter() {
-    setClassState(STATUS.HOVERED);
-  }
+    function _onMouseEnter() {
+        setClassState(STATUS.HOVERED);
+    }
 
-  function _onMouseLeave() {
-    setClassState(STATUS.NORMAL);
-  }
+    function _onMouseLeave() {
+        setClassState(STATUS.NORMAL);
+    }
 
-  return (
-    <a
-      className={classState}
-      href={url || "#"}
-      onMouseEnter={_onMouseEnter}
-      onMouseLeave={_onMouseLeave}
-    >
-      {children}
-    </a>
-  );
+    return (
+        <a
+            className={classState}
+            href={url || "#"}
+            onMouseEnter={_onMouseEnter}
+            onMouseLeave={_onMouseLeave}
+        >
+            {children}
+        </a>
+    );
 }
 
 export default Link;
@@ -76,12 +76,12 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
-  <React.StrictMode>
-    {" "}
-    // 💡 바로 요기
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+    <React.StrictMode>
+        {" "}
+        // 💡 바로 요기
+        <App />
+    </React.StrictMode>,
+    document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
@@ -96,8 +96,8 @@ Strict Mode는 부작용을 감지할 수 있도록 다양한 기능을 제공�
 
 부작용이 어디에서 발생하는지 알기 위해서는 리액트가 동작하는 방식을 조금 더 자세히 알 필요가 있습니다. 리액트는 다음의 두 단계로 동작합니다.
 
-- **렌더링 단계** : 특정 환경에 어떤 변화가 필요한지 검사하는 단계
-- **커밋 단계** : 변경사항을 반영하는 단계
+-   **렌더링 단계** : 특정 환경에 어떤 변화가 필요한지 검사하는 단계
+-   **커밋 단계** : 변경사항을 반영하는 단계
 
 **렌더링 단계**는 `render` 함수를 호출해서 이전 렌더와 결과값을 비교합니다. **커밋 단계**는 React DOM의 경우, DOM 노드를 추가/변경하는 단계로, `componentDidMount`, `componentDidUpdate` 와 같은 생명주기 메서드를 실행합니다.
 
@@ -109,14 +109,14 @@ Strict Mode는 부작용을 감지할 수 있도록 다양한 기능을 제공�
 
 ### **렌더링 단계 생명주기 메서드**
 
-- `coustructor`
-- `componentWillMount` (or `UNSAFE_componentWillMount`)
-- `componentReceiveProps` (or `UNSAFE_componentReceiveProps`)
-- `componentWillUpdate` (or `UNSAFE_componentWillUpdate`)
-- `getDerivedStateFromProps`
-- `shouldComponentUpdate`
-- `render`
-- `setState` 업데이트 함수 (첫 번째 인자)
+-   `coustructor`
+-   `componentWillMount` (or `UNSAFE_componentWillMount`)
+-   `componentReceiveProps` (or `UNSAFE_componentReceiveProps`)
+-   `componentWillUpdate` (or `UNSAFE_componentWillUpdate`)
+-   `getDerivedStateFromProps`
+-   `shouldComponentUpdate`
+-   `render`
+-   `setState` 업데이트 함수 (첫 번째 인자)
 
 이 메서드들은 **여러 번 호출**될 가능성이 있기 때문에 주의⚠️가 필요합니다. 호출할 때마다 결과가 달라지는 '부작용'을 가지게 되면 원하지 않는 방식으로 애플리케이션이 동작할 수 있기 때문입니다. 함수 호출의 결과가 외부의 영향을 받지 않고 ✅ **입력값에 따라 결정되는 순수한 함수** 라면, 여러 번 호출되더라도 문제가 발생하지 않을 겁니다. (결과가 동일하다는 뜻입니다.)
 
@@ -126,11 +126,11 @@ Strict 모드가 자동적으로 부작용을 찾아주는 것은 불가능하�
 
 ### 이중 호출(Double-Invoke)되는 함수
 
-- 클래스 컴포넌트의 `constructor`, `render` 그리고 `shouldComponentUpdate`
-- 클래스 컴포넌트의 `getDrivedStateFromProps` static 메서드
-- 함수 컴포넌트 바디
-- State updater 함수(`setState` 의 첫 번째 인자)
-- `useState`, `useMemo`, `useReducer` 에 전달되는 함수
+-   클래스 컴포넌트의 `constructor`, `render` 그리고 `shouldComponentUpdate`
+-   클래스 컴포넌트의 `getDrivedStateFromProps` static 메서드
+-   함수 컴포넌트 바디
+-   State updater 함수(`setState` 의 첫 번째 인자)
+-   `useState`, `useMemo`, `useReducer` 에 전달되는 함수
 
 아까 맨 처음에 작성했던 코드처럼 `useState`를 사용하면 **Strict Mode 가 해당 컴포넌트를 두 번 실행**하기 때문에, `console.log` 가 두 번 출력되는 결과를 낳았던 것입니다. `state`를 사용하지 않는 컴포넌트는 `console.log`의 결과가 한 번만 출력되는 것을 확인할 수 있었습니다.
 
