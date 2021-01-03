@@ -32,7 +32,7 @@ now newuser can login without sudo requirement:
 	mysql -u newuser -p
 ```
 
--   답변 링크 : [Connect to mysql server without sudo - stackoverflow](https://stackoverflow.com/questions/37239970/connect-to-mysql-server-without-sudo)
+- 답변 링크 : [Connect to mysql server without sudo - stackoverflow](https://stackoverflow.com/questions/37239970/connect-to-mysql-server-without-sudo)
 
 root 사용자만 sudo로 접속이 필요하기 때문에, 새로운 사용자를 만들어서 해당 사용자로 접속을 시도하면 패스워드만으로 접속이 가능하다는 답변이었습니다.
 

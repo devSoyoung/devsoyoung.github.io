@@ -28,17 +28,17 @@ const router = new Router();
 const app = new Koa();
 
 router.get("/", (ctx, next) => {
-    ctx.body = "Home";
+  ctx.body = "Home";
 });
 router.get("/hello", (ctx, next) => {
-    ctx.body = "Hello, World!";
+  ctx.body = "Hello, World!";
 });
 
 app.use(router.routes());
 app.use(router.allowedMethods());
 
 app.listen(3000, () => {
-    console.log("server is listening to port 3000");
+  console.log("server is listening to port 3000");
 });
 ```
 

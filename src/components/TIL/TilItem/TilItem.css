@@ -24,7 +24,7 @@
     /*margin-bottom: 10px;*/
 }
 .til-item-subject {
-    background: #dedcee;
+    background: var(--border-color);
     font-size: 13px;
     font-weight: 300;
     font-family: 'Montserrat', 'Noto Sans KR', sans-serif;

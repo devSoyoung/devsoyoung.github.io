@@ -58,27 +58,24 @@ FETCH 액션을 dispatch하면 설문(poll) 목록을 가져오는 API를 요청
 // pollReducers.js
 import { createAction, handleActions } from "redux-actions";
 export const actions = {
-    FETCH_POLL: "@poll/FETCH_POLL",
-    FETCH_POLL_SUCCESS: "@poll/FETCH_POLL_SUCCESS"
+  FETCH_POLL: "@poll/FETCH_POLL",
+  FETCH_POLL_SUCCESS: "@poll/FETCH_POLL_SUCCESS"
 };
 
 export const creators = {
-    fetchPoll: createAction(actions.FETCH_POLL),
-    fetchPollSuccess: createAction(
-        actions.FETCH_POLL_SUCCESS,
-        payload => payload
-    )
+  fetchPoll: createAction(actions.FETCH_POLL),
+  fetchPollSuccess: createAction(actions.FETCH_POLL_SUCCESS, payload => payload)
 };
 
 export const initialState = {
-    polls: []
+  polls: []
 };
 
 export default pollReducer = {
-    [actions.FETCH_POLL_SUCCESS]: (state, action) => ({
-        ...state,
-        polls: action.payload
-    })
+  [actions.FETCH_POLL_SUCCESS]: (state, action) => ({
+    ...state,
+    polls: action.payload
+  })
 };
 ```
 
@@ -86,10 +83,10 @@ export default pollReducer = {
 // selector.js
 import { initialState } from "./pollReducers";
 export const getNotDonePoll = state => {
-    if (!state.poll || !state.poll.polls) {
-        return initialState.polls;
-    }
-    return state.poll.polls.filter.map(poll => !poll.is_done);
+  if (!state.poll || !state.poll.polls) {
+    return initialState.polls;
+  }
+  return state.poll.polls.filter.map(poll => !poll.is_done);
 };
 ```
 
@@ -142,9 +139,9 @@ import { initialState } from "./friend.reducer";
 
 const selectFriend = state => state.friend || initialState;
 const getSearchedFriends = createSelector(selectFriend, friendState =>
-    friendState.friends.filter(item =>
-        item.username.includes(friendState.friendSearchInputText)
-    )
+  friendState.friends.filter(item =>
+    item.username.includes(friendState.friendSearchInputText)
+  )
 );
 
 export default { getSearchedFriends };
@@ -168,7 +165,7 @@ API로 가져온 데이터를 어떻게 처리해야 할지 고민된다면 sele
 
 ## Reference
 
--   [redux + reselect](https://medium.com/@ljs0705/redux-reselect-490f9acc1090)
--   [Reselect를 이용하여 React와 Redux 최적화하기](http://guswnsxodlf.github.io/optimize-react-component-using-reselect)
--   [Redux - Selector 패턴과 Reselect | Godsenal’s Blog](https://godsenal.github.io/2018/07/25/Redux-selector-%ED%8C%A8%ED%84%B4%EA%B3%BC-reselect/)
--   [What is a Redux selector? - Matthew Holman - Medium](https://medium.com/@matthew.holman/what-is-a-redux-selector-a517acee1fe8)
+- [redux + reselect](https://medium.com/@ljs0705/redux-reselect-490f9acc1090)
+- [Reselect를 이용하여 React와 Redux 최적화하기](http://guswnsxodlf.github.io/optimize-react-component-using-reselect)
+- [Redux - Selector 패턴과 Reselect | Godsenal’s Blog](https://godsenal.github.io/2018/07/25/Redux-selector-%ED%8C%A8%ED%84%B4%EA%B3%BC-reselect/)
+- [What is a Redux selector? - Matthew Holman - Medium](https://medium.com/@matthew.holman/what-is-a-redux-selector-a517acee1fe8)

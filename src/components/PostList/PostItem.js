@@ -3,21 +3,19 @@ import { Link } from "gatsby";
 
 import PostInfo from "../Post/PostInfo";
 
-import "./PostItem.css";
+import "./PostItem.scss";
 
 const PostItem = ({ item }) => {
-    const { title, description, path, date, category } = item;
-    return (
-        <div className="post-item-container">
-            <div className="post-item-info">
-                <PostInfo category={category} date={date} />
-            </div>
-            <Link to={path}>
-                <h2 className="post-item-title">{title}</h2>
-            </Link>
-            <div className="post-item-description">{description}</div>
-        </div>
-    );
+  const { title, description, path, date, category } = item;
+  return (
+    <li className="post-item">
+      <PostInfo category={category} date={date} />
+      <h2>
+        <Link to={path}>{title}</Link>
+      </h2>
+      <div className="description">{description}</div>
+    </li>
+  );
 };
 
 export default PostItem;

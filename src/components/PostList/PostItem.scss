@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+.post-item {
+    margin-bottom: 25px;
+    display: block;
+    h2 {
+        line-height: 1.4;
+        font-size: 23px;
+        letter-spacing: -0.5px;
+        margin-bottom: 10px;
+        &:hover {
+            transition: 0.3s;
+            color: var(--post-item-hover-color);
+        }
+    }
+    .description {
+        font-size: 16px;
+        letter-spacing: -0.7px;
+        cursor: default;
+    }
+}
+
+/* Tablet, Desktop Device */
+@media all and (min-width: 768px) {
+    .post-item-container {
+        padding: 15px;
+        margin-bottom: 0;
+    }
+}

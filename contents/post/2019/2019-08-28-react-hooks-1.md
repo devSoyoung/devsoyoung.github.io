@@ -26,29 +26,29 @@ HOC는 **input**으로 컴포넌트를 받아 **output**으로 컴포넌트를 �
 import { Component } from "React";
 
 export const Enhance = ComposedComponent =>
-    class extends Component {
-        constructor(props) {
-            super(props);
-            this.state = { data: null };
-        }
-        componentDidMount() {
-            this.setState({ data: "Hello" });
-        }
-        render() {
-            return <ComposedComponent {...this.props} data={this.state.data} />;
-        }
-    };
+  class extends Component {
+    constructor(props) {
+      super(props);
+      this.state = { data: null };
+    }
+    componentDidMount() {
+      this.setState({ data: "Hello" });
+    }
+    render() {
+      return <ComposedComponent {...this.props} data={this.state.data} />;
+    }
+  };
 ```
 
 ```js
 import { Enhance } from "./Enhance";
 
 class MyComponent {
-    render() {
-        if (!this.data) return <div>Waiting...</div>;
+  render() {
+    if (!this.data) return <div>Waiting...</div>;
 
-        return <div>{this.data}</div>;
-    }
+    return <div>{this.data}</div>;
+  }
 }
 
 export default Enhance(MyComponent); // Enhanced component
@@ -90,14 +90,14 @@ Hooks가 제공하는 내장 API에는 useEffect와 useState가 있습니다.
 import { useState } from "react";
 
 const Example = () => {
-    const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
 
-    return (
-        <div>
-            <p>{`count: ${count}`}</p>
-            <button onClick={() => setCount(count + 1)}>+</button>
-        </div>
-    );
+  return (
+    <div>
+      <p>{`count: ${count}`}</p>
+      <button onClick={() => setCount(count + 1)}>+</button>
+    </div>
+  );
 };
 
 export default Example;
@@ -111,21 +111,21 @@ Example은 함수이기 때문에, **렌더링 할 컴포넌트 대신 값을 �
 import { useState } from "react";
 
 const useCount = gap => {
-    const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
 
-    const increaseCount = () => {
-        setCount(count + gap);
-    };
+  const increaseCount = () => {
+    setCount(count + gap);
+  };
 
-    const decreaseCount = () => {
-        setCount(count - gap);
-    };
+  const decreaseCount = () => {
+    setCount(count - gap);
+  };
 
-    return {
-        count,
-        increaseCount,
-        decreaseCount
-    };
+  return {
+    count,
+    increaseCount,
+    decreaseCount
+  };
 };
 
 export default useCount;
@@ -153,19 +153,19 @@ render가 발생할 때마다 _(componentDidMount: 초기, componentDidUpdate: �
 import { useState, useEffect } from "react";
 
 export function Data() {
-    const [data, setData] = useState(null);
+  const [data, setData] = useState(null);
 
-    useEffect(() => {
-        API.getData().then(response => {
-            setData(response);
-        });
-    }, []);
+  useEffect(() => {
+    API.getData().then(response => {
+      setData(response);
+    });
+  }, []);
 
-    const isLoading = data == null;
-    if (isLoading) {
-        return "Loading..";
-    }
-    return data;
+  const isLoading = data == null;
+  if (isLoading) {
+    return "Loading..";
+  }
+  return data;
 }
 ```
 
@@ -175,10 +175,10 @@ export function Data() {
 
 ```js
 useEffect(() => {
-    window.addEventListener("mousemove", logMousePosition);
-    return () => {
-        window.removeEventListener("mousemove", logMousePosition);
-    };
+  window.addEventListener("mousemove", logMousePosition);
+  return () => {
+    window.removeEventListener("mousemove", logMousePosition);
+  };
 }, []);
 ```
 
@@ -188,9 +188,9 @@ effect 함수의 return 값이 있는 경우 hook의 cleanup 함수로 인식하
 
 ## 🤑 Hooks를 사용했을 때 얻는 이점
 
--   **Functional Component**로 통일
--   **Custom Hooks** : 보다 쉬운 상태 로직 재사용
--   **useEffect** : 라이프 사이클 API에 흩어져 있던 로직을 묶음
+- **Functional Component**로 통일
+- **Custom Hooks** : 보다 쉬운 상태 로직 재사용
+- **useEffect** : 라이프 사이클 API에 흩어져 있던 로직을 묶음
 
 Hooks는 HOC나 render-props 같은 패턴이 가져오는 Component Tree의 불필요한 중첩을 없애줄 수 있습니다. 복잡한 패턴을 적용하지 않고 보다 직관적으로 로직을 재사용할 수 있습니다.
 
@@ -210,8 +210,8 @@ Redux나 React Router가 어떤 패턴으로 만들어졌는지에 대해서도 
 
 ## Reference
 
--   [Making Sense of React Hooks](https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889)
--   [React의 기본, 컴포넌트를 알아보자](https://medium.com/little-big-programming/react%EC%9D%98-%EA%B8%B0%EB%B3%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%A5%BC-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90-92c923011818)
--   [리액트(React) 이해 4 - Higher Order Component(HOC)로 컴포넌트 재사용 하기](https://www.vobour.com/%EB%A6%AC%EC%95%A1%ED%8A%B8-react-%EC%9D%B4%ED%95%B4-4-higher-order-component)
--   [[React] Render Props Pattern](https://blog.naver.com/PostView.nhn?blogId=backsajang420&logNo=221325867683&categoryNo=77&parentCategoryNo=0)
--   [React의 새로운 패러다임, React Hooks](https://velog.io/@vies00/React-Hooks)
+- [Making Sense of React Hooks](https://medium.com/@dan_abramov/making-sense-of-react-hooks-fdbde8803889)
+- [React의 기본, 컴포넌트를 알아보자](https://medium.com/little-big-programming/react%EC%9D%98-%EA%B8%B0%EB%B3%B8-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8%EB%A5%BC-%EC%95%8C%EC%95%84%EB%B3%B4%EC%9E%90-92c923011818)
+- [리액트(React) 이해 4 - Higher Order Component(HOC)로 컴포넌트 재사용 하기](https://www.vobour.com/%EB%A6%AC%EC%95%A1%ED%8A%B8-react-%EC%9D%B4%ED%95%B4-4-higher-order-component)
+- [[React] Render Props Pattern](https://blog.naver.com/PostView.nhn?blogId=backsajang420&logNo=221325867683&categoryNo=77&parentCategoryNo=0)
+- [React의 새로운 패러다임, React Hooks](https://velog.io/@vies00/React-Hooks)

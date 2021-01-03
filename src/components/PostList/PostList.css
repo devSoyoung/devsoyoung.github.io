@@ -1,8 +1,0 @@
-.post-list {
-    max-width: 570px;
-    margin: auto;
-}
-
-.post-list:first-child {
-    margin-top: 15px;
-}

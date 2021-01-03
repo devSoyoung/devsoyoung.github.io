@@ -1,0 +1,63 @@
+@import "../../assets/scss/_variables.scss";
+
+header {
+    text-align: center;
+    background: var(--header-bg);
+    height: 200px;
+    .header-inner {
+        margin: 0 auto;
+        max-width: $app-max-width;
+        ul {
+            padding: 15px 0;
+            text-align: left;
+            margin-bottom: 25px;
+            font-family: Ubuntu, sans-serif;
+            &:first-child {
+                margin-left: 15px;
+            }
+            li {
+                display: inline;
+                a {
+                    text-decoration: none;
+                    margin: 10px;
+                    font-size: 16px;
+                    font-weight: 300;
+                    opacity: 0.4;
+                    &:hover {
+                        opacity: 1;
+                        transition: 0.3s;
+                    }
+                    &.selected {
+                        opacity: 1;
+                        font-weight: bold;
+                    }
+                    &.link .fab {
+                        float: right;
+                        padding-top: 5px;
+                        font-size: 20px;
+                        margin-left: 20px;
+                    }
+                    &.github .fab {
+                        margin-right: 15px;
+                    }
+                    @media all and (min-width: 768px) {
+
+                    }
+                }
+            }
+        }
+    }
+    h1 {
+        font-size: 35px;
+        letter-spacing: -1px;
+        margin-bottom: 5px;
+        cursor: default;
+    }
+    .description {
+        font-size: 15px;
+        letter-spacing: -0.5px;
+        cursor: default;
+        font-style: italic;
+        font-family: georgia, serif;
+    }
+}

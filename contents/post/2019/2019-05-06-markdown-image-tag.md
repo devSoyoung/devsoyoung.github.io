@@ -38,5 +38,5 @@ category: "ETC"
 
 ## 참고링크
 
--   [마크다운(Markdown) 소개방법 - 트렌드톡](https://news.trendtalk.kr/markdown-intro/#index-08)
--   [aligning-images.md](https://gist.github.com/DavidWells/7d2e0e1bc78f4ac59a123ddf8b74932d)
+- [마크다운(Markdown) 소개방법 - 트렌드톡](https://news.trendtalk.kr/markdown-intro/#index-08)
+- [aligning-images.md](https://gist.github.com/DavidWells/7d2e0e1bc78f4ac59a123ddf8b74932d)
