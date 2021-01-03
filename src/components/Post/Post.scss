@@ -2,6 +2,7 @@
 .post-container {
     padding-top: 30px;
     max-width: 600px;
+    margin: auto;
 }
 
 .post-title {
@@ -28,6 +29,9 @@
         border-bottom: 1px solid #eaecef;
         margin: 30px 0 15px 0;
         font-size: 25px;
+        @media (prefers-color-scheme: dark) {
+            border-bottom: 1px solid #3f4040;
+        }
     }
     h3 {
         margin: 35px 0 20px 0;
@@ -61,7 +65,7 @@
     pre[class*="language-"] {
         font-family: 'Source Code Pro', monospace;
         font-size: inherit;
-        color: black;
+        color: var(--default-color);
         letter-spacing: -0.5px;
         padding: 3px;
     }

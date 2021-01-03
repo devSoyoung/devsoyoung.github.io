@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import profile from "../../../../contents/profile.jpeg";
 
-import "./Author.css";
+import "./Author.scss";
 
 const Author = () => {
   const data = useStaticQuery(graphql`

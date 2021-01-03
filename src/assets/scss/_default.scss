@@ -6,6 +6,8 @@
 
     --post-info-category-bg: #fc9d9a;
     --post-item-hover-color: #fe4365;
+
+    --border-color: #dedcee;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,5 +18,7 @@
         --header-bg: #2b2a2a;
 
         --post-info-category-bg: #54546c;
+
+        --border-color: #3f4040;
     }
 }
