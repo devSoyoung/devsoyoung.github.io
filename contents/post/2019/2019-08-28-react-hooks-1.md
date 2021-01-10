@@ -139,7 +139,7 @@ increaseCount와 decreaseCount에서 setCount를 실행하기 때문에, 이 두
 
 ### useEffect
 
-componentDidMount 등의 **Life Cycle API**는 useEffect로 사용할 수 있습니다. Life Cycle API에서 우리가 수행했던 API 요청, DOM 조작 등이 side effect이기 때문에, useEffect라는 이름의 API가 되었습니다.
+`componentDidMount` 등의 **Life Cycle API**는 useEffect로 사용할 수 있습니다. Life Cycle API에서 우리가 수행했던 API 요청, DOM 조작 등이 side effect이기 때문에, useEffect라는 이름의 API가 되었습니다.
 
 클래스 컴포넌트에서의 `componentDidMount`, `componentDidUpdate`, `componentWillUnmount`는 **useEffect**로 실행됩니다.
 
@@ -147,7 +147,12 @@ componentDidMount 등의 **Life Cycle API**는 useEffect로 사용할 수 있습
 function useEffect(effect: EffectCallback, inputs?: InputIdentityList)
 ```
 
-render가 발생할 때마다 _(componentDidMount: 초기, componentDidUpdate: 매번)_ **effect**가 실행됩니다. 두 번째 파라미터인 **inputs**를 통해 특정한 상태가 update 되었을 때만 effect가 실행되도록 설정해줄 수 있습니다.
+render가 발생할 때마다 **effect**가 실행됩니다. 
+
+- `componentDidMount`: 초기 
+- `componentDidUpdate`: 매번
+
+두 번째 파라미터인 **inputs**를 통해 특정한 상태가 update 되었을 때만 effect가 실행되도록 설정해줄 수 있습니다.
 
 ```js
 import { useState, useEffect } from "react";
@@ -169,9 +174,11 @@ export function Data() {
 }
 ```
 
-위의 예제는 useEffect의 inputs에 빈 배열을 넘겨서 최초(componentDidMount)에만 실행되도록 하였습니다. **useEffect는 여러 개 사용될 수 있기 때문**에, 각 state 마다 정의해 줄 수도 있고, 예제처럼 최초에 실행되는 것만 정의해주어도 됩니다.
+위의 예제는 `useEffect`의 inputs에 빈 배열을 넘겨서 최초(`componentDidMount`)에만 실행되도록 하였습니다. 
 
-그렇다면 componentWillUnmount는 어떻게 실행될까요?
+**`useEffect`는 여러 개 사용될 수 있기 때문**에, 각 state 마다 정의해 줄 수도 있고, 예제처럼 최초에 실행되는 것만 정의해주어도 됩니다.
+
+그렇다면 `componentWillUnmount`는 어떻게 실행될까요?
 
 ```js
 useEffect(() => {
@@ -182,7 +189,9 @@ useEffect(() => {
 }, []);
 ```
 
-effect 함수의 return 값이 있는 경우 hook의 cleanup 함수로 인식하고 다음 effect가 실행되기 전에 실행해줍니다. componentWillUnmount는 컴포넌트가 사라지기 전에 한 번만 실행했지만, cleanup 함수는 **새로운 effect 실행 전에 매번 호출**된다는 차이가 있습니다.
+effect 함수의 return 값이 있는 경우 hook의 cleanup 함수로 인식하고 다음 effect가 실행되기 전에 실행해줍니다. 
+
+`componentWillUnmount`는 컴포넌트가 사라지기 전에 한 번만 실행했지만, cleanup 함수는 **새로운 effect 실행 전에 매번 호출**된다는 차이가 있습니다.
 
 위의 예제에서는 inputs로 빈 배열을 넘겨주었기 때문에, unmount 될 때 한 번만 실행됩니다.
 
@@ -196,7 +205,7 @@ Hooks는 HOC나 render-props 같은 패턴이 가져오는 Component Tree의 불
 
 뿐만 아니라 그간 함수형과 클래스형 두 가지 타입 _ㅡ상태가 있는 경우는 클래스형 컴포넌트로, 뷰만 관리하는 경우는 함수형 컴포넌트로 개발하는 등ㅡ_ 을 오가면서 개발했던 것을 함수형 컴포넌트로 통일할 수 있습니다.
 
-클래스형 컴포넌트에서 componentDidMount와 componentWillUnmount에 흩어져있던 관련 코드도 state 마다 묶을 수 있기 때문에 좀 더 연관성 있는 코드끼리 모을 수 있습니다.
+클래스형 컴포넌트에서 `componentDidMount`와 `componentWillUnmount`에 흩어져있던 관련 코드도 state 마다 묶을 수 있기 때문에 좀 더 연관성 있는 코드끼리 모을 수 있습니다.
 
 ## 글을 마무리하며
 
@@ -206,7 +215,6 @@ Hooks는 HOC나 render-props 같은 패턴이 가져오는 Component Tree의 불
 
 Redux나 React Router가 어떤 패턴으로 만들어졌는지에 대해서도 이번 글을 정리하면서 알게 되었는데, 앞으로는 라이브러리를 쓸 때에도 사용하는 것에만 급급하기보다는 어떤 방식으로 구현되었는지 관심을 가져야겠다는 생각이 들었습니다 :)
 
----
 
 ## Reference
 
