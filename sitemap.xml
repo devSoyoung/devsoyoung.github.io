@@ -3,6 +3,7 @@
 <url> <loc>https://devsoyoung.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://devsoyoung.github.io/til</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://devsoyoung.github.io/category</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://devsoyoung.github.io/posts/ios-input-focus-zoom/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://devsoyoung.github.io/posts/2020-review/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://devsoyoung.github.io/posts/react-context-api/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://devsoyoung.github.io/posts/react-usestate-double-invoked/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -32,12 +33,12 @@
 <url> <loc>https://devsoyoung.github.io/posts/webpack-introduce</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://devsoyoung.github.io/posts/naver-tech-concert-review-4</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://devsoyoung.github.io/posts/naver-tech-concert-review-3</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://devsoyoung.github.io/posts/naver-tech-concert-review-1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://devsoyoung.github.io/posts/naver-tech-concert-review-2</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://devsoyoung.github.io/posts/naver-tech-concert-review-1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://devsoyoung.github.io/posts/css-display-attribute/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://devsoyoung.github.io/posts/js-event-basic</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://devsoyoung.github.io/posts/js-htmlcollection-nodelist</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://devsoyoung.github.io/posts/js-exception</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://devsoyoung.github.io/posts/js-event-basic</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://devsoyoung.github.io/posts/js-timer</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://devsoyoung.github.io/posts/js-exception</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://devsoyoung.github.io/posts/python-anaconda/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
