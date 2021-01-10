@@ -147,10 +147,10 @@ increaseCount와 decreaseCount에서 setCount를 실행하기 때문에, 이 두
 function useEffect(effect: EffectCallback, inputs?: InputIdentityList)
 ```
 
-render가 발생할 때마다 **effect**가 실행됩니다. 
+render가 발생할 때마다 **effect**가 실행됩니다.
 
-- `componentDidMount`: 초기 
-- `componentDidUpdate`: 매번
+-   `componentDidMount`: 초기
+-   `componentDidUpdate`: 매번
 
 두 번째 파라미터인 **inputs**를 통해 특정한 상태가 update 되었을 때만 effect가 실행되도록 설정해줄 수 있습니다.
 
@@ -174,7 +174,7 @@ export function Data() {
 }
 ```
 
-위의 예제는 `useEffect`의 inputs에 빈 배열을 넘겨서 최초(`componentDidMount`)에만 실행되도록 하였습니다. 
+위의 예제는 `useEffect`의 inputs에 빈 배열을 넘겨서 최초(`componentDidMount`)에만 실행되도록 하였습니다.
 
 **`useEffect`는 여러 개 사용될 수 있기 때문**에, 각 state 마다 정의해 줄 수도 있고, 예제처럼 최초에 실행되는 것만 정의해주어도 됩니다.
 
@@ -189,7 +189,7 @@ useEffect(() => {
 }, []);
 ```
 
-effect 함수의 return 값이 있는 경우 hook의 cleanup 함수로 인식하고 다음 effect가 실행되기 전에 실행해줍니다. 
+effect 함수의 return 값이 있는 경우 hook의 cleanup 함수로 인식하고 다음 effect가 실행되기 전에 실행해줍니다.
 
 `componentWillUnmount`는 컴포넌트가 사라지기 전에 한 번만 실행했지만, cleanup 함수는 **새로운 effect 실행 전에 매번 호출**된다는 차이가 있습니다.
 
@@ -214,7 +214,6 @@ Hooks는 HOC나 render-props 같은 패턴이 가져오는 Component Tree의 불
 미루고 미뤄왔던 Hooks에 대해 공부해서 뿌듯하지만, 이해하는데에 꽤 많이 시간이 걸렸다는 건 그 동안 상태 관련 로직을 재사용하는 것에 대해 그다지 고려해보지 않았다는 증거인 것 같아서 한편으로는 많이 반성하기도 했습니다.
 
 Redux나 React Router가 어떤 패턴으로 만들어졌는지에 대해서도 이번 글을 정리하면서 알게 되었는데, 앞으로는 라이브러리를 쓸 때에도 사용하는 것에만 급급하기보다는 어떤 방식으로 구현되었는지 관심을 가져야겠다는 생각이 들었습니다 :)
-
 
 ## Reference
 
