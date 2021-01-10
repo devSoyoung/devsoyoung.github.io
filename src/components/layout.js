@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Header from "../layout/Header";
 
 import "@fortawesome/fontawesome-free/css/all.css";
+import "./reset.scss";
 import "./layout.scss";
 
 const Layout = ({ children, type }) => {
@@ -37,10 +38,11 @@ const Layout = ({ children, type }) => {
             />
             <div
                 style={{
-                    margin: "0 auto",
+                    // margin: "0 auto",
                     maxWidth: 1200,
                     padding: "0 1.0875rem 1.45rem"
                 }}
+                className={`layout_${type}`}
             >
                 <main>{children}</main>
                 <footer>

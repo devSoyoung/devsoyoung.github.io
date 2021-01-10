@@ -6,19 +6,21 @@
 
     --post-info-category-bg: #ffaba1;
     --post-item-hover-color: #fe4365;
+    --post-item-description-color: #5e5e5f;
 
     --border-color: #f2a299;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --default-color: #e6dfdf;
-        --default-bg: #261a18;
+        --default-color: #d9d2d2;
+        --default-bg: #262120;
 
-        --primary-color: #402b28;
+        --primary-color: #332c2b;
 
-        --post-info-category-bg: #996760;
-        --post-item-hover-color: #fe4365;
+        --post-info-category-bg: #804752;
+        --post-item-hover-color: #cc3551;
+        --post-item-description-color: #a6a1a2;
 
         --border-color: #593c38;
     }

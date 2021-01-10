@@ -8,7 +8,9 @@
         font-size: 23px;
         letter-spacing: -0.5px;
         margin-bottom: 10px;
-        &:hover {
+        &:hover,
+        &:active,
+        &:focus {
             transition: 0.3s;
             color: var(--post-item-hover-color);
         }
@@ -17,6 +19,7 @@
         font-size: 16px;
         letter-spacing: -0.7px;
         cursor: default;
+        color: var(--post-item-description-color);
     }
 }
 
