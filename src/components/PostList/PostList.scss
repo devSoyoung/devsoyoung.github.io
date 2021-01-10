@@ -1,9 +1,9 @@
 @import "../../assets/scss/variables";
 
-.post-list {
-    max-width: 550px;
+.post-list-container {
+    max-width: $app-max-width;
     margin: auto;
-    &:first-child {
+    .post-list:first-child {
          margin-top: 15px;
     }
 }

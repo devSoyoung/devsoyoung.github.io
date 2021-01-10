@@ -1,18 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import PostItem from "./PostItem";
+import PostSearch from "./PostSearch";
 
 import "./PostList.scss";
 
 const PostList = ({ posts }) => {
+    const [keyword, setKeyword] = useState("");
+    const onChange = ({ target }) => {
+        setKeyword(target.value);
+    };
     return (
-        <ul className="post-list">
-            {posts.map((post, idx) => (
-                <PostItem
-                    item={post.node.frontmatter}
-                    key={`post-list-${idx}`}
-                />
-            ))}
-        </ul>
+        <div className="post-list-container">
+            <PostSearch keyword={keyword} onChange={onChange} />
+            <ul className="post-list">
+                {posts
+                    .filter(({ node }) => {
+                        const { title, category } = node.frontmatter;
+                        const lowerKeyword = keyword.toLowerCase();
+                        return (
+                            category.toLowerCase().includes(lowerKeyword) ||
+                            title.toLowerCase().includes(lowerKeyword)
+                        );
+                    })
+                    .map((post, idx) => (
+                        <PostItem
+                            item={post.node.frontmatter}
+                            key={`post-list-${idx}`}
+                        />
+                    ))}
+            </ul>
+        </div>
     );
 };
 

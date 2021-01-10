@@ -4,6 +4,10 @@
 
     --primary-color: #e89f90;
 
+    --post-search-bg: #ffe8e6; // #ffaba1 -> 10%
+    --post-search-hover-bg: #ffdcd9; // 15%
+    --post-search-focus-bg: #ffd0cc;
+
     --post-info-category-bg: #ffaba1;
     --post-item-hover-color: #fe4365;
     --post-item-description-color: #5e5e5f;
@@ -17,6 +21,10 @@
         --default-bg: #262120;
 
         --primary-color: #332c2b;
+
+        --post-search-bg: #211a1a;
+        --post-search-hover-bg: #403333; // 15%
+        --post-search-focus-bg: #4d4343;
 
         --post-info-category-bg: #804752;
         --post-item-hover-color: #cc3551;

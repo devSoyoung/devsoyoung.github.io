@@ -1,0 +1,37 @@
+.post-search {
+    margin: 20px 0 20px 0;
+    label {
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        background: var(--post-search-bg);
+        padding: 7px 20px;
+        border-radius: 5px;
+        transform: rotateY(360deg);
+        &:hover {
+            background: var(--post-search-hover-bg);
+        }
+        &.focused {
+            background: var(--post-search-focus-bg);
+        }
+        input:focus ~ span {
+            transform: rotateY(180deg);
+            transition: 0.3s;
+        }
+        input {
+            margin-left: 10px;
+            flex: 1;
+            border: 0;
+            box-sizing: border-box;
+            font-size: 14px;
+            font-weight: 500;
+            background: transparent;
+            color: var(--default-color);
+            &:focus {
+                outline: 0;
+            }
+        }
+    }
+
+}

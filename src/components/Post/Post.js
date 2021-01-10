@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import Comment from "./Comment";
 import Author from "./Author";
@@ -7,12 +7,21 @@ import PostInfo from "./PostInfo";
 import "./Post.scss";
 
 const Post = ({ title, date, category, html, path }) => {
-    const titleRef = useRef();
+    const [showTopButton, setShowTopButton] = useState(false);
+    const onScroll = () => {
+        setShowTopButton(window.scrollY > 100);
+    };
+    const toTop = () => {
+        window.scrollTo(0, 0);
+    };
     useEffect(() => {
-        titleRef.current.scrollIntoView();
+        document.addEventListener("scroll", onScroll);
+        return () => {
+            document.removeEventListener("scroll", onScroll);
+        };
     }, []);
     return (
-        <div className="post-container" ref={titleRef}>
+        <div className="post-container">
             <div className="post-info-container">
                 <PostInfo category={category} date={date} />
                 <h2 className="post-title">{title}</h2>
@@ -21,6 +30,11 @@ const Post = ({ title, date, category, html, path }) => {
                 className="post-content"
                 dangerouslySetInnerHTML={{ __html: html }}
             />
+            {showTopButton && (
+                <button type="button" className="to-top" onClick={toTop}>
+                    top
+                </button>
+            )}
             <Author />
             <Comment path={path} title={title} />
         </div>

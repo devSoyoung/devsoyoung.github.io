@@ -16,4 +16,4 @@ export default {
     docker,
     git,
     python
-}
+};

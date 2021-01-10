@@ -36,14 +36,7 @@ const Layout = ({ children, type }) => {
                 siteDescription={description}
                 type={type}
             />
-            <div
-                style={{
-                    // margin: "0 auto",
-                    maxWidth: 1200,
-                    padding: "0 1.0875rem 1.45rem"
-                }}
-                className={`layout_${type}`}
-            >
+            <div className={`layout layout_${type}`}>
                 <main>{children}</main>
                 <footer>
                     © {new Date().getFullYear()}, Built with{" "}
