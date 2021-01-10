@@ -16,17 +16,14 @@ const Author = () => {
             }
         }
     `);
-
     const { author, description } = data.site.siteMetadata;
     return (
-        <div className="author-info">
-            <img className="author-image" alt="프로필 사진" src={profile} />
-            <p className="author-name">
-                <a href="https://github.com/devSoyoung" target="_blank">
-                    {author}
-                </a>
-            </p>
-            <p className="author-description">{description}</p>
+        <div className="author">
+            <img alt="프로필 사진" src={profile} />
+            <a href="https://github.com/devSoyoung" target="_blank">
+                {author}
+            </a>
+            <p>{description}</p>
         </div>
     );
 };
