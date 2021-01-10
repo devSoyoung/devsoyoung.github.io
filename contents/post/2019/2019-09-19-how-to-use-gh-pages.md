@@ -5,7 +5,7 @@ template: "post"
 draft: false
 path: "/posts/how-to-use-gh-pages/"
 description: "GitHub의 User Site를 만들 때, 배포를 위한 브랜치와 소스코드를 위한 브랜치 구분 방법을 정리한 글입니다."
-category: "Etc"
+category: "git"
 ---
 
 GitHub에서는 GitHub Pages로 호스팅 서비스를 제공하고 있습니다. 제 블로그 또한 저의 GitHub 사용자 사이트인 `devsoyoung.github.io`를 통해 호스팅하고 있습니다.

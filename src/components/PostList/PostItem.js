@@ -5,15 +5,21 @@ import PostInfo from "../Post/PostInfo";
 
 import "./PostItem.scss";
 
+import thumbnails from "../../assets/thumbnail";
+
 const PostItem = ({ item }) => {
     const { title, description, path, date, category } = item;
+    const thumbnail = thumbnails[category.toLowerCase()];
     return (
         <li className="post-item">
-            <PostInfo category={category} date={date} />
-            <h2>
-                <Link to={path}>{title}</Link>
-            </h2>
-            <div className="description">{description}</div>
+            <Link to={path}>
+                <div>
+                    <PostInfo category={category} date={date} />
+                    <h2>{title}</h2>
+                    <div className="description">{description}</div>
+                </div>
+                {thumbnail && <img src={thumbnail} alt={category} />}
+            </Link>
         </li>
     );
 };

@@ -6,7 +6,7 @@ import "./Header.scss";
 const Header = ({ siteTitle, siteDescription, type }) => {
     const isMain = type === "main";
     return (
-        <header className={!isMain && "simple"}>
+        <header className={!isMain ? "simple" : null}>
             <div className="header-inner">
                 <h1>
                     <Link to="/">{siteTitle}</Link>

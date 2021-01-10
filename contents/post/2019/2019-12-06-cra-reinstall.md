@@ -5,7 +5,7 @@ template: "post"
 draft: false
 path: "/posts/cra-reinstall/"
 description: "create-react-app으로 프로젝트를 생성했을 때, index.js 등의 파일이 생성되지 않는 문제의 해결방법입니다."
-category: "React.js"
+category: "React"
 ---
 
 create-react-app으로 프로젝트를 생성하려고 하던 어느 날, 갑자기 2주 전만 해도 잘 동작하던 친구가 말을 듣지 않습니다. `index.js`도, `App.js`도, 어떤 template도 생기지 않고 오직 react, react-dom, react-scripts만 포함된 `package.json`만 생성되었습니다.
