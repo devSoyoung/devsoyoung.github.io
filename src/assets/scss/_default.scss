@@ -11,6 +11,9 @@
     --post-info-category-bg: #ffaba1;
     --post-item-hover-color: #fe4365;
     --post-item-description-color: #5e5e5f;
+    --post-author-bg: #ffd8d4;
+
+    --post-content-blockquote: #999291;
 
     --border-color: #f2a299;
 }
@@ -25,10 +28,13 @@
         --post-search-bg: #211a1a;
         --post-search-hover-bg: #403333; // 15%
         --post-search-focus-bg: #4d4343;
+        --post-author-bg: #403333;
 
         --post-info-category-bg: #804752;
         --post-item-hover-color: #cc3551;
         --post-item-description-color: #a6a1a2;
+
+        --post-content-blockquote: #807473;
 
         --border-color: #593c38;
     }
