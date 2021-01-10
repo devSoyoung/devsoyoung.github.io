@@ -4,6 +4,9 @@
     text-align: center;
     padding: 20px;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     img {
         width: 100px;
         margin-bottom: 10px;
@@ -11,15 +14,14 @@
         filter: grayscale(30%);
     }
     a {
-        display: block;
-        font-family: 'Montserrat', sans-serif;
+        font-family: "Source Code Pro", monospace;
         font-size: 12px;
         background: var(--post-info-category-bg);
-        width: 100px;
         border-radius: 20px;
         margin: auto;
         font-weight: bold;
         color: var(--default-color);
+        padding: 0 10px;
         &:hover {
             text-decoration: underline;
         }

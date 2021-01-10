@@ -46,6 +46,9 @@
     a {
         text-decoration: none;
         color: #0080ff;
+        @media (prefers-color-scheme: dark) {
+            color: #297acc;
+        }
         &:hover {
             text-decoration: underline;
         }
@@ -70,7 +73,7 @@
         padding: 3px;
     }
     pre[class*="language-"] {
-        background: rgba(166, 168, 170, .07);
+        background: rgba(166, 168, 170, .1);
         padding: 10px 20px;
         margin-bottom: 15px;
         font-size: 14px;

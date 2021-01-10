@@ -26,7 +26,7 @@ Flux 패턴을 구현한 Redux를 사용하면 상태를 한 곳에서 관리합
 context를 이용하면 단계마다 일일이 props를 넘겨주지 않고도 컴포넌트 트리 전체에 데이터를 제공할 수 있습니다.
 ```
 
-Context를 생성하고 해당 상태가 필요한 컴포넌트에서 Context를 가져다 사용하면 됩니다. 그래서 <span style="color: red;">컴포넌트 트리를 따라가며 props로 전달할 필요가 없습니다.</span>
+Context를 생성하고 해당 상태가 필요한 컴포넌트에서 Context를 가져다 사용하면 됩니다. 그래서 컴포넌트 트리를 따라가며 props로 전달할 필요가 없습니다.
 
 > 리덕스에서 `connect`, `mapStateToProps`로 컴포넌트에 필요한 상태를 가져오듯, 원하는 컴포넌트에서 Context를 이용해 상태를 가져올 수 있습니다.
 
@@ -72,13 +72,11 @@ const ThemeContext = React.createContext(defaultValue);
 <ThemeContext.Provider value={/* 전달할 어떤 값 */}>
 ```
 
-`Provider`는 컨텍스트를 구독하는 컴포넌트에게 <span style="color: red;">컨텍스트의 변화</span>를 알려줍니다. 구독하는 컴포넌트들은 `value` props의 값을 받게 됩니다.
+`Provider`는 컨텍스트를 구독하는 컴포넌트에게 **컨텍스트의 변화**를 알려줍니다. 구독하는 컴포넌트들은 `value` props의 값을 받게 됩니다.
 
 `Provider`는 중첩해서 사용할 수 있습니다. 위 예제를 예로 들면, `App` 컴포넌트보다 자식 컴포넌트에서 다시 `ThemeContext.Provider`를 사용할 수 있습니다. 이 경우 구독하는 컴포넌트에서 가장 가까운, 다시 말해 **더 아래에 있는** `Provider`의 값을 가져옵니다.
 
-이 컨텍스트를 구독하는 컴포넌트들은 **`Provider`의 `value`가 변경될 때 <span style="color: red;">다시 렌더링</span> 됩니다.** 예제에서는 변경되지 않는 문자열 값을 넣어줬지만, 상태를 넣는다면 상태가 바뀔 때 다시 렌더링 될 것입니다.
-
-<br />
+이 컨텍스트를 구독하는 컴포넌트들은 **`Provider`의 `value`가 변경될 때 다시 렌더링 됩니다.** 예제에서는 변경되지 않는 문자열 값을 넣어줬지만, 상태를 넣는다면 상태가 바뀔 때 다시 렌더링 될 것입니다.
 
 이제 컨텍스트를 사용할 컴포넌트를 만들어보겠습니다. `App` 컴포넌트의 자식인 `ChildComponent`의 자식입니다.
 
@@ -136,8 +134,6 @@ MyComponent.contextType = ThemeContext;
 
 단 `contextType` 프로퍼티에 여러 개의 컨텍스트 객체를 지정할 수 없기 때문에, 이 방법은 하나의 컨텍스트만 구독할 수 있습니다.
 
-<br />
-
 ## 구독하는 컴포넌트에서 컨텍스트 값 바꾸기
 
 구독 컴포넌트에서 얌전히 값을 가져다 쓰면 좋겠지만, 현실은 그렇게 간단할 리 없습니다!
@@ -146,9 +142,7 @@ MyComponent.contextType = ThemeContext;
 
 <br />
 
-구독하는 컴포넌트(Consumer)에서도 컨텍스트 값을 변경할 수 있는 예제를 만들어봅시다.
-
-> React 공식 문서의 [Context](https://ko.reactjs.org/docs/context.html#caveats) 예제를 가져왔습니다.
+구독하는 컴포넌트(Consumer)에서도 컨텍스트 값을 변경할 수 있는 예제를 만들어봅시다. React 공식 문서의 [Context](https://ko.reactjs.org/docs/context.html#caveats) 예제를 가져왔습니다.
 
 먼저, 아까 예제와는 다르게 context를 별도의 파일에 분리해서 만들어봅시다. 각 컴포넌트에 컨텍스트가 있으면 어디에 있는지 몰라 컨텍스트를 가져오거나 관리하기가 어려우니 말입니다.
 
@@ -196,7 +190,7 @@ function App() {
 
 `App` 컴포넌트에서는 `Provider`의 `value` props에 상태를 전달해줍니다. 이 상태가 `setTheme`로 변경되면 해당 컨텍스트를 구독하는 컴포넌트들이 <a href="#re-render">다시 렌더링</a> 될 겁니다.
 
-또 하나 중요한 것은 ⚠️ `theme` 상태를 변경할 수 있는 `setTheme` 함수를 `Provider`의 `value` props에 함께 넘겨준다는 점입니다.
+또 하나 중요한 것은 `theme` 상태를 변경할 수 있는 `setTheme` 함수를 `Provider`의 `value` props에 함께 넘겨준다는 점입니다.
 
 ```jsx
 // Theme.jsx
@@ -247,8 +241,6 @@ export const themes = {
 ```
 
 여기에서 `themes`를 가져다쓰지 않고 `{ foreground: ... }`로 새로운 객체 리터럴을 만든다면 우리가 보기에 같은 값이라도 자바스크립트에게는 다른 값입니다. ~~그러면 렌더링이 다시 발..생..~~
-
-![충격](https://lh3.googleusercontent.com/proxy/aHmjNTTw0Wigl2JcBYd8GPLXuwyg-iNTGHhhIRjkQ3UfwDY-S9ps0eIFO00oUkJFTD6ylvZuyElI7aQ)
 
 그래서 컨텍스트의 값으로 객체를 사용할 때는 나의 작은 실수로 불필요한 렌더링이 발생하지 않는지 꼭 주의해야 합니다.
 
