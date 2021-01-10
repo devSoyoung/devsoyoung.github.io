@@ -2,23 +2,24 @@
     --default-color: #000;
     --default-bg: #fff;
 
-    --header-bg: #e9afa3;
+    --primary-color: #e89f90;
 
-    --post-info-category-bg: #fc9d9a;
+    --post-info-category-bg: #ffaba1;
     --post-item-hover-color: #fe4365;
 
-    --border-color: #dedcee;
+    --border-color: #f2a299;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --default-color: #e3dede;
-        --default-bg: #272625;
+        --default-color: #e6dfdf;
+        --default-bg: #261a18;
 
-        --header-bg: #2b2a2a;
+        --primary-color: #402b28;
 
-        --post-info-category-bg: #54546c;
+        --post-info-category-bg: #996760;
+        --post-item-hover-color: #fe4365;
 
-        --border-color: #3f4040;
+        --border-color: #593c38;
     }
 }
