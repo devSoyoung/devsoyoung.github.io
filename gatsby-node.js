@@ -11,30 +11,12 @@ exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions;
     const blogPostTemplate = path.resolve("src/templates/post-template.js");
     const indexTemplate = path.resolve("src/templates/index-template.js");
-    const tilTemplate = path.resolve("src/templates/til-template.js");
-    const categoryTemplate = path.resolve("src/templates/category-template.js");
-
-    // MAIN
+    /* 메인 페이지 */
     createPage({
         path: "/",
         component: indexTemplate,
         context: {}
     });
-
-    // TIL
-    createPage({
-        path: "/til",
-        component: tilTemplate,
-        context: {}
-    });
-
-    // Category
-    createPage({
-        path: "/category",
-        component: categoryTemplate,
-        context: {}
-    });
-
     return graphql(`
         {
             allMarkdownRemark(
