@@ -1,3 +1,7 @@
+const { parsed: env } = require("dotenv").config({ path: ".env" });
+
+const { GOOGLE_ADSENSE } = env;
+
 const siteMetadata = {
     title: "큐트리 개발 블로그",
     description: "Ego sum operarius studens",
@@ -140,6 +144,12 @@ module.exports = {
                 theme_color: "#663399",
                 display: "minimal-ui",
                 icon: "contents/profile.jpeg" // This path is relative to the root of the site.
+            }
+        },
+        {
+            resolve: "gatsby-plugin-google-adsense",
+            options: {
+                publisherId: `ca-pub-${GOOGLE_ADSENSE}`
             }
         }
     ]
