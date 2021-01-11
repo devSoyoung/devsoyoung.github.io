@@ -8,10 +8,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
+import "@fortawesome/fontawesome-free/css/all.css";
 
 import Header from "../layout/Header";
-
-import "@fortawesome/fontawesome-free/css/all.css";
 import "./reset.scss";
 import "./layout.scss";
 

@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDisqusComments from "react-disqus-comments";
 
-import { useSiteMetaData } from "../../../hooks";
-
+import { useSiteMetaData } from "hooks";
 import "./Comment.scss";
 
 const Comment = ({ title, path }) => {

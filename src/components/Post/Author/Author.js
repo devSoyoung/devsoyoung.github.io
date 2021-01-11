@@ -1,8 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-import profile from "../../../../contents/profile.jpeg";
-
+import profile from "assets/profile.jpeg";
 import "./Author.scss";
 
 const Author = () => {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+
 import PostItem from "./PostItem";
 import PostSearch from "./PostSearch";
-
 import "./PostList.scss";
 
 const PostList = ({ posts }) => {

@@ -1,11 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import PostInfo from "../Post/PostInfo";
-
-import "./PostItem.scss";
-
+import PostInfo from "components/Post/PostInfo";
 import thumbnails from "../../assets/thumbnails";
+import "./PostItem.scss";
 
 const PostItem = ({ item }) => {
     const { title, description, path, date, category } = item;

@@ -63,12 +63,15 @@ module.exports = {
             serialize: ({ query: { site, allMarkdownRemark } }) =>
               allMarkdownRemark.edges.map(edge =>
                 Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.frontmatter.description,
+                  description:
+                                        edge.node.frontmatter.description,
                   date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.site_url
-                      + edge.node.frontmatter.path,
-                  guid: site.siteMetadata.site_url
-                      + edge.node.frontmatter.path,
+                  url:
+                                        site.siteMetadata.site_url +
+                                        edge.node.frontmatter.path,
+                  guid:
+                                        site.siteMetadata.site_url +
+                                        edge.node.frontmatter.path,
                   custom_elements: [
                     { "content:encoded": edge.node.html }
                   ]
@@ -149,6 +152,12 @@ module.exports = {
       resolve: "gatsby-plugin-google-adsense",
       options: {
         publisherId: `ca-pub-${GOOGLE_ADSENSE}`
+      }
+    },
+    {
+      resolve: "gatsby-alias-imports",
+      options: {
+        aliases: { rootFolder: "src" }
       }
     }
   ]
