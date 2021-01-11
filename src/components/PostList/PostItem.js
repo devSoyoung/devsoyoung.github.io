@@ -5,7 +5,7 @@ import PostInfo from "../Post/PostInfo";
 
 import "./PostItem.scss";
 
-import thumbnails from "../../assets/thumbnail";
+import thumbnails from "../../assets/thumbnails";
 
 const PostItem = ({ item }) => {
     const { title, description, path, date, category } = item;
