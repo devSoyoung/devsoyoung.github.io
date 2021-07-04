@@ -143,9 +143,7 @@ module.exports = {
         start_url: siteMetadata.siteUrl,
         background_color: "#663399",
         theme_color: "#663399",
-        display: "minimal-ui",
-        /* icon 경로: 사이트 루트에 상대적 */
-        icon: "contents/profile.jpeg"
+        display: "minimal-ui"
       }
     },
     {
