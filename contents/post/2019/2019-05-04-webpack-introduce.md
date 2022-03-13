@@ -269,5 +269,4 @@ module.exports = {
 ## 참고링크
 
 -   [요즘 잘나가는 프론트엔드 개발 환경 만들기(2018): Webpack](https://meetup.toast.com/posts/153)
--   [웹팩의 기본 개념](http://blog.jeonghwan.net/js/2017/05/15/webpack.html)
 -   [웹팩4(Webpack) 설정하기](https://www.zerocho.com/category/Webpack/post/58aa916d745ca90018e5301d)

@@ -10,13 +10,11 @@ category: "WEB"
 
 [Apollo Client에 관한 글](https://d2.naver.com/helloworld/4245995)을 읽던 중, Rest API의 underfetching, overfetching이라는 개념이 등장해, 해당 개념에 대해 보다 명확한 정리를 하기 위해 이 글을 작성하게 되었습니다.
 
--   **관련 글** : [React에서 Apollo Client 사용하기](bear://x-callback-url/open-note?id=2689D991-68A0-431C-8FB4-E109DD003F95-1462-00000A4861198497)
-
 ---
 
 ## 어디서 이 단어를 보게 되었을까
 
-Apollo Client는 [graphql](bear://x-callback-url/open-note?id=E3F3AFDD-90F7-4DD4-9FA1-C0222F5AC55A-1462-00001304B8AE5449)을 프론트엔드에서 보다 편리하게 적용할 수 있도록 해주는 툴입니다. Apollo Client에 관련된 내용을 검색하다보니, 공통적으로 나오는 이야기가 있었습니다.
+Apollo Client는 graphql을 프론트엔드에서 보다 편리하게 적용할 수 있도록 해주는 툴입니다. Apollo Client에 관련된 내용을 검색하다보니, 공통적으로 나오는 이야기가 있었습니다.
 
 **널리 사용되고 있는 Restful API의 under-fetching, over-fetching 문제를 해결해주는 API 설계구조**라는 것입니다. under-fetching, over-fetching이 무엇을 말하는지 궁금했습니다.
 

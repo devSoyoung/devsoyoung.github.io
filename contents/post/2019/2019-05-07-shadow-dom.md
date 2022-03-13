@@ -129,4 +129,3 @@ Shadow DOM 내에 또 다른 Shadow DOM을 생성해서 DOM, 부모 Shadow DOM�
 ## 참고링크
 
 -   [(번역) Shadow DOM은 무엇일까?](https://wit.nts-corp.com/2019/03/27/5552)
--   [웹 컴포넌트(3) — 쉐도우 돔(#SHADOW DOM)](https://kyu.io/ko/%EC%9B%B9-%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B83%E2%80%8A-%E2%80%8A%EC%89%90%EB%8F%84%EC%9A%B0-%EB%8F%94shadow-dom/)

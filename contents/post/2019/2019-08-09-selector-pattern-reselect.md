@@ -22,8 +22,6 @@ category: "React"
 
 ## Selector
 
-[이 글](https://godsenal.github.io/2018/07/25/Redux-selector-%ED%8C%A8%ED%84%B4%EA%B3%BC-reselect/)에서 store에 저장하는 액션을 `setter`, selector를 `getter`에 비유해주셨습니다. 쉽게 이해되는 비유라고 생각합니다.
-
 **selector**는 store에 저장된 state에서 필요한 데이터를 선별적으로 가져오거나, 계산을 수행해서 원하는 형태의 데이터를 가져오는 일을 합니다.
 
 A 컴포넌트와 B 컴포넌트에서 동일한 API를 요청해서 서로 다른 형태로 데이터를 가져온다고 가정해봅시다. A 컴포넌트에서는 결과 중 일부를 계산해서 사용해야 하고, B 컴포넌트에서는 응답받은 결과를 그대로 사용합니다.
@@ -169,6 +167,4 @@ API로 가져온 데이터를 어떻게 처리해야 할지 고민된다면 sele
 ## Reference
 
 -   [redux + reselect](https://medium.com/@ljs0705/redux-reselect-490f9acc1090)
--   [Reselect를 이용하여 React와 Redux 최적화하기](http://guswnsxodlf.github.io/optimize-react-component-using-reselect)
--   [Redux - Selector 패턴과 Reselect | Godsenal’s Blog](https://godsenal.github.io/2018/07/25/Redux-selector-%ED%8C%A8%ED%84%B4%EA%B3%BC-reselect/)
 -   [What is a Redux selector? - Matthew Holman - Medium](https://medium.com/@matthew.holman/what-is-a-redux-selector-a517acee1fe8)
